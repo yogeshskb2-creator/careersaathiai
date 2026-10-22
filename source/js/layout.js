@@ -11,14 +11,15 @@ import { getItem, setItem } from "./storage.js";
 export const NAV_ITEMS = [
   { id: "home",            href: "index.html",           key: "nav.home",            ready: true },
   { id: "profile",         href: "profile.html",         key: "nav.profile",         ready: true },
+  { id: "quiz",            href: "quiz.html",            key: "nav.quiz",            ready: true },
   { id: "recommendations", href: "recommendations.html", key: "nav.recommendations", ready: true },
   { id: "jobs",            href: "jobs.html",            key: "nav.jobs",            ready: true },
   { id: "schemes",         href: "schemes.html",         key: "nav.schemes",         ready: true },
+  { id: "scholarships",    href: "scholarships.html",    key: "nav.scholarships",    ready: true },
   { id: "courses",         href: "courses.html",         key: "nav.courses",         ready: true },
-  { id: "dashboard",       href: "dashboard.html",       key: "nav.dashboard",       ready: true },
+  { id: "roadmap",         href: "roadmap.html",         key: "nav.roadmap",         ready: true },
   { id: "guides",          href: "guides.html",          key: "nav.guides",          ready: true },
-  { id: "about",           href: "about.html",           key: "nav.about",           ready: true },
-  { id: "privacy",         href: "privacy.html",         key: "nav.privacy",         ready: true }
+  { id: "dashboard",       href: "dashboard.html",       key: "nav.dashboard",       ready: true }
 ];
 
 let currentLang = normalizeLang(getItem("lang"));
@@ -82,6 +83,7 @@ function buildFooter() {
         <p><strong data-i18n="footer.verify"></strong></p>
       </div>
       <ul class="footer-links">
+        <li><a href="about.html" data-i18n="nav.about"></a></li>
         <li><a href="about.html#disclaimer" data-i18n="footer.disclaimer"></a></li>
         <li><a href="privacy.html" data-i18n="footer.privacy"></a></li>
         <li><a href="terms.html" data-i18n="footer.terms"></a></li>

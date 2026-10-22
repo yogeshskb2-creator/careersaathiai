@@ -84,7 +84,7 @@ const translations = {
     "home.f.dash.t": "Personal Dashboard",
     "home.f.dash.d": "All your matches, skill gaps and next steps in one place.",
     "home.f.plan.t": "30-Day Action Plan",
-    "home.f.plan.d": "A practical plan that changes with your career goal.",
+    "home.f.plan.d": "A practical plan that changes with your career goal — add it to your phone calendar.",
 
     "home.trustTitle": "Our promise to you",
     "home.trust.1t": "Honest suggestions",
@@ -338,8 +338,11 @@ const translations = {
     "sch.check.edu": "Your recorded qualification may not match — check the conditions.",
     "sch.check.ageOut": "Your age may be outside the published limit.",
     "sch.check.ageExact": "The published age limit is {min}–{max} years. Check your exact age.",
-    "sch.check.group": "This scheme is for SC/ST and/or women entrepreneurs. Check whether it applies to you.",
-    "sch.check.groupNo": "This scheme is for SC/ST and/or women entrepreneurs, so it may not apply to you.",
+    "sch.check.group": "This is only for certain groups (see the main conditions). Check whether it applies to you.",
+    "sch.check.groupNo": "This is for a group your profile does not show, so it may not apply to you.",
+    "sch.why.pwd": "It is meant for persons with disability, as recorded in your profile.",
+    "sch.check.pwd": "This is only for persons with disability (as defined in the scheme).",
+    "sch.check.pwdNo": "This is only for persons with disability, so it may not apply to you.",
     "sch.check.final": "Final eligibility is decided only by the official department or bank.",
 
     // ---- Courses ----
@@ -585,6 +588,90 @@ const translations = {
     "vac.check.notice": "Read the full official notification before applying. Pay fees only on the official portal.",
     "stale.warn": "These details were checked {n} days ago and may have changed. Confirm on the official page.",
 
+    // ---- Quiz, roadmap, scholarships, calendar ----
+    "nav.quiz": "Career Quiz",
+    "nav.scholarships": "Scholarships",
+    "nav.roadmap": "After 10th/12th",
+    "home.ctaQuiz": "Take the interest quiz",
+    "home.f.quiz.t": "Career Interest Quiz",
+    "home.f.quiz.d": "24 quick questions to find the kind of work you enjoy, with careers and skills to match.",
+    "home.f.road.t": "What after 10th / 12th?",
+    "home.f.road.d": "Streams, ITI, polytechnic, skill courses, degrees, entrance exams and govt jobs — explained simply.",
+    "home.f.schol.t": "Scholarship Finder",
+    "home.f.schol.d": "Government scholarships for school and college students, with amounts and how to apply.",
+    "schol.title": "Scholarship Finder — CareerSaathi AI",
+    "schol.h1": "Scholarship Finder",
+    "schol.lead": "Government scholarships for school and college students, summarised from official pages. Amounts and limits are shown as published.",
+    "schol.warn": "A suggestion here is not an approval. Rules, income limits and last dates change every year — always confirm on the official portal, and never pay anyone to \"get\" a scholarship.",
+    "schol.portalT": "Search every scholarship on the National Scholarship Portal",
+    "schol.portalBtn": "Open NSP",
+    "schol.worth": "Worth a look for you",
+    "schol.others": "Other scholarships",
+    "schol.all": "All scholarships",
+    "schol.noProfile": "Fill your profile (class, category, gender) to see which scholarships may be worth a look for you.",
+    "schol.noWorth": "None of these scholarships stands out for your profile yet. You can still read them all below, or search the National Scholarship Portal.",
+    "quiz.title": "Career Interest Quiz — CareerSaathi AI",
+    "quiz.h1": "What kind of work do I enjoy?",
+    "quiz.lead": "24 quick questions, about 4 minutes. There are no right or wrong answers — choose what feels true for you.",
+    "quiz.privacy": "Your answers stay only in this browser. You can clear them any time.",
+    "quiz.progress": "{done} of {total} answered",
+    "quiz.submit": "See my result",
+    "quiz.clear": "Clear my answers",
+    "quiz.missing": "Please answer the remaining {n} question(s). We have taken you to the first one.",
+    "quiz.resultT": "Your interest result",
+    "quiz.resultLead": "These are the kinds of work you seem to enjoy most, based on your answers:",
+    "quiz.points": "{n} of {max} points",
+    "quiz.careersT": "Careers to explore",
+    "quiz.skillsT": "Skills that help (tap to find courses)",
+    "quiz.guideLink": "Read a related guide",
+    "quiz.allT": "All six areas",
+    "quiz.noClear": "You answered \"No\" to almost everything, so we can't suggest an area yet. That is okay — try the roadmap page, or talk to a teacher or family member about what you liked doing as a child.",
+    "quiz.notTest": "This is a simple self-check, not a scientific or psychometric test. Use it to start thinking — your interests can change, and your qualification and situation matter too.",
+    "quiz.edit": "Change my answers",
+    "quiz.nextT": "What next?",
+    "quiz.nextHave": "Your career recommendations now show which careers match these interests.",
+    "quiz.nextNone": "Fill your profile so we can check which of these careers fit your education and skills.",
+    "quiz.nextRec": "See my recommendations",
+    "quiz.nextProfile": "Fill my profile",
+    "quiz.nextRoadmap": "What after 10th / 12th?",
+    "quiz.sumT": "Your interests",
+    "quiz.sumHave": "From your interest quiz, you seem to enjoy:",
+    "quiz.sumSee": "See full quiz result",
+    "quiz.sumNone": "Not sure what you like? A 4-minute quiz can help you find out.",
+    "quiz.cta": "Take the interest quiz",
+    "quiz.recTag": "Matches your interests (quiz)",
+    "road.title": "What after 10th or 12th? Career Roadmap — CareerSaathi AI",
+    "road.h1": "What after 10th or 12th?",
+    "road.lead": "Every main path explained simply — how long it usually takes, who it suits and where it leads. There is no single \"best\" path; the right one depends on what you enjoy and your situation.",
+    "road.warn": "Durations are the usual ones. Admission rules, fees and dates differ by state and year — always check the official website before deciding.",
+    "road.choose": "Choose your stage",
+    "road.count": "{stage}: {n} paths",
+    "road.liked": "Suits your interest: {areas}",
+    "road.goodFor": "Good if",
+    "road.leadsTo": "Leads to",
+    "road.tip": "Tip",
+    "road.careers": "Careers on this path",
+    "road.page.jobs": "See open govt recruitments",
+    "road.page.scholarships": "Find scholarships",
+    "road.page.courses": "Find free courses",
+    "road.guide": "Read our guide",
+    "road.quizHave": "Paths marked 🧭 suit your quiz interests ({areas}).",
+    "road.quizNone": "Take the interest quiz and we will mark the paths that suit you.",
+    "road.checked": "Information checked on {date} from official websites. Rules change — please confirm before deciding.",
+    "cal.remind": "Reminder:",
+    "cal.lastBtn": "Last date (.ics)",
+    "cal.openBtn": "Opening day (.ics)",
+    "cal.google": "Google Calendar",
+    "cal.done": "Calendar file downloaded — open it to add the reminder.",
+    "cal.fail": "Your browser blocked the download. Try the Google Calendar button.",
+    "cal.lastTitle": "Last date: {title}",
+    "cal.openTitle": "Applications open: {title}",
+    "cal.lastDesc": "Last date to apply for {title} ({org}) is {date}. Apply only on the official website: {url} — check the official notice for exact rules. Reminder from CareerSaathi AI.",
+    "cal.openDesc": "Applications for {title} ({org}) are expected to open on {date}. Read the official notice first: {url}. Reminder from CareerSaathi AI.",
+    "cal.planD": "Get a 9 am reminder at the start of each week on your phone.",
+    "cal.planBtn": "Add plan to calendar",
+    "cal.planPrefix": "CareerSaathi plan —",
+    "cal.planFoot": "Tick off tasks on your CareerSaathi AI dashboard.",
     // ---- About & Disclaimer ----
     "about.title": "About & Disclaimer — CareerSaathi AI",
     "about.h1": "About CareerSaathi AI",
@@ -635,6 +722,8 @@ const translations = {
     "privacy.where.3": "We do not share anything with employers, agencies or advertisers.",
     "privacy.where.4": "This website does not use analytics or tracking tools. It does not show ads at the moment.",
     "privacy.where.5": "If you do not tick \"Remember\", your answers are kept only until you close the browser tab.",
+    "privacy.where.6": "Interest-quiz answers are saved only in this browser so you can see your result again. \"Delete my saved data\" removes them too.",
+    "privacy.where.7": "Calendar reminders are files made on your device. We never see them, and we cannot send you messages.",
     "privacy.thirdTitle": "Outside services",
     "privacy.third.1": "The page font is loaded from Google Fonts, which can see your IP address, like any website you visit.",
     "privacy.third.2": "When you click an official link (for example ssc.gov.in), that website's own privacy policy applies.",
@@ -717,7 +806,7 @@ const translations = {
     "home.f.dash.t": "मेरा डैशबोर्ड",
     "home.f.dash.d": "आपके सुझाव, हुनर की कमी और अगले क़दम एक ही जगह।",
     "home.f.plan.t": "30 दिन का एक्शन प्लान",
-    "home.f.plan.d": "आपके करियर लक्ष्य के हिसाब से बदलने वाला आसान प्लान।",
+    "home.f.plan.d": "आपके करियर लक्ष्य के हिसाब से बदलने वाला आसान प्लान — इसे फ़ोन कैलेंडर में भी जोड़ें।",
 
     "home.trustTitle": "हमारा आपसे वादा",
     "home.trust.1t": "ईमानदार सुझाव",
@@ -971,8 +1060,11 @@ const translations = {
     "sch.check.edu": "आपकी दर्ज योग्यता शायद मेल न खाए — शर्तें देखें।",
     "sch.check.ageOut": "आपकी उम्र प्रकाशित सीमा से बाहर हो सकती है।",
     "sch.check.ageExact": "प्रकाशित उम्र सीमा {min}–{max} साल है। अपनी सही उम्र जाँचें।",
-    "sch.check.group": "यह योजना SC/ST और/या महिला उद्यमियों के लिए है। देखें कि यह आप पर लागू होती है या नहीं।",
-    "sch.check.groupNo": "यह योजना SC/ST और/या महिला उद्यमियों के लिए है, इसलिए शायद आप पर लागू न हो।",
+    "sch.check.group": "यह सिर्फ़ कुछ ख़ास वर्गों के लिए है (मुख्य शर्तें देखें)। देखें कि यह आप पर लागू होती है या नहीं।",
+    "sch.check.groupNo": "यह उस वर्ग के लिए है जो आपकी प्रोफ़ाइल में नहीं है, इसलिए शायद आप पर लागू न हो।",
+    "sch.why.pwd": "यह दिव्यांग व्यक्तियों के लिए है, जैसा आपकी प्रोफ़ाइल में दर्ज है।",
+    "sch.check.pwd": "यह सिर्फ़ दिव्यांग व्यक्तियों के लिए है (योजना की परिभाषा के अनुसार)।",
+    "sch.check.pwdNo": "यह सिर्फ़ दिव्यांग व्यक्तियों के लिए है, इसलिए शायद आप पर लागू न हो।",
     "sch.check.final": "आख़िरी पात्रता का फ़ैसला सिर्फ़ आधिकारिक विभाग या बैंक करता है।",
 
     // ---- Courses ----
@@ -1218,6 +1310,90 @@ const translations = {
     "vac.check.notice": "आवेदन से पहले पूरी आधिकारिक सूचना पढ़ें। फ़ीस सिर्फ़ आधिकारिक पोर्टल पर भरें।",
     "stale.warn": "यह जानकारी {n} दिन पहले जाँची गई थी और बदल सकती है। आधिकारिक पेज पर पक्का करें।",
 
+    // ---- Quiz, roadmap, scholarships, calendar ----
+    "nav.quiz": "करियर क्विज़",
+    "nav.scholarships": "स्कॉलरशिप",
+    "nav.roadmap": "10वीं/12वीं के बाद",
+    "home.ctaQuiz": "रुचि क्विज़ दें",
+    "home.f.quiz.t": "करियर रुचि क्विज़",
+    "home.f.quiz.d": "24 छोटे सवाल — जानें आपको किस तरह का काम पसंद है, और उससे मेल खाते करियर व हुनर।",
+    "home.f.road.t": "10वीं / 12वीं के बाद क्या?",
+    "home.f.road.d": "स्ट्रीम, ITI, पॉलिटेक्निक, स्किल कोर्स, डिग्री, प्रवेश परीक्षाएँ और सरकारी नौकरियाँ — आसान भाषा में।",
+    "home.f.schol.t": "स्कॉलरशिप खोजें",
+    "home.f.schol.d": "स्कूल और कॉलेज छात्रों के लिए सरकारी स्कॉलरशिप — राशि और आवेदन का तरीक़ा।",
+    "schol.title": "स्कॉलरशिप खोजें — CareerSaathi AI",
+    "schol.h1": "स्कॉलरशिप खोजें",
+    "schol.lead": "स्कूल और कॉलेज छात्रों के लिए सरकारी स्कॉलरशिप, आधिकारिक पेजों से सार। राशि और सीमाएँ वैसी ही दी गई हैं जैसी प्रकाशित हैं।",
+    "schol.warn": "यहाँ का सुझाव मंज़ूरी नहीं है। नियम, आय सीमा और आख़िरी तारीख़ हर साल बदलती हैं — हमेशा आधिकारिक पोर्टल पर पक्का करें, और स्कॉलरशिप \"दिलाने\" के लिए किसी को पैसे न दें।",
+    "schol.portalT": "नेशनल स्कॉलरशिप पोर्टल पर सभी स्कॉलरशिप खोजें",
+    "schol.portalBtn": "NSP खोलें",
+    "schol.worth": "आपके लिए देखने लायक़",
+    "schol.others": "अन्य स्कॉलरशिप",
+    "schol.all": "सभी स्कॉलरशिप",
+    "schol.noProfile": "कौन-सी स्कॉलरशिप आपके लिए देखने लायक़ हैं, यह जानने के लिए अपनी प्रोफ़ाइल (कक्षा, वर्ग, लिंग) भरें।",
+    "schol.noWorth": "अभी आपकी प्रोफ़ाइल के लिए कोई स्कॉलरशिप ख़ास तौर पर मेल नहीं खाती। आप नीचे सभी पढ़ सकते हैं या नेशनल स्कॉलरशिप पोर्टल पर खोज सकते हैं।",
+    "quiz.title": "करियर रुचि क्विज़ — CareerSaathi AI",
+    "quiz.h1": "मुझे किस तरह का काम पसंद है?",
+    "quiz.lead": "24 छोटे सवाल, लगभग 4 मिनट। कोई जवाब सही या ग़लत नहीं है — जो आपको सच लगे, वही चुनें।",
+    "quiz.privacy": "आपके जवाब सिर्फ़ इसी ब्राउज़र में रहते हैं। आप इन्हें कभी भी मिटा सकते हैं।",
+    "quiz.progress": "{total} में से {done} के जवाब दिए",
+    "quiz.submit": "मेरा नतीजा देखें",
+    "quiz.clear": "मेरे जवाब मिटाएँ",
+    "quiz.missing": "कृपया बचे हुए {n} सवालों के जवाब दें। हम आपको पहले सवाल पर ले आए हैं।",
+    "quiz.resultT": "आपकी रुचि का नतीजा",
+    "quiz.resultLead": "आपके जवाबों के हिसाब से, आपको इस तरह का काम सबसे ज़्यादा पसंद लगता है:",
+    "quiz.points": "{max} में से {n} अंक",
+    "quiz.careersT": "देखने लायक़ करियर",
+    "quiz.skillsT": "काम आने वाले हुनर (कोर्स देखने के लिए दबाएँ)",
+    "quiz.guideLink": "इससे जुड़ी गाइड पढ़ें",
+    "quiz.allT": "सभी छह क्षेत्र",
+    "quiz.noClear": "आपने लगभग हर सवाल पर \"नहीं\" चुना, इसलिए अभी कोई क्षेत्र सुझा नहीं सकते। कोई बात नहीं — रोडमैप पेज देखें, या किसी शिक्षक या परिवार के सदस्य से बात करें कि बचपन में आपको क्या करना अच्छा लगता था।",
+    "quiz.notTest": "यह एक आसान ख़ुद-जाँच है, कोई वैज्ञानिक या साइकोमेट्रिक टेस्ट नहीं। इसे सोचने की शुरुआत मानें — आपकी रुचियाँ बदल सकती हैं, और आपकी योग्यता व हालात भी मायने रखते हैं।",
+    "quiz.edit": "जवाब बदलें",
+    "quiz.nextT": "आगे क्या?",
+    "quiz.nextHave": "अब आपकी करियर सिफ़ारिशों में दिखेगा कि कौन-से करियर इन रुचियों से मेल खाते हैं।",
+    "quiz.nextNone": "अपनी प्रोफ़ाइल भरें, ताकि हम देख सकें कि इनमें से कौन-से करियर आपकी पढ़ाई और हुनर से मेल खाते हैं।",
+    "quiz.nextRec": "मेरी सिफ़ारिशें देखें",
+    "quiz.nextProfile": "मेरी प्रोफ़ाइल भरें",
+    "quiz.nextRoadmap": "10वीं / 12वीं के बाद क्या?",
+    "quiz.sumT": "आपकी रुचियाँ",
+    "quiz.sumHave": "आपकी रुचि क्विज़ के अनुसार, आपको यह पसंद लगता है:",
+    "quiz.sumSee": "क्विज़ का पूरा नतीजा देखें",
+    "quiz.sumNone": "पक्का नहीं कि आपको क्या पसंद है? 4 मिनट का क्विज़ मदद कर सकता है।",
+    "quiz.cta": "रुचि क्विज़ दें",
+    "quiz.recTag": "आपकी रुचि से मेल (क्विज़)",
+    "road.title": "10वीं या 12वीं के बाद क्या? करियर रोडमैप — CareerSaathi AI",
+    "road.h1": "10वीं या 12वीं के बाद क्या?",
+    "road.lead": "हर मुख्य रास्ता आसान भाषा में — आम तौर पर कितना समय लगता है, किसके लिए ठीक है और कहाँ ले जाता है। कोई एक \"सबसे अच्छा\" रास्ता नहीं होता; सही रास्ता आपकी पसंद और हालात पर निर्भर है।",
+    "road.warn": "अवधि आम तौर पर लगने वाली है। दाख़िले के नियम, फ़ीस और तारीख़ें राज्य और साल के हिसाब से बदलती हैं — फ़ैसला करने से पहले आधिकारिक वेबसाइट ज़रूर देखें।",
+    "road.choose": "अपना पड़ाव चुनें",
+    "road.count": "{stage}: {n} रास्ते",
+    "road.liked": "आपकी रुचि से मेल: {areas}",
+    "road.goodFor": "किसके लिए अच्छा",
+    "road.leadsTo": "कहाँ तक ले जाता है",
+    "road.tip": "सुझाव",
+    "road.careers": "इस रास्ते के करियर",
+    "road.page.jobs": "खुली सरकारी भर्तियाँ देखें",
+    "road.page.scholarships": "स्कॉलरशिप खोजें",
+    "road.page.courses": "मुफ़्त कोर्स खोजें",
+    "road.guide": "हमारी गाइड पढ़ें",
+    "road.quizHave": "🧭 वाले रास्ते आपकी क्विज़ रुचियों ({areas}) से मेल खाते हैं।",
+    "road.quizNone": "रुचि क्विज़ दें, हम आपके लिए सही रास्तों पर निशान लगा देंगे।",
+    "road.checked": "जानकारी {date} को आधिकारिक वेबसाइटों से जाँची गई। नियम बदलते हैं — फ़ैसले से पहले ज़रूर पक्का करें।",
+    "cal.remind": "रिमाइंडर:",
+    "cal.lastBtn": "आख़िरी तारीख़ (.ics)",
+    "cal.openBtn": "शुरू होने का दिन (.ics)",
+    "cal.google": "Google कैलेंडर",
+    "cal.done": "कैलेंडर फ़ाइल डाउनलोड हो गई — रिमाइंडर जोड़ने के लिए इसे खोलें।",
+    "cal.fail": "आपके ब्राउज़र ने डाउनलोड रोक दिया। Google कैलेंडर बटन आज़माएँ।",
+    "cal.lastTitle": "आख़िरी तारीख़: {title}",
+    "cal.openTitle": "आवेदन शुरू: {title}",
+    "cal.lastDesc": "{title} ({org}) के लिए आवेदन की आख़िरी तारीख़ {date} है। सिर्फ़ आधिकारिक वेबसाइट पर आवेदन करें: {url} — सही नियमों के लिए आधिकारिक नोटिस देखें। CareerSaathi AI का रिमाइंडर।",
+    "cal.openDesc": "{title} ({org}) के लिए आवेदन {date} को शुरू होने की उम्मीद है। पहले आधिकारिक नोटिस पढ़ें: {url}। CareerSaathi AI का रिमाइंडर।",
+    "cal.planD": "हर हफ़्ते की शुरुआत में फ़ोन पर सुबह 9 बजे रिमाइंडर पाएँ।",
+    "cal.planBtn": "प्लान कैलेंडर में जोड़ें",
+    "cal.planPrefix": "CareerSaathi प्लान —",
+    "cal.planFoot": "अपने CareerSaathi AI डैशबोर्ड पर काम पूरे होने का निशान लगाएँ।",
     // ---- About ----
     "about.title": "हमारे बारे में और अस्वीकरण — करियरसाथी AI",
     "about.h1": "करियरसाथी AI के बारे में",
@@ -1268,6 +1444,8 @@ const translations = {
     "privacy.where.3": "हम कुछ भी किसी कंपनी, एजेंसी या विज्ञापन देने वाले से साझा नहीं करते।",
     "privacy.where.4": "यह वेबसाइट एनालिटिक्स या ट्रैकिंग टूल इस्तेमाल नहीं करती। अभी इस पर कोई विज्ञापन नहीं है।",
     "privacy.where.5": "अगर आप \"याद रखें\" पर टिक नहीं करते, तो जवाब सिर्फ़ ब्राउज़र टैब बंद होने तक रहते हैं।",
+    "privacy.where.6": "रुचि क्विज़ के जवाब सिर्फ़ इसी ब्राउज़र में सेव होते हैं, ताकि आप नतीजा दोबारा देख सकें। \"मेरा सेव डेटा मिटाएँ\" से ये भी मिट जाते हैं।",
+    "privacy.where.7": "कैलेंडर रिमाइंडर आपके डिवाइस पर बनी फ़ाइलें हैं। हम इन्हें कभी नहीं देखते, और आपको कोई मैसेज नहीं भेज सकते।",
     "privacy.thirdTitle": "बाहरी सेवाएँ",
     "privacy.third.1": "पेज का फ़ॉन्ट Google Fonts से आता है, जो किसी भी वेबसाइट की तरह आपका IP पता देख सकता है।",
     "privacy.third.2": "जब आप किसी आधिकारिक लिंक (जैसे ssc.gov.in) पर जाते हैं, तो उस वेबसाइट की अपनी गोपनीयता नीति लागू होती है।",
@@ -1399,14 +1577,15 @@ const { getItem, setItem } = __mods["js/storage.js"];
 const NAV_ITEMS = [
   { id: "home",            href: "index.html",           key: "nav.home",            ready: true },
   { id: "profile",         href: "profile.html",         key: "nav.profile",         ready: true },
+  { id: "quiz",            href: "quiz.html",            key: "nav.quiz",            ready: true },
   { id: "recommendations", href: "recommendations.html", key: "nav.recommendations", ready: true },
   { id: "jobs",            href: "jobs.html",            key: "nav.jobs",            ready: true },
   { id: "schemes",         href: "schemes.html",         key: "nav.schemes",         ready: true },
+  { id: "scholarships",    href: "scholarships.html",    key: "nav.scholarships",    ready: true },
   { id: "courses",         href: "courses.html",         key: "nav.courses",         ready: true },
-  { id: "dashboard",       href: "dashboard.html",       key: "nav.dashboard",       ready: true },
+  { id: "roadmap",         href: "roadmap.html",         key: "nav.roadmap",         ready: true },
   { id: "guides",          href: "guides.html",          key: "nav.guides",          ready: true },
-  { id: "about",           href: "about.html",           key: "nav.about",           ready: true },
-  { id: "privacy",         href: "privacy.html",         key: "nav.privacy",         ready: true }
+  { id: "dashboard",       href: "dashboard.html",       key: "nav.dashboard",       ready: true }
 ];
 
 let currentLang = normalizeLang(getItem("lang"));
@@ -1470,6 +1649,7 @@ function buildFooter() {
         <p><strong data-i18n="footer.verify"></strong></p>
       </div>
       <ul class="footer-links">
+        <li><a href="about.html" data-i18n="nav.about"></a></li>
         <li><a href="about.html#disclaimer" data-i18n="footer.disclaimer"></a></li>
         <li><a href="privacy.html" data-i18n="footer.privacy"></a></li>
         <li><a href="terms.html" data-i18n="footer.terms"></a></li>
@@ -2719,6 +2899,219 @@ function openMatches(vacancies, rawProfile, today) {
 return { todayISO, daysBetween, vacancyStatus, ageInDays, matchVacancy, listVacancies, openMatches, CLOSING_SOON_DAYS, STALE_DAYS, STALE_LIST_DAYS, isActive };
 })();
 
+// ===== js/calendar.js =====
+__mods["js/calendar.js"] = (function () {
+// Calendar reminders — pure functions, tested in Node.
+// Builds standard .ics files (work with Google Calendar, Apple Calendar, Outlook and
+// most phone calendars) and Google Calendar "add event" links.
+// Everything is made on the visitor's device — nothing is sent anywhere.
+
+const PRODID = "-//CareerSaathi AI//Reminders//EN";
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+/** Escapes text for an .ics field (RFC 5545 §3.3.11). */
+function icsEscape(text) {
+  return String(text ?? "")
+    .replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,")
+    .replace(/\r\n|\r|\n/g, "\\n");
+}
+
+/** Splits long lines at 75 bytes, as the .ics standard asks (UTF-8 safe). */
+function foldLine(line) {
+  const enc = new TextEncoder();
+  if (enc.encode(line).length <= 75) return line;
+  const parts = [];
+  let cur = "", size = 0, limit = 75;
+  for (const ch of line) {
+    const n = enc.encode(ch).length;
+    if (size + n > limit) { parts.push(cur); cur = ""; size = 0; limit = 74; } // continuation lines start with a space
+    cur += ch; size += n;
+  }
+  parts.push(cur);
+  return parts.join("\r\n ");
+}
+
+/** "2026-11-06" → "20261106"; adds days safely in UTC. */
+function icsDate(iso, plusDays = 0) {
+  if (!DATE_RE.test(String(iso))) throw new Error(`Bad date: ${iso}`);
+  const d = new Date(`${iso}T00:00:00Z`);
+  if (Number.isNaN(d.getTime())) throw new Error(`Bad date: ${iso}`);
+  d.setUTCDate(d.getUTCDate() + plusDays);
+  return d.toISOString().slice(0, 10).replace(/-/g, "");
+}
+
+/** Adds days to a YYYY-MM-DD date and returns YYYY-MM-DD. */
+function addDays(iso, n) {
+  const s = icsDate(iso, n);
+  return `${s.slice(0, 4)}-${s.slice(4, 6)}-${s.slice(6)}`;
+}
+
+function stamp(now) {
+  return now.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+}
+
+/**
+ * events: [{ uid, date: "YYYY-MM-DD", title, description?, url?, alarms?: ["-P2D", "-PT15H"] }]
+ * All-day events. Alarm triggers are relative to the start of that day (00:00), so
+ * "-PT15H" = 9 am the day before and "PT9H" = 9 am on the day.
+ */
+function buildICS(events, { now = new Date(), calName = "CareerSaathi AI" } = {}) {
+  if (!Array.isArray(events) || !events.length) throw new Error("No events");
+  const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", `PRODID:${PRODID}`, "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+    `X-WR-CALNAME:${icsEscape(calName)}`];
+  for (const e of events) {
+    if (!e || !e.uid || !e.title) throw new Error("Event needs uid and title");
+    lines.push("BEGIN:VEVENT",
+      `UID:${icsEscape(e.uid)}@careersaathiai`,
+      `DTSTAMP:${stamp(now)}`,
+      `DTSTART;VALUE=DATE:${icsDate(e.date)}`,
+      `DTEND;VALUE=DATE:${icsDate(e.date, 1)}`,
+      `SUMMARY:${icsEscape(e.title)}`);
+    if (e.description) lines.push(`DESCRIPTION:${icsEscape(e.description)}`);
+    if (e.url) lines.push(`URL:${icsEscape(e.url)}`);
+    lines.push("TRANSP:TRANSPARENT");
+    for (const trig of e.alarms || []) {
+      if (!/^-?P(T?\d+[DHM])+$/.test(trig)) throw new Error(`Bad alarm: ${trig}`);
+      lines.push("BEGIN:VALARM", "ACTION:DISPLAY", `DESCRIPTION:${icsEscape(e.title)}`, `TRIGGER:${trig}`, "END:VALARM");
+    }
+    lines.push("END:VEVENT");
+  }
+  lines.push("END:VCALENDAR");
+  return lines.map(foldLine).join("\r\n") + "\r\n";
+}
+
+/** Google Calendar "add event" link for one all-day event. */
+function googleCalendarUrl({ title, date, details = "" }) {
+  const params = new URLSearchParams({
+    action: "TEMPLATE",
+    text: title,
+    dates: `${icsDate(date)}/${icsDate(date, 1)}`,
+    details
+  });
+  return `https://calendar.google.com/calendar/render?${params.toString()}`;
+}
+
+/** Safe file name: "rrb-ntpc-last-date.ics". */
+function icsFileName(base) {
+  const slug = String(base || "reminder").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60);
+  return `${slug || "reminder"}.ics`;
+}
+
+/** Reminder for a recruitment's last date: 3 days before and 9 am the day before. */
+function deadlineEvent(v, { title, description }) {
+  return { uid: `deadline-${v.id}-${v.closes}`, date: v.closes, title, description, url: v.applyUrl, alarms: ["-P3D", "-PT15H"] };
+}
+
+/** Reminder for the day a recruitment opens: 9 am that day. */
+function openingEvent(v, { title, description }) {
+  return { uid: `opens-${v.id}-${v.opens}`, date: v.opens, title, description, url: v.applyUrl, alarms: ["PT9H"] };
+}
+
+/** One event at the start of each plan week (start = today), with a 9 am alert. */
+function planEvents(weeks, startISO) {
+  const offsets = [0, 7, 14, 21];
+  return weeks.slice(0, 4).map((w, i) => ({
+    uid: `plan-${w.id}-${startISO}`, date: addDays(startISO, offsets[i]),
+    title: w.title, description: w.description, alarms: ["PT9H"]
+  }));
+}
+
+return { icsEscape, foldLine, icsDate, addDays, buildICS, googleCalendarUrl, icsFileName, deadlineEvent, openingEvent, planEvents };
+})();
+
+// ===== js/calendar-ui.js =====
+__mods["js/calendar-ui.js"] = (function () {
+// "Add to calendar" buttons. The .ics file is made on this device and downloaded
+// directly — no account, nothing sent to us.
+const { t } = __mods["js/i18n.js"];
+const { getLang } = __mods["js/layout.js"];
+const { esc, formatDate } = __mods["js/ui.js"];
+const { VACANCIES } = __mods["data/vacancies.js"];
+const { buildICS, googleCalendarUrl, icsFileName, deadlineEvent, openingEvent } = __mods["js/calendar.js"];
+const L = () => getLang();
+const tt = (key, vars) => t(key, L(), vars);
+const txt = (o) => (o ? o[L()] || o.en : "");
+
+/** Starts a download of an .ics file. Returns true if the browser allowed it. */
+function downloadICS(events, base) {
+  try {
+    const blob = new Blob([buildICS(events, { calName: "CareerSaathi AI" })], { type: "text/calendar;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = icsFileName(base);
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function vacTexts(v, kind) {
+  const title = txt(v.title);
+  const vars = { title, org: txt(v.org), url: v.applyUrl, date: formatDate(kind === "open" ? v.opens : v.closes, L()) };
+  return {
+    title: tt(kind === "open" ? "cal.openTitle" : "cal.lastTitle", vars),
+    description: tt(kind === "open" ? "cal.openDesc" : "cal.lastDesc", vars)
+  };
+}
+
+/** Buttons shown on an open or upcoming recruitment card. */
+function vacancyCalendarButtons(r) {
+  const v = r.vacancy;
+  if (r.status === "closed") return "";
+  const last = vacTexts(v, "last");
+  const g = googleCalendarUrl({ date: v.closes, title: last.title, details: last.description });
+  return `
+    <div class="cal-row no-print">
+      <span class="cal-label"><span aria-hidden="true">🔔</span> ${esc(tt("cal.remind"))}</span>
+      ${r.status === "upcoming" ? `<button type="button" class="btn btn-ghost btn-small" data-cal="open" data-vac="${esc(v.id)}">${esc(tt("cal.openBtn"))}</button>` : ""}
+      <button type="button" class="btn btn-ghost btn-small" data-cal="last" data-vac="${esc(v.id)}">${esc(tt("cal.lastBtn"))}</button>
+      <a class="btn btn-ghost btn-small" href="${esc(g)}" target="_blank" rel="noopener noreferrer">${esc(tt("cal.google"))}<span class="visually-hidden"> (${esc(tt("rec.newTab"))})</span></a>
+    </div>`;
+}
+
+let installed = false;
+/** One click handler for every page (event delegation). Safe to call many times. */
+function installCalendarHandler() {
+  if (installed) return;
+  installed = true;
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest && e.target.closest("button[data-cal][data-vac]");
+    if (!btn) return;
+    const v = VACANCIES.find((x) => x.id === btn.dataset.vac);
+    if (!v) return;
+    const kind = btn.dataset.cal === "open" ? "open" : "last";
+    const ev = kind === "open" ? openingEvent(v, vacTexts(v, "open")) : deadlineEvent(v, vacTexts(v, "last"));
+    const ok = downloadICS([ev], `${v.id}-${kind === "open" ? "opens" : "last-date"}`);
+    announce(ok ? tt("cal.done") : tt("cal.fail"), btn);
+  });
+}
+
+function announce(message, near) {
+  let live = document.getElementById("cal-live");
+  if (!live) {
+    live = document.createElement("p");
+    live.id = "cal-live";
+    live.className = "visually-hidden";
+    live.setAttribute("aria-live", "polite");
+    document.body.appendChild(live);
+  }
+  live.textContent = message;
+  const row = near.closest(".cal-row");
+  if (row) {
+    let note = row.querySelector(".cal-note");
+    if (!note) { note = document.createElement("span"); note.className = "cal-note small"; row.appendChild(note); }
+    note.textContent = message;
+  }
+}
+
+return { downloadICS, vacancyCalendarButtons, installCalendarHandler };
+})();
+
 // ===== js/vacancy-ui.js =====
 __mods["js/vacancy-ui.js"] = (function () {
 // Shared drawing code for open recruitments (used by Jobs, Dashboard, Recommendations).
@@ -2728,6 +3121,10 @@ const { esc, formatDate, extLink, hostOf } = __mods["js/ui.js"];
 const { EDUCATION_LEVELS, labelOf } = __mods["data/options.js"];
 const { LIST_UPDATED } = __mods["data/vacancies.js"];
 const { ageInDays, STALE_LIST_DAYS } = __mods["js/vacancy-match.js"];
+const { vacancyCalendarButtons, installCalendarHandler } = __mods["js/calendar-ui.js"];
+// Every page that draws recruitment cards gets working calendar buttons.
+if (typeof document !== "undefined") installCalendarHandler();
+
 const L = () => getLang();
 const tt = (key, vars) => t(key, L(), vars);
 const txt = (o) => (o ? o[L()] || o.en : "");
@@ -2784,6 +3181,7 @@ function vacancyCard(r, { full = true, showFit = true } = {}) {
     </details>` : ""}
     <p class="source-host">${esc(hostOf(v.applyUrl))}</p>
     <p>${extLink(v.applyUrl, tt("vac.apply"), tt("rec.newTab"), "btn btn-primary btn-small")}</p>
+    ${vacancyCalendarButtons(r)}
     <p class="muted small">${esc(tt("vac.checked", { date: formatDate(v.checkedOn, lang), source: txt(v.checkedFrom) }))}</p>
   </article>`;
 }

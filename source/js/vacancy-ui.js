@@ -5,6 +5,10 @@ import { esc, formatDate, extLink, hostOf } from "./ui.js";
 import { EDUCATION_LEVELS, labelOf } from "../data/options.js";
 import { LIST_UPDATED } from "../data/vacancies.js";
 import { ageInDays, STALE_LIST_DAYS } from "./vacancy-match.js";
+import { vacancyCalendarButtons, installCalendarHandler } from "./calendar-ui.js";
+
+// Every page that draws recruitment cards gets working calendar buttons.
+if (typeof document !== "undefined") installCalendarHandler();
 
 const L = () => getLang();
 const tt = (key, vars) => t(key, L(), vars);
@@ -62,6 +66,7 @@ export function vacancyCard(r, { full = true, showFit = true } = {}) {
     </details>` : ""}
     <p class="source-host">${esc(hostOf(v.applyUrl))}</p>
     <p>${extLink(v.applyUrl, tt("vac.apply"), tt("rec.newTab"), "btn btn-primary btn-small")}</p>
+    ${vacancyCalendarButtons(r)}
     <p class="muted small">${esc(tt("vac.checked", { date: formatDate(v.checkedOn, lang), source: txt(v.checkedFrom) }))}</p>
   </article>`;
 }

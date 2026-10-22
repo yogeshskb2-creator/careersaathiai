@@ -19,6 +19,9 @@ import { esc, extLink, hostOf } from "./ui.js";
 import { VACANCIES } from "../data/vacancies.js";
 import { openMatches, todayISO } from "./vacancy-match.js";
 import { vacancyCard } from "./vacancy-ui.js";
+import { downloadICS } from "./calendar-ui.js";
+import { planEvents } from "./calendar.js";
+import { quizSummaryHtml } from "./quiz-summary.js";
 
 const root = document.getElementById("dash-app");
 const PLAN_KEY = "plan_done";
@@ -201,6 +204,10 @@ function planHtml() {
       <span id="plan-progress-text" aria-live="polite">${esc(tt("plan.progress", { done, total }))}</span>
       ${done ? `<button type="button" class="btn btn-ghost btn-small no-print" data-action="reset-plan">${esc(tt("plan.reset"))}</button>` : ""}
     </div>
+    <div class="cal-row no-print">
+      <span class="cal-label"><span aria-hidden="true">🔔</span> ${esc(tt("cal.planD"))}</span>
+      <button type="button" class="btn btn-ghost btn-small" data-action="plan-cal">${esc(tt("cal.planBtn"))}</button>
+    </div>
     <div class="plan-weeks">${weeks}</div>`);
 }
 
@@ -226,7 +233,24 @@ function render() {
       ${coursesHtml()}
       ${schemesHtml()}
     </div>
+    ${quizSummaryHtml()}
     ${planHtml()}`;
+}
+
+function planToCalendar(btn) {
+  const plan = state.data.plan;
+  const weeks = plan.weeks.map((w) => ({
+    id: w.id,
+    title: `${tt("cal.planPrefix")} ${tt(w.titleKey)}`,
+    description: w.tasks.map((task) => `• ${sayTask(task)}`).join("\n") + "\n\n" + tt("cal.planFoot")
+  }));
+  const ok = downloadICS(planEvents(weeks, todayISO()), "careersaathi-30-day-plan");
+  const row = btn.closest(".cal-row");
+  if (row) {
+    let note = row.querySelector(".cal-note");
+    if (!note) { note = document.createElement("span"); note.className = "cal-note small"; note.setAttribute("aria-live", "polite"); row.appendChild(note); }
+    note.textContent = ok ? tt("cal.done") : tt("cal.fail");
+  }
 }
 
 function updateProgress() {
@@ -257,6 +281,7 @@ function init() {
     const btn = e.target.closest("[data-action]");
     if (!btn) return;
     if (btn.dataset.action === "print") window.print();
+    if (btn.dataset.action === "plan-cal") planToCalendar(btn);
     if (btn.dataset.action === "reset-plan") {
       state.done = [];
       saveDone();

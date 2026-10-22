@@ -84,7 +84,7 @@ const translations = {
     "home.f.dash.t": "Personal Dashboard",
     "home.f.dash.d": "All your matches, skill gaps and next steps in one place.",
     "home.f.plan.t": "30-Day Action Plan",
-    "home.f.plan.d": "A practical plan that changes with your career goal.",
+    "home.f.plan.d": "A practical plan that changes with your career goal — add it to your phone calendar.",
 
     "home.trustTitle": "Our promise to you",
     "home.trust.1t": "Honest suggestions",
@@ -338,8 +338,11 @@ const translations = {
     "sch.check.edu": "Your recorded qualification may not match — check the conditions.",
     "sch.check.ageOut": "Your age may be outside the published limit.",
     "sch.check.ageExact": "The published age limit is {min}–{max} years. Check your exact age.",
-    "sch.check.group": "This scheme is for SC/ST and/or women entrepreneurs. Check whether it applies to you.",
-    "sch.check.groupNo": "This scheme is for SC/ST and/or women entrepreneurs, so it may not apply to you.",
+    "sch.check.group": "This is only for certain groups (see the main conditions). Check whether it applies to you.",
+    "sch.check.groupNo": "This is for a group your profile does not show, so it may not apply to you.",
+    "sch.why.pwd": "It is meant for persons with disability, as recorded in your profile.",
+    "sch.check.pwd": "This is only for persons with disability (as defined in the scheme).",
+    "sch.check.pwdNo": "This is only for persons with disability, so it may not apply to you.",
     "sch.check.final": "Final eligibility is decided only by the official department or bank.",
 
     // ---- Courses ----
@@ -585,6 +588,90 @@ const translations = {
     "vac.check.notice": "Read the full official notification before applying. Pay fees only on the official portal.",
     "stale.warn": "These details were checked {n} days ago and may have changed. Confirm on the official page.",
 
+    // ---- Quiz, roadmap, scholarships, calendar ----
+    "nav.quiz": "Career Quiz",
+    "nav.scholarships": "Scholarships",
+    "nav.roadmap": "After 10th/12th",
+    "home.ctaQuiz": "Take the interest quiz",
+    "home.f.quiz.t": "Career Interest Quiz",
+    "home.f.quiz.d": "24 quick questions to find the kind of work you enjoy, with careers and skills to match.",
+    "home.f.road.t": "What after 10th / 12th?",
+    "home.f.road.d": "Streams, ITI, polytechnic, skill courses, degrees, entrance exams and govt jobs — explained simply.",
+    "home.f.schol.t": "Scholarship Finder",
+    "home.f.schol.d": "Government scholarships for school and college students, with amounts and how to apply.",
+    "schol.title": "Scholarship Finder — CareerSaathi AI",
+    "schol.h1": "Scholarship Finder",
+    "schol.lead": "Government scholarships for school and college students, summarised from official pages. Amounts and limits are shown as published.",
+    "schol.warn": "A suggestion here is not an approval. Rules, income limits and last dates change every year — always confirm on the official portal, and never pay anyone to \"get\" a scholarship.",
+    "schol.portalT": "Search every scholarship on the National Scholarship Portal",
+    "schol.portalBtn": "Open NSP",
+    "schol.worth": "Worth a look for you",
+    "schol.others": "Other scholarships",
+    "schol.all": "All scholarships",
+    "schol.noProfile": "Fill your profile (class, category, gender) to see which scholarships may be worth a look for you.",
+    "schol.noWorth": "None of these scholarships stands out for your profile yet. You can still read them all below, or search the National Scholarship Portal.",
+    "quiz.title": "Career Interest Quiz — CareerSaathi AI",
+    "quiz.h1": "What kind of work do I enjoy?",
+    "quiz.lead": "24 quick questions, about 4 minutes. There are no right or wrong answers — choose what feels true for you.",
+    "quiz.privacy": "Your answers stay only in this browser. You can clear them any time.",
+    "quiz.progress": "{done} of {total} answered",
+    "quiz.submit": "See my result",
+    "quiz.clear": "Clear my answers",
+    "quiz.missing": "Please answer the remaining {n} question(s). We have taken you to the first one.",
+    "quiz.resultT": "Your interest result",
+    "quiz.resultLead": "These are the kinds of work you seem to enjoy most, based on your answers:",
+    "quiz.points": "{n} of {max} points",
+    "quiz.careersT": "Careers to explore",
+    "quiz.skillsT": "Skills that help (tap to find courses)",
+    "quiz.guideLink": "Read a related guide",
+    "quiz.allT": "All six areas",
+    "quiz.noClear": "You answered \"No\" to almost everything, so we can't suggest an area yet. That is okay — try the roadmap page, or talk to a teacher or family member about what you liked doing as a child.",
+    "quiz.notTest": "This is a simple self-check, not a scientific or psychometric test. Use it to start thinking — your interests can change, and your qualification and situation matter too.",
+    "quiz.edit": "Change my answers",
+    "quiz.nextT": "What next?",
+    "quiz.nextHave": "Your career recommendations now show which careers match these interests.",
+    "quiz.nextNone": "Fill your profile so we can check which of these careers fit your education and skills.",
+    "quiz.nextRec": "See my recommendations",
+    "quiz.nextProfile": "Fill my profile",
+    "quiz.nextRoadmap": "What after 10th / 12th?",
+    "quiz.sumT": "Your interests",
+    "quiz.sumHave": "From your interest quiz, you seem to enjoy:",
+    "quiz.sumSee": "See full quiz result",
+    "quiz.sumNone": "Not sure what you like? A 4-minute quiz can help you find out.",
+    "quiz.cta": "Take the interest quiz",
+    "quiz.recTag": "Matches your interests (quiz)",
+    "road.title": "What after 10th or 12th? Career Roadmap — CareerSaathi AI",
+    "road.h1": "What after 10th or 12th?",
+    "road.lead": "Every main path explained simply — how long it usually takes, who it suits and where it leads. There is no single \"best\" path; the right one depends on what you enjoy and your situation.",
+    "road.warn": "Durations are the usual ones. Admission rules, fees and dates differ by state and year — always check the official website before deciding.",
+    "road.choose": "Choose your stage",
+    "road.count": "{stage}: {n} paths",
+    "road.liked": "Suits your interest: {areas}",
+    "road.goodFor": "Good if",
+    "road.leadsTo": "Leads to",
+    "road.tip": "Tip",
+    "road.careers": "Careers on this path",
+    "road.page.jobs": "See open govt recruitments",
+    "road.page.scholarships": "Find scholarships",
+    "road.page.courses": "Find free courses",
+    "road.guide": "Read our guide",
+    "road.quizHave": "Paths marked 🧭 suit your quiz interests ({areas}).",
+    "road.quizNone": "Take the interest quiz and we will mark the paths that suit you.",
+    "road.checked": "Information checked on {date} from official websites. Rules change — please confirm before deciding.",
+    "cal.remind": "Reminder:",
+    "cal.lastBtn": "Last date (.ics)",
+    "cal.openBtn": "Opening day (.ics)",
+    "cal.google": "Google Calendar",
+    "cal.done": "Calendar file downloaded — open it to add the reminder.",
+    "cal.fail": "Your browser blocked the download. Try the Google Calendar button.",
+    "cal.lastTitle": "Last date: {title}",
+    "cal.openTitle": "Applications open: {title}",
+    "cal.lastDesc": "Last date to apply for {title} ({org}) is {date}. Apply only on the official website: {url} — check the official notice for exact rules. Reminder from CareerSaathi AI.",
+    "cal.openDesc": "Applications for {title} ({org}) are expected to open on {date}. Read the official notice first: {url}. Reminder from CareerSaathi AI.",
+    "cal.planD": "Get a 9 am reminder at the start of each week on your phone.",
+    "cal.planBtn": "Add plan to calendar",
+    "cal.planPrefix": "CareerSaathi plan —",
+    "cal.planFoot": "Tick off tasks on your CareerSaathi AI dashboard.",
     // ---- About & Disclaimer ----
     "about.title": "About & Disclaimer — CareerSaathi AI",
     "about.h1": "About CareerSaathi AI",
@@ -635,6 +722,8 @@ const translations = {
     "privacy.where.3": "We do not share anything with employers, agencies or advertisers.",
     "privacy.where.4": "This website does not use analytics or tracking tools. It does not show ads at the moment.",
     "privacy.where.5": "If you do not tick \"Remember\", your answers are kept only until you close the browser tab.",
+    "privacy.where.6": "Interest-quiz answers are saved only in this browser so you can see your result again. \"Delete my saved data\" removes them too.",
+    "privacy.where.7": "Calendar reminders are files made on your device. We never see them, and we cannot send you messages.",
     "privacy.thirdTitle": "Outside services",
     "privacy.third.1": "The page font is loaded from Google Fonts, which can see your IP address, like any website you visit.",
     "privacy.third.2": "When you click an official link (for example ssc.gov.in), that website's own privacy policy applies.",
@@ -717,7 +806,7 @@ const translations = {
     "home.f.dash.t": "मेरा डैशबोर्ड",
     "home.f.dash.d": "आपके सुझाव, हुनर की कमी और अगले क़दम एक ही जगह।",
     "home.f.plan.t": "30 दिन का एक्शन प्लान",
-    "home.f.plan.d": "आपके करियर लक्ष्य के हिसाब से बदलने वाला आसान प्लान।",
+    "home.f.plan.d": "आपके करियर लक्ष्य के हिसाब से बदलने वाला आसान प्लान — इसे फ़ोन कैलेंडर में भी जोड़ें।",
 
     "home.trustTitle": "हमारा आपसे वादा",
     "home.trust.1t": "ईमानदार सुझाव",
@@ -971,8 +1060,11 @@ const translations = {
     "sch.check.edu": "आपकी दर्ज योग्यता शायद मेल न खाए — शर्तें देखें।",
     "sch.check.ageOut": "आपकी उम्र प्रकाशित सीमा से बाहर हो सकती है।",
     "sch.check.ageExact": "प्रकाशित उम्र सीमा {min}–{max} साल है। अपनी सही उम्र जाँचें।",
-    "sch.check.group": "यह योजना SC/ST और/या महिला उद्यमियों के लिए है। देखें कि यह आप पर लागू होती है या नहीं।",
-    "sch.check.groupNo": "यह योजना SC/ST और/या महिला उद्यमियों के लिए है, इसलिए शायद आप पर लागू न हो।",
+    "sch.check.group": "यह सिर्फ़ कुछ ख़ास वर्गों के लिए है (मुख्य शर्तें देखें)। देखें कि यह आप पर लागू होती है या नहीं।",
+    "sch.check.groupNo": "यह उस वर्ग के लिए है जो आपकी प्रोफ़ाइल में नहीं है, इसलिए शायद आप पर लागू न हो।",
+    "sch.why.pwd": "यह दिव्यांग व्यक्तियों के लिए है, जैसा आपकी प्रोफ़ाइल में दर्ज है।",
+    "sch.check.pwd": "यह सिर्फ़ दिव्यांग व्यक्तियों के लिए है (योजना की परिभाषा के अनुसार)।",
+    "sch.check.pwdNo": "यह सिर्फ़ दिव्यांग व्यक्तियों के लिए है, इसलिए शायद आप पर लागू न हो।",
     "sch.check.final": "आख़िरी पात्रता का फ़ैसला सिर्फ़ आधिकारिक विभाग या बैंक करता है।",
 
     // ---- Courses ----
@@ -1218,6 +1310,90 @@ const translations = {
     "vac.check.notice": "आवेदन से पहले पूरी आधिकारिक सूचना पढ़ें। फ़ीस सिर्फ़ आधिकारिक पोर्टल पर भरें।",
     "stale.warn": "यह जानकारी {n} दिन पहले जाँची गई थी और बदल सकती है। आधिकारिक पेज पर पक्का करें।",
 
+    // ---- Quiz, roadmap, scholarships, calendar ----
+    "nav.quiz": "करियर क्विज़",
+    "nav.scholarships": "स्कॉलरशिप",
+    "nav.roadmap": "10वीं/12वीं के बाद",
+    "home.ctaQuiz": "रुचि क्विज़ दें",
+    "home.f.quiz.t": "करियर रुचि क्विज़",
+    "home.f.quiz.d": "24 छोटे सवाल — जानें आपको किस तरह का काम पसंद है, और उससे मेल खाते करियर व हुनर।",
+    "home.f.road.t": "10वीं / 12वीं के बाद क्या?",
+    "home.f.road.d": "स्ट्रीम, ITI, पॉलिटेक्निक, स्किल कोर्स, डिग्री, प्रवेश परीक्षाएँ और सरकारी नौकरियाँ — आसान भाषा में।",
+    "home.f.schol.t": "स्कॉलरशिप खोजें",
+    "home.f.schol.d": "स्कूल और कॉलेज छात्रों के लिए सरकारी स्कॉलरशिप — राशि और आवेदन का तरीक़ा।",
+    "schol.title": "स्कॉलरशिप खोजें — CareerSaathi AI",
+    "schol.h1": "स्कॉलरशिप खोजें",
+    "schol.lead": "स्कूल और कॉलेज छात्रों के लिए सरकारी स्कॉलरशिप, आधिकारिक पेजों से सार। राशि और सीमाएँ वैसी ही दी गई हैं जैसी प्रकाशित हैं।",
+    "schol.warn": "यहाँ का सुझाव मंज़ूरी नहीं है। नियम, आय सीमा और आख़िरी तारीख़ हर साल बदलती हैं — हमेशा आधिकारिक पोर्टल पर पक्का करें, और स्कॉलरशिप \"दिलाने\" के लिए किसी को पैसे न दें।",
+    "schol.portalT": "नेशनल स्कॉलरशिप पोर्टल पर सभी स्कॉलरशिप खोजें",
+    "schol.portalBtn": "NSP खोलें",
+    "schol.worth": "आपके लिए देखने लायक़",
+    "schol.others": "अन्य स्कॉलरशिप",
+    "schol.all": "सभी स्कॉलरशिप",
+    "schol.noProfile": "कौन-सी स्कॉलरशिप आपके लिए देखने लायक़ हैं, यह जानने के लिए अपनी प्रोफ़ाइल (कक्षा, वर्ग, लिंग) भरें।",
+    "schol.noWorth": "अभी आपकी प्रोफ़ाइल के लिए कोई स्कॉलरशिप ख़ास तौर पर मेल नहीं खाती। आप नीचे सभी पढ़ सकते हैं या नेशनल स्कॉलरशिप पोर्टल पर खोज सकते हैं।",
+    "quiz.title": "करियर रुचि क्विज़ — CareerSaathi AI",
+    "quiz.h1": "मुझे किस तरह का काम पसंद है?",
+    "quiz.lead": "24 छोटे सवाल, लगभग 4 मिनट। कोई जवाब सही या ग़लत नहीं है — जो आपको सच लगे, वही चुनें।",
+    "quiz.privacy": "आपके जवाब सिर्फ़ इसी ब्राउज़र में रहते हैं। आप इन्हें कभी भी मिटा सकते हैं।",
+    "quiz.progress": "{total} में से {done} के जवाब दिए",
+    "quiz.submit": "मेरा नतीजा देखें",
+    "quiz.clear": "मेरे जवाब मिटाएँ",
+    "quiz.missing": "कृपया बचे हुए {n} सवालों के जवाब दें। हम आपको पहले सवाल पर ले आए हैं।",
+    "quiz.resultT": "आपकी रुचि का नतीजा",
+    "quiz.resultLead": "आपके जवाबों के हिसाब से, आपको इस तरह का काम सबसे ज़्यादा पसंद लगता है:",
+    "quiz.points": "{max} में से {n} अंक",
+    "quiz.careersT": "देखने लायक़ करियर",
+    "quiz.skillsT": "काम आने वाले हुनर (कोर्स देखने के लिए दबाएँ)",
+    "quiz.guideLink": "इससे जुड़ी गाइड पढ़ें",
+    "quiz.allT": "सभी छह क्षेत्र",
+    "quiz.noClear": "आपने लगभग हर सवाल पर \"नहीं\" चुना, इसलिए अभी कोई क्षेत्र सुझा नहीं सकते। कोई बात नहीं — रोडमैप पेज देखें, या किसी शिक्षक या परिवार के सदस्य से बात करें कि बचपन में आपको क्या करना अच्छा लगता था।",
+    "quiz.notTest": "यह एक आसान ख़ुद-जाँच है, कोई वैज्ञानिक या साइकोमेट्रिक टेस्ट नहीं। इसे सोचने की शुरुआत मानें — आपकी रुचियाँ बदल सकती हैं, और आपकी योग्यता व हालात भी मायने रखते हैं।",
+    "quiz.edit": "जवाब बदलें",
+    "quiz.nextT": "आगे क्या?",
+    "quiz.nextHave": "अब आपकी करियर सिफ़ारिशों में दिखेगा कि कौन-से करियर इन रुचियों से मेल खाते हैं।",
+    "quiz.nextNone": "अपनी प्रोफ़ाइल भरें, ताकि हम देख सकें कि इनमें से कौन-से करियर आपकी पढ़ाई और हुनर से मेल खाते हैं।",
+    "quiz.nextRec": "मेरी सिफ़ारिशें देखें",
+    "quiz.nextProfile": "मेरी प्रोफ़ाइल भरें",
+    "quiz.nextRoadmap": "10वीं / 12वीं के बाद क्या?",
+    "quiz.sumT": "आपकी रुचियाँ",
+    "quiz.sumHave": "आपकी रुचि क्विज़ के अनुसार, आपको यह पसंद लगता है:",
+    "quiz.sumSee": "क्विज़ का पूरा नतीजा देखें",
+    "quiz.sumNone": "पक्का नहीं कि आपको क्या पसंद है? 4 मिनट का क्विज़ मदद कर सकता है।",
+    "quiz.cta": "रुचि क्विज़ दें",
+    "quiz.recTag": "आपकी रुचि से मेल (क्विज़)",
+    "road.title": "10वीं या 12वीं के बाद क्या? करियर रोडमैप — CareerSaathi AI",
+    "road.h1": "10वीं या 12वीं के बाद क्या?",
+    "road.lead": "हर मुख्य रास्ता आसान भाषा में — आम तौर पर कितना समय लगता है, किसके लिए ठीक है और कहाँ ले जाता है। कोई एक \"सबसे अच्छा\" रास्ता नहीं होता; सही रास्ता आपकी पसंद और हालात पर निर्भर है।",
+    "road.warn": "अवधि आम तौर पर लगने वाली है। दाख़िले के नियम, फ़ीस और तारीख़ें राज्य और साल के हिसाब से बदलती हैं — फ़ैसला करने से पहले आधिकारिक वेबसाइट ज़रूर देखें।",
+    "road.choose": "अपना पड़ाव चुनें",
+    "road.count": "{stage}: {n} रास्ते",
+    "road.liked": "आपकी रुचि से मेल: {areas}",
+    "road.goodFor": "किसके लिए अच्छा",
+    "road.leadsTo": "कहाँ तक ले जाता है",
+    "road.tip": "सुझाव",
+    "road.careers": "इस रास्ते के करियर",
+    "road.page.jobs": "खुली सरकारी भर्तियाँ देखें",
+    "road.page.scholarships": "स्कॉलरशिप खोजें",
+    "road.page.courses": "मुफ़्त कोर्स खोजें",
+    "road.guide": "हमारी गाइड पढ़ें",
+    "road.quizHave": "🧭 वाले रास्ते आपकी क्विज़ रुचियों ({areas}) से मेल खाते हैं।",
+    "road.quizNone": "रुचि क्विज़ दें, हम आपके लिए सही रास्तों पर निशान लगा देंगे।",
+    "road.checked": "जानकारी {date} को आधिकारिक वेबसाइटों से जाँची गई। नियम बदलते हैं — फ़ैसले से पहले ज़रूर पक्का करें।",
+    "cal.remind": "रिमाइंडर:",
+    "cal.lastBtn": "आख़िरी तारीख़ (.ics)",
+    "cal.openBtn": "शुरू होने का दिन (.ics)",
+    "cal.google": "Google कैलेंडर",
+    "cal.done": "कैलेंडर फ़ाइल डाउनलोड हो गई — रिमाइंडर जोड़ने के लिए इसे खोलें।",
+    "cal.fail": "आपके ब्राउज़र ने डाउनलोड रोक दिया। Google कैलेंडर बटन आज़माएँ।",
+    "cal.lastTitle": "आख़िरी तारीख़: {title}",
+    "cal.openTitle": "आवेदन शुरू: {title}",
+    "cal.lastDesc": "{title} ({org}) के लिए आवेदन की आख़िरी तारीख़ {date} है। सिर्फ़ आधिकारिक वेबसाइट पर आवेदन करें: {url} — सही नियमों के लिए आधिकारिक नोटिस देखें। CareerSaathi AI का रिमाइंडर।",
+    "cal.openDesc": "{title} ({org}) के लिए आवेदन {date} को शुरू होने की उम्मीद है। पहले आधिकारिक नोटिस पढ़ें: {url}। CareerSaathi AI का रिमाइंडर।",
+    "cal.planD": "हर हफ़्ते की शुरुआत में फ़ोन पर सुबह 9 बजे रिमाइंडर पाएँ।",
+    "cal.planBtn": "प्लान कैलेंडर में जोड़ें",
+    "cal.planPrefix": "CareerSaathi प्लान —",
+    "cal.planFoot": "अपने CareerSaathi AI डैशबोर्ड पर काम पूरे होने का निशान लगाएँ।",
     // ---- About ----
     "about.title": "हमारे बारे में और अस्वीकरण — करियरसाथी AI",
     "about.h1": "करियरसाथी AI के बारे में",
@@ -1268,6 +1444,8 @@ const translations = {
     "privacy.where.3": "हम कुछ भी किसी कंपनी, एजेंसी या विज्ञापन देने वाले से साझा नहीं करते।",
     "privacy.where.4": "यह वेबसाइट एनालिटिक्स या ट्रैकिंग टूल इस्तेमाल नहीं करती। अभी इस पर कोई विज्ञापन नहीं है।",
     "privacy.where.5": "अगर आप \"याद रखें\" पर टिक नहीं करते, तो जवाब सिर्फ़ ब्राउज़र टैब बंद होने तक रहते हैं।",
+    "privacy.where.6": "रुचि क्विज़ के जवाब सिर्फ़ इसी ब्राउज़र में सेव होते हैं, ताकि आप नतीजा दोबारा देख सकें। \"मेरा सेव डेटा मिटाएँ\" से ये भी मिट जाते हैं।",
+    "privacy.where.7": "कैलेंडर रिमाइंडर आपके डिवाइस पर बनी फ़ाइलें हैं। हम इन्हें कभी नहीं देखते, और आपको कोई मैसेज नहीं भेज सकते।",
     "privacy.thirdTitle": "बाहरी सेवाएँ",
     "privacy.third.1": "पेज का फ़ॉन्ट Google Fonts से आता है, जो किसी भी वेबसाइट की तरह आपका IP पता देख सकता है।",
     "privacy.third.2": "जब आप किसी आधिकारिक लिंक (जैसे ssc.gov.in) पर जाते हैं, तो उस वेबसाइट की अपनी गोपनीयता नीति लागू होती है।",
@@ -1399,14 +1577,15 @@ const { getItem, setItem } = __mods["js/storage.js"];
 const NAV_ITEMS = [
   { id: "home",            href: "index.html",           key: "nav.home",            ready: true },
   { id: "profile",         href: "profile.html",         key: "nav.profile",         ready: true },
+  { id: "quiz",            href: "quiz.html",            key: "nav.quiz",            ready: true },
   { id: "recommendations", href: "recommendations.html", key: "nav.recommendations", ready: true },
   { id: "jobs",            href: "jobs.html",            key: "nav.jobs",            ready: true },
   { id: "schemes",         href: "schemes.html",         key: "nav.schemes",         ready: true },
+  { id: "scholarships",    href: "scholarships.html",    key: "nav.scholarships",    ready: true },
   { id: "courses",         href: "courses.html",         key: "nav.courses",         ready: true },
-  { id: "dashboard",       href: "dashboard.html",       key: "nav.dashboard",       ready: true },
+  { id: "roadmap",         href: "roadmap.html",         key: "nav.roadmap",         ready: true },
   { id: "guides",          href: "guides.html",          key: "nav.guides",          ready: true },
-  { id: "about",           href: "about.html",           key: "nav.about",           ready: true },
-  { id: "privacy",         href: "privacy.html",         key: "nav.privacy",         ready: true }
+  { id: "dashboard",       href: "dashboard.html",       key: "nav.dashboard",       ready: true }
 ];
 
 let currentLang = normalizeLang(getItem("lang"));
@@ -1470,6 +1649,7 @@ function buildFooter() {
         <p><strong data-i18n="footer.verify"></strong></p>
       </div>
       <ul class="footer-links">
+        <li><a href="about.html" data-i18n="nav.about"></a></li>
         <li><a href="about.html#disclaimer" data-i18n="footer.disclaimer"></a></li>
         <li><a href="privacy.html" data-i18n="footer.privacy"></a></li>
         <li><a href="terms.html" data-i18n="footer.terms"></a></li>
@@ -2952,6 +3132,248 @@ const SOURCES = {
 return { SOURCES };
 })();
 
+// ===== js/ui.js =====
+__mods["js/ui.js"] = (function () {
+// Small helpers shared by the explorer pages.
+
+/** Makes text safe to put inside HTML. Always use this for data. */
+function esc(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+}
+
+/** "2026-10-22" → "22 Oct 2026" (or Hindi month names). */
+function formatDate(iso, lang) {
+  const d = new Date(iso + "T00:00:00");
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString(lang === "hi" ? "hi-IN" : "en-IN", { day: "numeric", month: "short", year: "numeric" });
+}
+
+/** An external link that opens safely in a new tab. */
+function extLink(url, text, newTabLabel, cls = "") {
+  return `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer"${cls ? ` class="${cls}"` : ""}>${esc(text)}<span class="visually-hidden"> (${esc(newTabLabel)})</span> <span aria-hidden="true">↗</span></a>`;
+}
+
+/** Shows only the web address part, e.g. "ssc.gov.in". */
+function hostOf(url) {
+  try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return url; }
+}
+
+return { esc, formatDate, extLink, hostOf };
+})();
+
+// ===== data/quiz.js =====
+__mods["data/quiz.js"] = (function () {
+// "What do I enjoy?" interest quiz — original questions written for CareerSaathi AI.
+// Six broad interest areas (an idea widely used in career guidance). This is a simple
+// self-check to start a conversation, not a scientific or psychometric test.
+
+const tx = (en, hi) => ({ en, hi });
+
+const QUIZ_AREAS = [
+  {
+    id: "hands", icon: "🔧",
+    name: tx("Hands-on & machines", "हाथ का काम और मशीनें"),
+    about: tx("You enjoy practical work — fixing, building and using tools. Skilled trades are in steady demand and you can learn them through ITI, apprenticeships and short courses.",
+      "आपको व्यावहारिक काम पसंद है — चीज़ें ठीक करना, बनाना और औज़ार चलाना। हुनर वाले कामों की माँग बनी रहती है और इन्हें ITI, अप्रेंटिसशिप और छोटे कोर्स से सीखा जा सकता है।"),
+    careers: ["electrician", "plumber", "welder", "repair-technician", "driver", "trade-apprentice", "rrb-level1", "army-agniveer", "agri-entrepreneur"],
+    skills: ["electrician", "repair", "welding", "plumbing", "driving"],
+    guide: "guide-career-after-iti.html"
+  },
+  {
+    id: "think", icon: "🔍",
+    name: tx("Solving & science", "हल ढूँढना और विज्ञान"),
+    about: tx("You like understanding how things work and solving problems. Computers, data and exam-based careers that reward careful thinking may suit you.",
+      "आपको यह समझना पसंद है कि चीज़ें कैसे काम करती हैं, और समस्याएँ हल करना अच्छा लगता है। कंप्यूटर, डेटा और सोच-समझ वाली परीक्षाओं से जुड़े करियर आपके लिए हो सकते हैं।"),
+    careers: ["software-developer", "data-analyst", "web-developer", "ssc-cgl", "upsc-cse"],
+    skills: ["programming", "data-analytics", "excel", "basic-computer"],
+    guide: "guide-free-skill-training.html"
+  },
+  {
+    id: "create", icon: "🎨",
+    name: tx("Creative & design", "रचनात्मक काम और डिज़ाइन"),
+    about: tx("You enjoy making things look good and expressing ideas. Design, digital content and craft-based work can turn this into a career or your own business.",
+      "आपको चीज़ों को सुंदर बनाना और अपने विचार दिखाना पसंद है। डिज़ाइन, डिजिटल कंटेंट और कारीगरी वाला काम इसे करियर या अपना व्यवसाय बना सकता है।"),
+    careers: ["graphic-designer", "digital-marketer", "web-developer", "tailoring-business"],
+    skills: ["graphic-design", "digital-marketing", "tailoring", "webdev"],
+    guide: "guide-free-skill-training.html"
+  },
+  {
+    id: "help", icon: "🤝",
+    name: tx("Helping & teaching", "मदद करना और पढ़ाना"),
+    about: tx("You care about people and like explaining and supporting. Teaching, public service and customer-facing work use these strengths.",
+      "आप लोगों की परवाह करते हैं और समझाना व मदद करना पसंद करते हैं। पढ़ाना, जन-सेवा और ग्राहकों से जुड़े काम में ये ख़ूबियाँ काम आती हैं।"),
+    careers: ["tutor", "govt-teacher", "customer-support", "india-post-gds", "state-police"],
+    skills: ["teaching", "customer-service", "spoken-english"],
+    guide: "guide-free-skill-training.html"
+  },
+  {
+    id: "lead", icon: "🚀",
+    name: tx("Business & leading", "व्यवसाय और नेतृत्व"),
+    about: tx("You like convincing people, taking charge and spotting opportunities. Sales, your own business and leadership roles may suit you.",
+      "आपको लोगों को मनाना, ज़िम्मेदारी लेना और मौक़े पहचानना पसंद है। सेल्स, अपना व्यवसाय और नेतृत्व वाले काम आपके लिए हो सकते हैं।"),
+    careers: ["sales-executive", "food-business", "computer-centre", "tailoring-business", "bank-po", "state-psc"],
+    skills: ["sales", "digital-marketing", "accounting", "spoken-english"],
+    guide: "guide-business-loans-schemes.html"
+  },
+  {
+    id: "organise", icon: "📋",
+    name: tx("Organising & numbers", "व्यवस्था और हिसाब-किताब"),
+    about: tx("You like order, accuracy and working with numbers. Office, accounts, banking and clerical government jobs need exactly these strengths.",
+      "आपको व्यवस्था, सटीकता और अंकों के साथ काम पसंद है। ऑफ़िस, हिसाब-किताब, बैंक और सरकारी क्लर्क वाली नौकरियों में यही ख़ूबियाँ चाहिए।"),
+    careers: ["accounts-assistant", "data-entry", "office-assistant", "bank-clerk", "ssc-chsl", "ssc-mts"],
+    skills: ["tally", "excel", "accounting", "typing", "ccc"],
+    guide: "guide-ccc-course-guide.html"
+  }
+];
+
+// Questions are mixed so the same area does not come twice in a row.
+const QUESTIONS = [
+  { id: "q1", area: "hands", text: tx("Fixing things like a fan, a bicycle or a mobile phone", "पंखा, साइकिल या मोबाइल जैसी चीज़ें ठीक करना") },
+  { id: "q2", area: "think", text: tx("Solving puzzles and maths problems", "पहेलियाँ और गणित के सवाल हल करना") },
+  { id: "q3", area: "create", text: tx("Drawing, painting or designing things", "ड्रॉइंग, पेंटिंग या डिज़ाइन बनाना") },
+  { id: "q4", area: "help", text: tx("Explaining things to others or teaching younger children", "दूसरों को समझाना या छोटे बच्चों को पढ़ाना") },
+  { id: "q5", area: "lead", text: tx("Selling things or convincing people", "चीज़ें बेचना या लोगों को मनाना") },
+  { id: "q6", area: "organise", text: tx("Keeping records, lists and files neat", "रिकॉर्ड, सूची और फ़ाइलें व्यवस्थित रखना") },
+  { id: "q7", area: "hands", text: tx("Working with tools and machines", "औज़ारों और मशीनों के साथ काम करना") },
+  { id: "q8", area: "think", text: tx("Finding out how and why things work", "यह जानना कि चीज़ें कैसे और क्यों काम करती हैं") },
+  { id: "q9", area: "create", text: tx("Making videos, photos or social media posts", "वीडियो, फ़ोटो या सोशल मीडिया पोस्ट बनाना") },
+  { id: "q10", area: "help", text: tx("Helping people solve their problems", "लोगों की परेशानी हल करने में मदद करना") },
+  { id: "q11", area: "lead", text: tx("Planning and leading a group or an event", "किसी समूह या कार्यक्रम की योजना बनाना और उसे चलाना") },
+  { id: "q12", area: "organise", text: tx("Working with numbers, accounts or money", "अंकों, हिसाब-किताब या पैसों के साथ काम करना") },
+  { id: "q13", area: "hands", text: tx("Working outdoors, on a farm or at a building site", "बाहर, खेत में या निर्माण की जगह पर काम करना") },
+  { id: "q14", area: "think", text: tx("Learning to use computers, apps or coding", "कंप्यूटर, ऐप या कोडिंग सीखना") },
+  { id: "q15", area: "create", text: tx("Writing stories, poems or articles", "कहानी, कविता या लेख लिखना") },
+  { id: "q16", area: "help", text: tx("Looking after people who are sick or elderly", "बीमार या बुज़ुर्ग लोगों की देखभाल करना") },
+  { id: "q17", area: "lead", text: tx("Thinking about starting my own business", "अपना व्यवसाय शुरू करने के बारे में सोचना") },
+  { id: "q18", area: "organise", text: tx("Following clear rules and steps carefully", "साफ़ नियमों और क़दमों का ध्यान से पालन करना") },
+  { id: "q19", area: "hands", text: tx("Learning a practical trade by doing it with my hands", "हाथ से करके कोई व्यावहारिक हुनर सीखना") },
+  { id: "q20", area: "think", text: tx("Reading about science, technology or current affairs", "विज्ञान, तकनीक या करंट अफ़ेयर्स के बारे में पढ़ना") },
+  { id: "q21", area: "create", text: tx("Stitching, decorating or making things look beautiful", "सिलाई, सजावट या चीज़ों को सुंदर बनाना") },
+  { id: "q22", area: "help", text: tx("Working for my community or village", "अपने समुदाय या गाँव के लिए काम करना") },
+  { id: "q23", area: "lead", text: tx("Taking decisions and responsibility", "फ़ैसले लेना और ज़िम्मेदारी उठाना") },
+  { id: "q24", area: "organise", text: tx("Typing, data entry or office work on a computer", "कंप्यूटर पर टाइपिंग, डेटा एंट्री या ऑफ़िस का काम") }
+];
+
+// Answer values: 2 = "Yes, I enjoy this", 1 = "Sometimes / not sure", 0 = "No".
+const ANSWERS = [
+  { value: 2, en: "Yes, I enjoy this", hi: "हाँ, मुझे पसंद है" },
+  { value: 1, en: "Sometimes / not sure", hi: "कभी-कभी / पता नहीं" },
+  { value: 0, en: "No", hi: "नहीं" }
+];
+
+return { QUIZ_AREAS, QUESTIONS, ANSWERS };
+})();
+
+// ===== js/quiz-model.js =====
+__mods["js/quiz-model.js"] = (function () {
+// Interest quiz scoring. Pure functions — tested in Node.
+const { QUIZ_AREAS, QUESTIONS } = __mods["data/quiz.js"];
+const MAX_PER_AREA = 8; // 4 questions × 2 points
+
+/**
+ * answers: { q1: 2, q2: 0, ... } (missing = not answered)
+ * Returns { scores: {area: n}, answered, total, complete, top: [area ids], clear: boolean }
+ * top = up to 3 areas within 1 point of the best score (ties keep the fixed area order).
+ * clear = false when nothing scored, so we never pretend to have a result.
+ */
+function scoreQuiz(answers = {}) {
+  const scores = Object.fromEntries(QUIZ_AREAS.map((a) => [a.id, 0]));
+  let answered = 0;
+  for (const q of QUESTIONS) {
+    const v = answers && answers[q.id];
+    if (v === 0 || v === 1 || v === 2) {
+      scores[q.area] += v;
+      answered += 1;
+    }
+  }
+  const best = Math.max(...Object.values(scores));
+  const top = best > 0
+    ? QUIZ_AREAS.map((a) => a.id)
+      .filter((id) => scores[id] >= best - 1 && scores[id] > 0)
+      .sort((a, b) => scores[b] - scores[a])
+      .slice(0, 3)
+    : [];
+  return { scores, answered, total: QUESTIONS.length, complete: answered === QUESTIONS.length, top, clear: top.length > 0 };
+}
+
+/** Cleans saved answers (from storage) so broken data never crashes the page. */
+function cleanAnswers(raw) {
+  const out = {};
+  if (!raw || typeof raw !== "object") return out;
+  for (const q of QUESTIONS) {
+    const v = raw[q.id];
+    if (v === 0 || v === 1 || v === 2) out[q.id] = v;
+  }
+  return out;
+}
+
+/** Career ids linked to the top interest areas (no duplicates, in area order). */
+function careersForAreas(areaIds) {
+  const ids = [];
+  for (const id of areaIds) {
+    const area = QUIZ_AREAS.find((a) => a.id === id);
+    if (area) area.careers.forEach((c) => { if (!ids.includes(c)) ids.push(c); });
+  }
+  return ids;
+}
+
+return { scoreQuiz, cleanAnswers, careersForAreas, MAX_PER_AREA };
+})();
+
+// ===== js/quiz-summary.js =====
+__mods["js/quiz-summary.js"] = (function () {
+// Saved quiz answers + a small summary box used on the Dashboard and Recommendations.
+const { t } = __mods["js/i18n.js"];
+const { getLang } = __mods["js/layout.js"];
+const { getJSON, setJSON, removeItem } = __mods["js/storage.js"];
+const { esc } = __mods["js/ui.js"];
+const { QUIZ_AREAS } = __mods["data/quiz.js"];
+const { scoreQuiz, cleanAnswers, careersForAreas } = __mods["js/quiz-model.js"];
+const QUIZ_KEY = "quiz";
+
+const L = () => getLang();
+const tt = (key, vars) => t(key, L(), vars);
+const txt = (o) => (o ? o[L()] || o.en : "");
+
+function loadQuizAnswers() { return cleanAnswers(getJSON(QUIZ_KEY, {})); }
+function saveQuizAnswers(answers) { setJSON(QUIZ_KEY, cleanAnswers(answers)); }
+function clearQuizAnswers() { removeItem(QUIZ_KEY); }
+
+/** Finished quiz result, or null if the quiz was not completed. */
+function savedQuizResult() {
+  const r = scoreQuiz(loadQuizAnswers());
+  return r.complete ? r : null;
+}
+
+/** Career ids that match the person's top interests (empty if no finished quiz). */
+function interestCareerIds() {
+  const r = savedQuizResult();
+  return r && r.clear ? careersForAreas(r.top) : [];
+}
+
+function areaName(id) { return txt(QUIZ_AREAS.find((a) => a.id === id)?.name); }
+
+/** Box for the dashboard: the result if there is one, otherwise an invitation. */
+function quizSummaryHtml() {
+  const r = savedQuizResult();
+  const body = r && r.clear
+    ? `<p>${esc(tt("quiz.sumHave"))}</p>
+       <ul class="chips chips--left">${r.top.map((id) => `<li>${esc(QUIZ_AREAS.find((a) => a.id === id).icon)} ${esc(areaName(id))}</li>`).join("")}</ul>
+       <p><a class="btn btn-secondary btn-small" href="quiz.html">${esc(tt("quiz.sumSee"))}</a></p>`
+    : `<p class="muted">${esc(tt("quiz.sumNone"))}</p>
+       <p><a class="btn btn-primary btn-small" href="quiz.html">${esc(tt("quiz.cta"))}</a></p>`;
+  return `
+  <section class="card dash-section quiz-summary" aria-labelledby="d-quiz-t">
+    <h2 id="d-quiz-t"><span aria-hidden="true">🧭</span> ${esc(tt("quiz.sumT"))}</h2>
+    ${body}
+  </section>`;
+}
+
+return { loadQuizAnswers, saveQuizAnswers, clearQuizAnswers, savedQuizResult, interestCareerIds, areaName, quizSummaryHtml, QUIZ_KEY };
+})();
+
 // ===== js/recommendations.js =====
 __mods["js/recommendations.js"] = (function () {
 // Recommendations page: reads the saved profile, runs the matching engine,
@@ -2966,11 +3388,12 @@ const { VACANCIES } = __mods["data/vacancies.js"];
 const { openMatches, todayISO } = __mods["js/vacancy-match.js"];
 const { SOURCES } = __mods["data/sources.js"];
 const { ALL_SKILLS, GOALS, EDUCATION_LEVELS, STATES, labelOf } = __mods["data/options.js"];
+const { interestCareerIds } = __mods["js/quiz-summary.js"];
 const root = document.getElementById("rec-app");
 const PAGE_SIZE = 8;
 const OPEN_DETAILS = 3; // first few cards show all details
 
-const state = { profile: null, result: null, sector: "all", shown: PAGE_SIZE };
+const state = { profile: null, result: null, sector: "all", shown: PAGE_SIZE, interests: [] };
 
 // ---------- Helpers ----------
 const L = () => getLang();
@@ -3051,6 +3474,7 @@ function sourceLinks(career) {
 
 function card(m, index) {
   const c = m.career;
+  const likes = state.interests.includes(c.id);
   const sector = SECTORS.find((s) => s.id === c.sector);
   // Each missing skill links to courses that teach it.
   const missingChips = m.missingSkills.map((id) =>
@@ -3063,6 +3487,7 @@ function card(m, index) {
       <span class="fit fit--${m.fit}">${esc(tt(`rec.fit.${m.fit}`))}</span>
     </div>
     <h3 id="${headingId}">${esc(c.title[L()] || c.title.en)}</h3>
+    ${likes ? `<p class="interest-tag"><span aria-hidden="true">🧭</span> ${esc(tt("quiz.recTag"))}</p>` : ""}
     <p class="muted">${esc(c.summary[L()] || c.summary.en)}</p>
     <p><span class="status status--${m.status}"><span aria-hidden="true">${STATUS_ICON[m.status]}</span> ${esc(tt(STATUS_KEY[m.status]))}</span></p>
 
@@ -3164,6 +3589,7 @@ function init() {
   const saved = loadProfile();
   state.profile = saved ? saved.profile : null;
   state.result = state.profile ? matchCareers(state.profile, CAREERS) : null;
+  state.interests = interestCareerIds();
   root.addEventListener("click", onClick);
   document.addEventListener("cs:langchange", () => render());
   render();

@@ -102,6 +102,24 @@ test("Stand-Up India: women or SC/ST fit; unknown group → asked to check; othe
   assert.ok(keys(no.checks).includes("sch.check.groupNo"));
 });
 
+test("a category-only scheme is not ruled out just because gender is known", () => {
+  const catOnly = { id: "x", hints: { genderOrCategory: { category: ["sc"] } } };
+  const p = person(); p.eligibility.gender = "male";
+  const r = evaluateScheme(catOnly, p);
+  assert.ok(keys(r.checks).includes("sch.check.group"));
+  assert.ok(!keys(r.checks).includes("sch.check.groupNo"));
+  p.eligibility.category = "general";
+  assert.ok(keys(evaluateScheme(catOnly, p).checks).includes("sch.check.groupNo"));
+});
+
+test("PwD-only schemes: yes fits, no rules out, unknown asks to check", () => {
+  const s = { id: "y", hints: { pwd: true } };
+  const p = person();
+  assert.ok(keys(evaluateScheme(s, p).checks).includes("sch.check.pwd"));
+  p.eligibility.pwd = "yes"; assert.ok(keys(evaluateScheme(s, p).reasons).includes("sch.why.pwd"));
+  p.eligibility.pwd = "no"; assert.ok(keys(evaluateScheme(s, p).checks).includes("sch.check.pwdNo"));
+});
+
 test("PM Internship: exact age decides when given, otherwise the age range", () => {
   const p = person({ goals: ["internship"] });
   assert.equal(evaluateScheme(scheme("pm-internship"), p).worthALook, true);

@@ -13,11 +13,12 @@ import {
   ALL_SKILLS, GOALS, EDUCATION_LEVELS, STATES, labelOf
 } from "../data/options.js";
 
+import { interestCareerIds } from "./quiz-summary.js";
 const root = document.getElementById("rec-app");
 const PAGE_SIZE = 8;
 const OPEN_DETAILS = 3; // first few cards show all details
 
-const state = { profile: null, result: null, sector: "all", shown: PAGE_SIZE };
+const state = { profile: null, result: null, sector: "all", shown: PAGE_SIZE, interests: [] };
 
 // ---------- Helpers ----------
 const L = () => getLang();
@@ -98,6 +99,7 @@ function sourceLinks(career) {
 
 function card(m, index) {
   const c = m.career;
+  const likes = state.interests.includes(c.id);
   const sector = SECTORS.find((s) => s.id === c.sector);
   // Each missing skill links to courses that teach it.
   const missingChips = m.missingSkills.map((id) =>
@@ -110,6 +112,7 @@ function card(m, index) {
       <span class="fit fit--${m.fit}">${esc(tt(`rec.fit.${m.fit}`))}</span>
     </div>
     <h3 id="${headingId}">${esc(c.title[L()] || c.title.en)}</h3>
+    ${likes ? `<p class="interest-tag"><span aria-hidden="true">🧭</span> ${esc(tt("quiz.recTag"))}</p>` : ""}
     <p class="muted">${esc(c.summary[L()] || c.summary.en)}</p>
     <p><span class="status status--${m.status}"><span aria-hidden="true">${STATUS_ICON[m.status]}</span> ${esc(tt(STATUS_KEY[m.status]))}</span></p>
 
@@ -211,6 +214,7 @@ function init() {
   const saved = loadProfile();
   state.profile = saved ? saved.profile : null;
   state.result = state.profile ? matchCareers(state.profile, CAREERS) : null;
+  state.interests = interestCareerIds();
   root.addEventListener("click", onClick);
   document.addEventListener("cs:langchange", () => render());
   render();

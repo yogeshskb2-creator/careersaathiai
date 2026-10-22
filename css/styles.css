@@ -572,6 +572,61 @@ section + section { margin-top: 8px; }
 .dash-vac .vac-card { box-shadow: none; padding: 16px; background: var(--c-bg); }
 .vac-banner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; color: var(--c-text); }
 
+/* ---------- 9b. Quiz, roadmap, reminders ---------- */
+.chip--plain { padding: 6px 12px; font-weight: 600; }
+.chip-link { padding: 6px 12px; text-decoration: none; min-height: 36px; }
+.chips--left { justify-content: flex-start; margin-bottom: 12px; }
+.chips--left li { padding: 6px 14px; }
+.interest-tag { display: inline-block; margin: 0 0 8px; padding: 4px 10px; border-radius: 999px; background: var(--c-accent-soft); color: var(--c-accent); font-weight: 700; font-size: .9rem; }
+
+.quiz-form { display: grid; gap: 14px; }
+.quiz-progress { display: flex; align-items: center; gap: 12px; padding: 12px 16px; }
+.quiz-progress progress { flex: 1; height: 10px; accent-color: var(--c-brand); }
+.quiz-progress span { font-weight: 700; white-space: nowrap; }
+.quiz-q { margin: 0; padding: 16px; border: 1px solid var(--c-border); border-radius: var(--radius); background: var(--c-surface); }
+.quiz-q.is-done { border-color: var(--c-brand); }
+.quiz-q legend { float: left; width: 100%; padding: 0; margin-bottom: 10px; font-weight: 700; font-size: 1.05rem; }
+.quiz-q legend + * { clear: both; }
+.quiz-num { color: var(--c-accent); margin-right: 4px; }
+.quiz-opts { display: grid; gap: 8px; }
+@media (min-width: 600px) { .quiz-opts { grid-template-columns: repeat(3, 1fr); } }
+.quiz-opt { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 8px 12px; border: 1px solid var(--c-border); border-radius: var(--radius-sm); cursor: pointer; font-weight: 600; }
+.quiz-opt:hover { background: var(--c-brand-soft); }
+.quiz-opt input { width: 20px; height: 20px; accent-color: var(--c-brand); flex: none; margin: 0; }
+.quiz-opt:has(input:checked) { border-color: var(--c-brand); background: var(--c-brand-soft); color: var(--c-brand-ink); }
+.quiz-opt:has(input:focus-visible) { box-shadow: var(--focus); }
+.quiz-result h2:first-child { margin-top: 0; }
+.quiz-areas { margin: 12px 0 24px; }
+.quiz-area h3 { display: flex; align-items: center; gap: 8px; }
+.quiz-icon { font-size: 1.5rem; }
+.quiz-area h4, .road-card h4 { margin: 14px 0 6px; font-size: .95rem; }
+.quiz-guide { margin-top: 12px; font-weight: 600; }
+.quiz-bars { list-style: none; padding: 0; margin: 0 0 20px; display: grid; gap: 10px; }
+.quiz-bar { display: grid; grid-template-columns: 1fr; gap: 4px; }
+@media (min-width: 600px) { .quiz-bar { grid-template-columns: 220px 1fr auto; align-items: center; gap: 12px; } }
+.quiz-bar-name { font-weight: 600; }
+.quiz-bar-track { height: 12px; border-radius: 999px; background: var(--c-brand-soft); overflow: hidden; }
+.quiz-bar-track span { display: block; height: 100%; background: var(--c-brand); border-radius: 999px; }
+.quiz-bar-num { color: var(--c-muted); font-size: .9rem; }
+.quiz-next { margin-top: 28px; }
+.quiz-next .btn-row { justify-content: center; }
+
+.road-tabs .filter-btn { font-size: 1rem; }
+.road-count { font-size: 1.15rem; margin: 18px 0 12px; }
+.road-grid { margin-bottom: 16px; }
+.road-card--liked { border-color: var(--c-accent-bright); border-width: 2px; }
+.road-dur { font-weight: 700; color: var(--c-brand-ink); font-size: .92rem; }
+.road-card h3 { margin-top: 8px; }
+.road-tip { background: var(--c-bg); border-radius: var(--radius-sm); padding: 10px 12px; font-size: .95rem; }
+.road-links { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 4px; }
+.road-links a { display: inline-flex; min-height: 40px; align-items: center; font-weight: 600; }
+
+.cal-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--c-border); }
+.cal-label { font-weight: 700; font-size: .92rem; margin-right: 2px; }
+.cal-row .btn-small { min-height: 40px; padding: 0 12px; }
+.cal-note { flex-basis: 100%; color: var(--c-ok); font-weight: 600; }
+@media print { .cal-row, .quiz-progress { display: none !important; } }
+
 /* ---------- 10. Footer ---------- */
 .site-footer { margin-top: 64px; background: #10262a; color: #c9d6d8; padding-top: 40px; font-size: .95rem; }
 .site-footer a { color: #fff; }

@@ -49,10 +49,20 @@ export function evaluateScheme(scheme, rawProfile) {
     const g = p.eligibility.gender;
     const c = p.eligibility.category;
     const fits = gender.includes(g) || category.includes(c);
-    const known = (g && g !== "prefer-not") || (c && c !== "prefer-not");
+    // Only the dimensions this scheme uses count. Blocked only when every one of them is known.
+    const isKnown = (v) => Boolean(v) && v !== "prefer-not";
+    const known = (gender.length === 0 || isKnown(g)) && (category.length === 0 || isKnown(c));
     if (fits) reasons.push(msg("sch.why.group"));
     else if (!known) checks.push(msg("sch.check.group"));
     else { checks.push(msg("sch.check.groupNo")); blocked = true; }
+  }
+
+  // Persons with disability (PwD)
+  if (h.pwd) {
+    const v = p.eligibility.pwd;
+    if (v === "yes") reasons.push(msg("sch.why.pwd"));
+    else if (v === "no") { checks.push(msg("sch.check.pwdNo")); blocked = true; }
+    else checks.push(msg("sch.check.pwd"));
   }
 
   // Skills / trade

@@ -12,11 +12,15 @@ Everything a visitor types is processed inside their own browser.
 |------|--------------|
 | `index.html` | Homepage |
 | `profile.html` | 6-step Career Profile form (no login, name optional) |
+| `quiz.html` | Career Interest Quiz — 24 questions, 6 interest areas, result linked to careers, skills and guides |
 | `recommendations.html` | Explainable career suggestions with fit level and status labels |
 | `jobs.html` | Government Job Explorer — 22 official recruitment websites |
 | `schemes.html` | Government Scheme Finder — 9 schemes from official pages |
+| `scholarships.html` | Scholarship Finder — 6 government scholarships (NMMSS, CSSS, Pragati, Saksham, Post-Matric SC, PM YASASVI) |
+| `roadmap.html` | "What after 10th / 12th?" — 11 paths with usual duration, who it suits and official links |
 | `courses.html` | Course & Skill Explorer — 14 free/official learning options |
-| `dashboard.html` | Personal dashboard + 30-day action plan (print / save as PDF) |
+| `dashboard.html` | Personal dashboard + 30-day action plan (print / save as PDF / add to calendar) |
+| (all recruitment cards) | "Add to calendar" reminders: `.ics` file made on the device + Google Calendar link |
 | `about.html` | About, label meanings and disclaimer |
 | `privacy.html` | Privacy information + "delete my saved data" |
 
