@@ -528,6 +528,34 @@ section + section { margin-top: 8px; }
   .plan-task:has(input:checked) span { text-decoration: none; color: #000; }
 }
 
+/* ---------- 9g. Career guides ---------- */
+.guide { max-width: 760px; padding-block: 24px 8px; }
+.guide-crumbs a { font-weight: 600; text-decoration: none; display: inline-flex; min-height: 44px; align-items: center; }
+.guide-head h1 { font-size: clamp(1.7rem, 5vw, 2.4rem); text-wrap: balance; }
+.guide-meta { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; color: var(--c-muted); font-size: .95rem; }
+.guide-meta a { font-weight: 700; }
+.guide-head .lead { font-size: 1.15rem; color: var(--c-muted); }
+.guide-body h2 { margin-top: 1.6em; font-size: 1.35rem; }
+.guide-body p, .guide-body li { max-width: 68ch; }
+.guide-body ul, .guide-body ol { padding-left: 1.3em; }
+.guide-body li { margin-bottom: .45em; }
+.guide-body a { overflow-wrap: anywhere; }
+.guide-tools { margin: 28px 0 16px; background: var(--c-brand-soft); border-color: transparent; }
+.guide-tools h2 { font-size: 1.15rem; margin-bottom: 8px; }
+.guide-tools ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.guide-tools a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 999px; background: var(--c-surface); font-weight: 600; text-decoration: none; }
+.guide-disc { font-size: .95rem; }
+.guide-card h2 { font-size: 1.15rem; margin-bottom: 4px; }
+.guide-card h2 a { text-decoration: none; color: var(--c-text); }
+.guide-card h2 a:hover { color: var(--c-brand); text-decoration: underline; }
+.guide-card-hi { margin-bottom: 8px; font-weight: 600; }
+.guide-card-hi a { text-decoration: none; }
+.guide-card-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+.contact-card { margin-bottom: 24px; }
+.contact-label { font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--c-muted); margin-bottom: 4px; }
+.contact-email { font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; overflow-wrap: anywhere; }
+.contact-email a { text-decoration: none; }
+
 /* ---------- 10. Footer ---------- */
 .site-footer { margin-top: 64px; background: #10262a; color: #c9d6d8; padding-top: 40px; font-size: .95rem; }
 .site-footer a { color: #fff; }

@@ -16,6 +16,7 @@ export const NAV_ITEMS = [
   { id: "schemes",         href: "schemes.html",         key: "nav.schemes",         ready: true },
   { id: "courses",         href: "courses.html",         key: "nav.courses",         ready: true },
   { id: "dashboard",       href: "dashboard.html",       key: "nav.dashboard",       ready: true },
+  { id: "guides",          href: "guides.html",          key: "nav.guides",          ready: true },
   { id: "about",           href: "about.html",           key: "nav.about",           ready: true },
   { id: "privacy",         href: "privacy.html",         key: "nav.privacy",         ready: true }
 ];
@@ -83,6 +84,8 @@ function buildFooter() {
       <ul class="footer-links">
         <li><a href="about.html#disclaimer" data-i18n="footer.disclaimer"></a></li>
         <li><a href="privacy.html" data-i18n="footer.privacy"></a></li>
+        <li><a href="terms.html" data-i18n="footer.terms"></a></li>
+        <li><a href="contact.html" data-i18n="footer.contact"></a></li>
       </ul>
     </div>
     <div class="container footer-base">

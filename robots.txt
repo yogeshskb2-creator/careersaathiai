@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yogeshskb2-creator.github.io/careersaathiai/sitemap.xml
