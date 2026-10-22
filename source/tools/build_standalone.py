@@ -11,6 +11,7 @@ Usage (from the project folder):
 It only uses Python's standard library. It supports the simple import/export
 forms used in this project and stops with an error on anything else.
 """
+import hashlib
 import os
 import re
 import shutil
@@ -118,6 +119,9 @@ def main():
     shutil.copytree(os.path.join(ROOT, "css"), os.path.join(OUT, "css"))
     open(os.path.join(OUT, ".nojekyll"), "w").close()
 
+    def ver(rel):
+        return hashlib.sha1(open(os.path.join(OUT, rel), "rb").read()).hexdigest()[:8]
+
     pages = sorted(f[:-5] for f in os.listdir(ROOT) if f.endswith(".html"))
     script_re = re.compile(r'\s*<script type="module" src="([^"]+)"></script>')
     built = {}  # same set of scripts → one shared bundle file
@@ -141,10 +145,12 @@ def main():
             nonlocal first
             if first:
                 first = False
-                return f'\n  <script src="{bundle_name}" defer></script>'
+                return f'\n  <script src="{bundle_name}?v={ver(bundle_name)}" defer></script>'
             return ""
 
         html = script_re.sub(swap, html)
+        # Version tags make browsers load fresh files after every update (no stale cache).
+        html = html.replace('href="css/styles.css"', f'href="css/styles.css?v={ver("css/styles.css")}"')
         html = html.replace("</head>", seo_tags(page, html) + "</head>", 1)
         open(os.path.join(OUT, f"{page}.html"), "w", encoding="utf8").write(html)
     print(f"built {len(pages)} pages")
