@@ -284,7 +284,7 @@ const translations = {
     // ---- Jobs & schemes ----
     "jobs.title": "Government Job Explorer — CareerSaathi AI",
     "jobs.h1": "Government Job Explorer",
-    "jobs.lead": "Official websites where government recruitment is announced, grouped by type. We do not list live vacancies or dates.",
+    "jobs.lead": "Open recruitments with their last dates (updated by hand), and the official websites where government recruitment is announced.",
     "jobs.verify": "Explore the official recruitment source to verify current vacancies and eligibility.",
     "jobs.scamT": "Stay safe from job scams",
     "jobs.scam": "Government jobs are never sold. Do not pay any agent. Trust only official websites, which usually end in .gov.in or .nic.in.",
@@ -538,6 +538,53 @@ const translations = {
     "home.guidesT": "Career guides in English and Hindi",
     "home.guidesD": "Simple, source-checked guides: jobs after ITI, the CCC course, free skill training, apprenticeships, business loans and how to avoid job scams.",
     "home.guidesBtn": "Read the guides",
+    // ---- Open recruitments ----
+    "vac.sectionT": "Open right now",
+    "jobs.sourcesT": "Official recruitment websites",
+    "vac.sectionD": "Recruitments open for applications, worked out from today's date ({today}). We update this list by hand — always confirm on the official website.",
+    "vac.listUpdated": "List last updated: {date}",
+    "vac.listStale": "This list was last updated {n} days ago and may be out of date. Please check the official websites.",
+    "vac.none": "No open recruitments in our list right now. Check the official recruitment websites below.",
+    "vac.status.open": "Open",
+    "vac.status.closing-soon": "Closing soon",
+    "vac.status.upcoming": "Opens soon",
+    "vac.daysLeft": "{n} days left",
+    "vac.oneDayLeft": "1 day left",
+    "vac.lastDay": "Last day today",
+    "vac.daysToOpen": "Opens in {n} days",
+    "vac.dates": "Apply from {from} to {to}",
+    "vac.until": "until {time}",
+    "vac.posts": "Posts",
+    "vac.qualification": "Qualification",
+    "vac.age": "Age",
+    "vac.reportedLabel": "Open as per reports — confirm officially",
+    "vac.matchYou": "Matches your profile",
+    "vac.fitCheck": "Check if you qualify",
+    "vac.notMet": "Qualification may not match",
+    "vac.why": "Why it may suit you",
+    "vac.check": "Check before applying",
+    "vac.apply": "Official website",
+    "vac.checked": "Checked on {date} from: {source}",
+    "vac.forYouT": "Open now for you",
+    "vac.forYouNone": "No open recruitment in our list matches your profile today.",
+    "vac.seeAll": "See all open recruitments",
+    "vac.recBanner": "{n} open recruitment(s) match your profile today.",
+    "vac.recBtn": "See open recruitments",
+    "vac.why.edu": "Your qualification ({level}) matches the recorded requirement.",
+    "vac.why.goal": "You chose a government job as a goal.",
+    "vac.why.state": "This is your own state's recruitment.",
+    "vac.check.eduNo": "The required qualification may be higher than or different from yours.",
+    "vac.check.edu": "Qualification differs by post — read the notice to see which post fits you.",
+    "vac.check.ageYoung": "You may be below the minimum age ({min} years).",
+    "vac.check.ageOld": "You may be above the general upper age limit ({max} years).",
+    "vac.check.ageRelax": "You are above the general limit ({max} years), but age relaxation may apply to your category — check the notice.",
+    "vac.check.ageDate": "Age is counted as on {date}.",
+    "vac.check.exp": "Some posts need {n} years of work experience.",
+    "vac.check.state": "State-level recruitment — check the rules for candidates from other states.",
+    "vac.check.reported": "These dates come from news reports, not the official notice — confirm them on the official website.",
+    "vac.check.notice": "Read the full official notification before applying. Pay fees only on the official portal.",
+    "stale.warn": "These details were checked {n} days ago and may have changed. Confirm on the official page.",
+
     // ---- About & Disclaimer ----
     "about.title": "About & Disclaimer — CareerSaathi AI",
     "about.h1": "About CareerSaathi AI",
@@ -549,7 +596,7 @@ const translations = {
     "about.what.4": "Suggests courses, preferring free and official options.",
     "about.notTitle": "What this website does not do",
     "about.not.1": "It does not offer jobs or collect job applications.",
-    "about.not.2": "It does not show live vacancies or application deadlines.",
+    "about.not.2": "It is not a live job feed. Our list of open recruitments is updated by hand and may miss some — always check official websites.",
     "about.not.3": "It does not approve schemes, loans, subsidies or benefits.",
     "about.not.4": "It is not connected to any government department.",
     "about.labelsTitle": "What our labels mean",
@@ -560,7 +607,7 @@ const translations = {
     "about.label.eligible": "Eligible based on available recorded criteria",
     "about.label.eligibleD": "You meet the rules we have recorded. Official rules may have more conditions.",
     "about.label.vacancy": "Verified active vacancy",
-    "about.label.vacancyD": "Not used in this version, because we do not have a live official vacancy feed.",
+    "about.label.vacancyD": "Shown only when we checked a recruitment against its official notice and it is open on today's date.",
     "about.discTitle": "Disclaimer",
     "about.disc.1": "Information on this website is for general guidance only. It may be incomplete or out of date.",
     "about.disc.2": "Always read the official notification or scheme guidelines before applying. Official rules always win.",
@@ -870,7 +917,7 @@ const translations = {
     // ---- Jobs & schemes ----
     "jobs.title": "सरकारी नौकरी जानकारी — करियरसाथी AI",
     "jobs.h1": "सरकारी नौकरी जानकारी",
-    "jobs.lead": "वे आधिकारिक वेबसाइटें जहाँ सरकारी भर्तियाँ निकलती हैं, प्रकार के हिसाब से। हम चालू भर्ती या तारीख़ें नहीं दिखाते।",
+    "jobs.lead": "आख़िरी तारीख़ के साथ खुली भर्तियाँ (हाथ से अपडेट), और वे आधिकारिक वेबसाइटें जहाँ सरकारी भर्तियाँ निकलती हैं।",
     "jobs.verify": "चालू भर्ती और पात्रता पक्की करने के लिए आधिकारिक भर्ती वेबसाइट देखें।",
     "jobs.scamT": "नौकरी के धोखे से बचें",
     "jobs.scam": "सरकारी नौकरी कभी बिकती नहीं। किसी एजेंट को पैसे न दें। सिर्फ़ आधिकारिक वेबसाइट पर भरोसा करें, जो आमतौर पर .gov.in या .nic.in पर ख़त्म होती हैं।",
@@ -1124,6 +1171,53 @@ const translations = {
     "home.guidesT": "अंग्रेज़ी और हिंदी में करियर गाइड",
     "home.guidesD": "स्रोतों से जाँची हुई आसान गाइड: ITI के बाद नौकरी, CCC कोर्स, मुफ़्त हुनर ट्रेनिंग, अप्रेंटिसशिप, व्यवसाय ऋण और नौकरी के धोखे से बचाव।",
     "home.guidesBtn": "गाइड पढ़ें",
+    // ---- Open recruitments ----
+    "vac.sectionT": "अभी खुली भर्तियाँ",
+    "jobs.sourcesT": "आधिकारिक भर्ती वेबसाइटें",
+    "vac.sectionD": "आज की तारीख़ ({today}) के हिसाब से जिन भर्तियों में आवेदन खुले हैं। यह सूची हम हाथ से अपडेट करते हैं — हमेशा आधिकारिक वेबसाइट पर पक्का करें।",
+    "vac.listUpdated": "सूची का पिछला अपडेट: {date}",
+    "vac.listStale": "यह सूची {n} दिन पहले अपडेट हुई थी और पुरानी हो सकती है। कृपया आधिकारिक वेबसाइटें देखें।",
+    "vac.none": "अभी हमारी सूची में कोई खुली भर्ती नहीं है। नीचे दी आधिकारिक भर्ती वेबसाइटें देखें।",
+    "vac.status.open": "खुली है",
+    "vac.status.closing-soon": "जल्द बंद होगी",
+    "vac.status.upcoming": "जल्द खुलेगी",
+    "vac.daysLeft": "{n} दिन बाक़ी",
+    "vac.oneDayLeft": "1 दिन बाक़ी",
+    "vac.lastDay": "आज आख़िरी दिन",
+    "vac.daysToOpen": "{n} दिन में खुलेगी",
+    "vac.dates": "आवेदन: {from} से {to} तक",
+    "vac.until": "{time} बजे तक",
+    "vac.posts": "पद",
+    "vac.qualification": "योग्यता",
+    "vac.age": "उम्र",
+    "vac.reportedLabel": "रिपोर्ट के अनुसार खुली — आधिकारिक रूप से पक्का करें",
+    "vac.matchYou": "आपकी प्रोफ़ाइल से मेल",
+    "vac.fitCheck": "जाँचें कि आप योग्य हैं या नहीं",
+    "vac.notMet": "योग्यता शायद मेल न खाए",
+    "vac.why": "यह आपके लिए क्यों हो सकती है",
+    "vac.check": "आवेदन से पहले जाँचें",
+    "vac.apply": "आधिकारिक वेबसाइट",
+    "vac.checked": "{date} को इस स्रोत से जाँचा गया: {source}",
+    "vac.forYouT": "आपके लिए अभी खुली",
+    "vac.forYouNone": "आज हमारी सूची की कोई खुली भर्ती आपकी प्रोफ़ाइल से मेल नहीं खाती।",
+    "vac.seeAll": "सभी खुली भर्तियाँ देखें",
+    "vac.recBanner": "आज {n} खुली भर्ती आपकी प्रोफ़ाइल से मेल खाती हैं।",
+    "vac.recBtn": "खुली भर्तियाँ देखें",
+    "vac.why.edu": "आपकी योग्यता ({level}) दर्ज ज़रूरत से मेल खाती है।",
+    "vac.why.goal": "आपने लक्ष्य में सरकारी नौकरी चुनी है।",
+    "vac.why.state": "यह आपके अपने राज्य की भर्ती है।",
+    "vac.check.eduNo": "ज़रूरी योग्यता आपकी योग्यता से ऊँची या अलग हो सकती है।",
+    "vac.check.edu": "हर पद की योग्यता अलग है — नोटिस पढ़कर देखें कौन-सा पद आपके लिए है।",
+    "vac.check.ageYoung": "आपकी उम्र न्यूनतम उम्र ({min} साल) से कम हो सकती है।",
+    "vac.check.ageOld": "आपकी उम्र सामान्य ऊपरी सीमा ({max} साल) से ज़्यादा हो सकती है।",
+    "vac.check.ageRelax": "आपकी उम्र सामान्य सीमा ({max} साल) से ज़्यादा है, पर आपके वर्ग को उम्र में छूट मिल सकती है — नोटिस देखें।",
+    "vac.check.ageDate": "उम्र {date} को गिनी जाएगी।",
+    "vac.check.exp": "कुछ पदों के लिए {n} साल का काम का अनुभव चाहिए।",
+    "vac.check.state": "राज्य स्तर की भर्ती — दूसरे राज्यों के उम्मीदवारों के नियम देखें।",
+    "vac.check.reported": "ये तारीख़ें समाचार रिपोर्ट से हैं, आधिकारिक नोटिस से नहीं — आधिकारिक वेबसाइट पर पक्का करें।",
+    "vac.check.notice": "आवेदन से पहले पूरी आधिकारिक सूचना पढ़ें। फ़ीस सिर्फ़ आधिकारिक पोर्टल पर भरें।",
+    "stale.warn": "यह जानकारी {n} दिन पहले जाँची गई थी और बदल सकती है। आधिकारिक पेज पर पक्का करें।",
+
     // ---- About ----
     "about.title": "हमारे बारे में और अस्वीकरण — करियरसाथी AI",
     "about.h1": "करियरसाथी AI के बारे में",
@@ -1135,7 +1229,7 @@ const translations = {
     "about.what.4": "कोर्स सुझाती है — पहले मुफ़्त और आधिकारिक विकल्प।",
     "about.notTitle": "यह वेबसाइट क्या नहीं करती",
     "about.not.1": "नौकरी नहीं देती और नौकरी के आवेदन नहीं लेती।",
-    "about.not.2": "चालू भर्ती या आवेदन की आख़िरी तारीख़ नहीं दिखाती।",
+    "about.not.2": "यह लाइव नौकरी फ़ीड नहीं है। खुली भर्तियों की हमारी सूची हाथ से अपडेट होती है और कुछ छूट सकती हैं — हमेशा आधिकारिक वेबसाइट देखें।",
     "about.not.3": "योजना, लोन, सब्सिडी या कोई लाभ मंज़ूर नहीं करती।",
     "about.not.4": "किसी सरकारी विभाग से जुड़ी नहीं है।",
     "about.labelsTitle": "हमारे लेबल का मतलब",
@@ -1146,7 +1240,7 @@ const translations = {
     "about.label.eligible": "दर्ज नियमों के अनुसार पात्र",
     "about.label.eligibleD": "हमारे पास दर्ज नियम आप पूरे करते हैं। आधिकारिक नियमों में और शर्तें हो सकती हैं।",
     "about.label.vacancy": "पुष्टि की गई चालू भर्ती",
-    "about.label.vacancyD": "इस संस्करण में इस्तेमाल नहीं होता, क्योंकि हमारे पास भर्ती की लाइव आधिकारिक जानकारी नहीं है।",
+    "about.label.vacancyD": "सिर्फ़ तब दिखता है जब हमने भर्ती को उसके आधिकारिक नोटिस से जाँचा हो और वह आज की तारीख़ में खुली हो।",
     "about.discTitle": "अस्वीकरण",
     "about.disc.1": "इस वेबसाइट की जानकारी सिर्फ़ सामान्य मार्गदर्शन के लिए है। यह अधूरी या पुरानी हो सकती है।",
     "about.disc.2": "आवेदन से पहले हमेशा आधिकारिक सूचना या योजना के नियम पढ़ें। आधिकारिक नियम ही मान्य हैं।",
@@ -2560,6 +2654,142 @@ function hostOf(url) {
 return { esc, formatDate, extLink, hostOf };
 })();
 
+// ===== js/vacancy-match.js =====
+__mods["js/vacancy-match.js"] = (function () {
+// Open-recruitment logic. Pure functions — tested in Node.
+//
+// Everything is worked out from TODAY'S date on the visitor's device:
+//   upcoming (not open yet) · open · closing soon (≤ 7 days) · closed
+// "Verified active vacancy" is used ONLY for records checked against the
+// official notice AND open today. Everything else says "confirm officially".
+
+const { normalizeProfile } = __mods["js/profile-model.js"];
+const { userLevels } = __mods["js/engine.js"];
+const CLOSING_SOON_DAYS = 7;
+const STALE_DAYS = 90;          // scheme/course facts older than this get a warning
+const STALE_LIST_DAYS = 14;     // the vacancy list itself should be refreshed weekly
+
+const msg = (key, vars = {}) => ({ key, vars });
+
+/** Today's date as "YYYY-MM-DD" in the visitor's own time zone. */
+function todayISO(now = new Date()) {
+  const y = now.getFullYear();
+  const m = String(now.getMonth() + 1).padStart(2, "0");
+  const d = String(now.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+/** Whole days from date a to date b ("YYYY-MM-DD"), ignoring time zones. */
+function daysBetween(a, b) {
+  const [ay, am, ad] = a.split("-").map(Number);
+  const [by, bm, bd] = b.split("-").map(Number);
+  return Math.round((Date.UTC(by, bm - 1, bd) - Date.UTC(ay, am - 1, ad)) / 86400000);
+}
+
+/** "upcoming" | "open" | "closing-soon" | "closed", plus day counts. */
+function vacancyStatus(v, today) {
+  if (today < v.opens) return { status: "upcoming", daysToOpen: daysBetween(today, v.opens), daysLeft: daysBetween(today, v.closes) };
+  if (today > v.closes) return { status: "closed", daysLeft: -1 };
+  const daysLeft = daysBetween(today, v.closes); // 0 = last day today
+  return { status: daysLeft <= CLOSING_SOON_DAYS ? "closing-soon" : "open", daysLeft };
+}
+
+const isActive = (s) => s === "open" || s === "closing-soon";
+
+/** How old a "checked" date is, in days (never negative). */
+function ageInDays(checkedISO, today) {
+  return Math.max(0, daysBetween(checkedISO, today));
+}
+
+/** Compares one vacancy with a profile. Never says "eligible" — only what fits and what to check. */
+function matchVacancy(v, rawProfile, today) {
+  const p = normalizeProfile(rawProfile);
+  const st = vacancyStatus(v, today);
+  const reasons = [];
+  const checks = [];
+  let fit = "check"; // "fits-recorded" | "check" | "not-met"
+
+  // Qualification
+  const levels = userLevels(p);
+  let eduOk = null;
+  if (Array.isArray(v.education)) {
+    if (!levels.length) eduOk = null;
+    else if (levels.some((l) => v.education.includes(l))) eduOk = true;
+    else if (levels.every((l) => l === "other")) eduOk = null;
+    else eduOk = false;
+  }
+  if (eduOk === true) reasons.push(msg("vac.why.edu", { level: levels.find((l) => v.education.includes(l)) }));
+  if (eduOk === false) checks.push(msg("vac.check.eduNo"));
+  if (eduOk === null) checks.push(msg("vac.check.edu"));
+
+  // Goal
+  if (p.goals.includes("govt-job")) reasons.push(msg("vac.why.goal"));
+
+  // Age — we only know an exact age if the person chose to give it.
+  const age = p.eligibility.exactAge;
+  if (v.age && Number.isInteger(age)) {
+    if (v.age.min && age < v.age.min) checks.push(msg("vac.check.ageYoung", { min: v.age.min }));
+    else if (v.age.maxGeneral && age > v.age.maxGeneral) {
+      const reserved = ["obc", "sc", "st", "ews"].includes(p.eligibility.category) ||
+        p.eligibility.pwd === "yes" || p.eligibility.exServiceman === "yes";
+      checks.push(msg(reserved ? "vac.check.ageRelax" : "vac.check.ageOld", { max: v.age.maxGeneral }));
+    }
+  }
+  if (v.age) checks.push(msg("vac.check.ageDate", { date: v.age.asOn }));
+
+  // Experience
+  if (v.experienceYears > 0) checks.push(msg("vac.check.exp", { n: v.experienceYears }));
+
+  // State-level recruitment
+  if (v.state) {
+    if (p.state === v.state) reasons.push(msg("vac.why.state"));
+    else checks.push(msg("vac.check.state"));
+  }
+
+  // Source quality
+  if (v.verification !== "official-notice") checks.push(msg("vac.check.reported"));
+  checks.push(msg("vac.check.notice"));
+
+  if (eduOk === false) fit = "not-met";
+  else if (eduOk === true && !(v.state && p.state !== v.state)) fit = "fits-recorded";
+
+  const verifiedActive = v.verification === "official-notice" && isActive(st.status);
+  const relevant = fit !== "not-met" && (p.goals.includes("govt-job") || eduOk === true);
+
+  return { vacancy: v, ...st, fit, relevant, verifiedActive, reasons, checks };
+}
+
+/**
+ * All vacancies that are not closed, with match info.
+ * Order: relevant for this person first, then clear matches before "check" ones,
+ * then open/closing-soon before upcoming, then the soonest closing date.
+ */
+function listVacancies(vacancies, rawProfile, today) {
+  if (!Array.isArray(vacancies)) return [];
+  const out = [];
+  for (const v of vacancies) {
+    try {
+      const r = matchVacancy(v, rawProfile, today);
+      if (r.status !== "closed") out.push(r);
+    } catch { /* skip a broken record */ }
+  }
+  const rank = { "closing-soon": 0, open: 1, upcoming: 2 };
+  const fitRank = { "fits-recorded": 0, check: 1, "not-met": 2 };
+  return out.sort((a, b) =>
+    (Number(b.relevant) - Number(a.relevant)) ||
+    (fitRank[a.fit] - fitRank[b.fit]) ||
+    (rank[a.status] - rank[b.status]) ||
+    (a.vacancy.closes < b.vacancy.closes ? -1 : a.vacancy.closes > b.vacancy.closes ? 1 : 0));
+}
+
+/** Open (not upcoming) vacancies that match the profile — for dashboard & recommendations. */
+function openMatches(vacancies, rawProfile, today) {
+  return listVacancies(vacancies, rawProfile, today).filter((r) => r.relevant && isActive(r.status));
+}
+
+return { todayISO, daysBetween, vacancyStatus, ageInDays, matchVacancy, listVacancies, openMatches, CLOSING_SOON_DAYS, STALE_DAYS, STALE_LIST_DAYS, isActive };
+})();
+
 // ===== js/schemes.js =====
 __mods["js/schemes.js"] = (function () {
 // Government Scheme Finder: scheme summaries from official pages, plus
@@ -2572,6 +2802,7 @@ const { matchSchemes } = __mods["js/scheme-match.js"];
 const { SCHEMES, SCHEME_CATEGORIES, MYSCHEME } = __mods["data/schemes.js"];
 const { ALL_SKILLS, GOALS, EDUCATION_LEVELS, labelOf } = __mods["data/options.js"];
 const { esc, formatDate, extLink, hostOf } = __mods["js/ui.js"];
+const { ageInDays, todayISO, STALE_DAYS } = __mods["js/vacancy-match.js"];
 const root = document.getElementById("schemes-app");
 const state = { profile: null, results: [], category: "all" };
 
@@ -2587,6 +2818,12 @@ function say(m) {
   if (v.skills) vars.skills = listOf(ALL_SKILLS, v.skills);
   if (v.level) vars.level = labelOf(EDUCATION_LEVELS, v.level, L());
   return tt(m.key, vars);
+}
+
+// Warn when facts are older than STALE_DAYS (worked out from today's date).
+function staleNote(checked) {
+  const age = ageInDays(checked, todayISO());
+  return age > STALE_DAYS ? `<p class="alert alert--warn small">${esc(tt("stale.warn", { n: age }))}</p>` : "";
 }
 
 function list(items, cls = "compact") {
@@ -2615,6 +2852,7 @@ function card(r, showFit) {
     <h4>${esc(tt("schemes.check"))}</h4>
     <ul class="list-warn compact">${checks.map((m) => `<li>${esc(say(m))}</li>`).join("")}</ul>
     ${s.note ? `<p class="alert alert--warn small"><strong>${esc(tt("schemes.important"))}</strong> ${esc(txt(s.note))}</p>` : ""}
+    ${staleNote(s.checked)}
 
     <details class="rec-more">
       <summary>${esc(tt("schemes.details"))}</summary>

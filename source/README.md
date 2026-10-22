@@ -113,6 +113,26 @@ translations; and safe external links.
 
 See **docs/DEPLOY.md** — free hosting on GitHub Pages, step by step, with current limits.
 
+## Updating open recruitments (every week, ~5 minutes)
+
+The "Open right now" list lives in `data/vacancies.js`. The website works out
+**open / closing soon / opens soon / closed** from *today's date on the visitor's device*,
+so closed recruitments disappear by themselves — but new ones must be added by hand.
+
+1. Open `data/vacancies.js` (on GitHub: open the file → pencil icon to edit).
+2. Delete records whose last date has passed.
+3. Add new ones by copying an existing record. Dates are `YYYY-MM-DD`.
+   - `verification: "official-notice"` only if you read the official notice yourself —
+     only these get the **"Verified active vacancy"** label.
+   - Otherwise use `"news-reports"`; the site then says "confirm officially".
+   - `applyUrl` must be the official `.gov.in` / `.nic.in` website.
+4. Change `LIST_UPDATED` to today's date. (After 14 days without an update the site
+   warns visitors that the list may be old.)
+5. Run `npm test`, then `python tools/build_standalone.py`, and upload.
+
+Scheme and course facts also carry a `checked` date; after 90 days the site shows
+"may have changed" on those cards — a reminder to re-check them.
+
 ## Keeping official information honest
 
 - Scheme, course and recruitment details change. Every record has a `checked` date.

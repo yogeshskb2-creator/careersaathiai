@@ -8,6 +8,9 @@ No login, no server, no database — everything a visitor types stays in their o
 **Live site:** https://yogeshskb2-creator.github.io/careersaathiai/
 
 ## What's new
+- **Open right now**: open government recruitments with last dates, worked out from today's date.
+  Matching ones appear on the Dashboard and Recommendations. Update weekly in `source/data/vacancies.js`
+  (steps in `source/README.md`).
 - **Career Guides**: 6 guides in English and Hindi (12 pages) — `guides.html`
 - **Contact** and **Terms of Use** pages; **Privacy** page now covers advertising (Google AdSense)
 - `sitemap.xml`, `robots.txt`, canonical and social-sharing tags on every page

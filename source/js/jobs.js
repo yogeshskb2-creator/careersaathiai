@@ -7,9 +7,12 @@ import { loadProfile } from "./profile-store.js";
 import { RECRUITMENT_SOURCES, RECRUITMENT_CATEGORIES } from "../data/recruitment.js";
 import { STATES, labelOf } from "../data/options.js";
 import { esc, formatDate, extLink, hostOf } from "./ui.js";
+import { VACANCIES } from "../data/vacancies.js";
+import { listVacancies, todayISO } from "./vacancy-match.js";
+import { vacancyCard, listFreshness } from "./vacancy-ui.js";
 
 const root = document.getElementById("jobs-app");
-const state = { category: "all", query: "", userState: "" };
+const state = { category: "all", query: "", userState: "", profile: null };
 
 const L = () => getLang();
 const tt = (key, vars) => t(key, L(), vars);
@@ -31,6 +34,23 @@ function filtered() {
   return list.sort((a, b) => (b.state === state.userState) - (a.state === state.userState));
 }
 
+// Open recruitments, worked out from today's date on this device.
+function vacanciesSection() {
+  const today = todayISO();
+  const list = listVacancies(VACANCIES, state.profile, today);
+  const body = list.length
+    ? `<div class="rec-grid">${list.map((r) => vacancyCard(r, { showFit: Boolean(state.profile) })).join("")}</div>`
+    : `<p class="alert alert--info">${esc(tt("vac.none"))}</p>`;
+  return `
+  <section class="vac-section" aria-labelledby="vac-title" id="open-now">
+    <h2 id="vac-title">${esc(tt("vac.sectionT"))}</h2>
+    <p class="muted">${esc(tt("vac.sectionD", { today: formatDate(today, L()) }))}</p>
+    ${listFreshness(today)}
+    ${body}
+  </section>
+  <h2 class="sources-title">${esc(tt("jobs.sourcesT"))}</h2>`;
+}
+
 function shellHtml() {
   const counts = {};
   RECRUITMENT_SOURCES.forEach((s) => { counts[s.category] = (counts[s.category] || 0) + 1; });
@@ -40,6 +60,7 @@ function shellHtml() {
         ${esc(b.label)} <span class="count">${b.n}</span></button>`).join("");
 
   return `
+  ${vacanciesSection()}
   <div class="field search-field">
     <label for="jobs-search">${esc(tt("jobs.searchLabel"))}</label>
     <input type="search" id="jobs-search" value="${esc(state.query)}" placeholder="${esc(tt("jobs.searchHint"))}"
@@ -98,7 +119,8 @@ function renderAll() {
 
 function init() {
   if (!root) return;
-  state.userState = loadProfile()?.profile.state || "";
+  state.profile = loadProfile()?.profile || null;
+  state.userState = state.profile?.state || "";
 
   root.addEventListener("input", (e) => {
     if (e.target.id !== "jobs-search") return;

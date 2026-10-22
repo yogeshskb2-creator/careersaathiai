@@ -6,6 +6,8 @@ import { getLang } from "./layout.js";
 import { loadProfile } from "./profile-store.js";
 import { matchCareers, FIT } from "./engine.js";
 import { CAREERS, SECTORS } from "../data/careers.js";
+import { VACANCIES } from "../data/vacancies.js";
+import { openMatches, todayISO } from "./vacancy-match.js";
 import { SOURCES } from "../data/sources.js";
 import {
   ALL_SKILLS, GOALS, EDUCATION_LEVELS, STATES, labelOf
@@ -62,6 +64,7 @@ function profileSummary() {
     listOf(GOALS, p.goals)
   ].filter(Boolean);
   const missing = state.result.missingInfo.map((m) => tt(`rec.missing.${m}`));
+  const openNow = openMatches(VACANCIES, state.profile, todayISO()).length;
   return `
   <div class="rec-summary card">
     <p><strong>${esc(tt("rec.basedOn"))}</strong> ${esc(bits.join(" · "))}</p>
@@ -70,6 +73,8 @@ function profileSummary() {
       <a class="btn btn-ghost btn-small" href="about.html#labels">${esc(tt("rec.labelsHelp"))}</a>
     </div>
     ${missing.length ? `<p class="alert alert--info">${esc(tt("rec.incomplete", { items: missing.join(", ") }))}</p>` : ""}
+    ${openNow ? `<p class="alert alert--ok vac-banner"><strong>${esc(tt("vac.recBanner", { n: openNow }))}</strong>
+      <a class="btn btn-primary btn-small" href="jobs.html#open-now">${esc(tt("vac.recBtn"))} →</a></p>` : ""}
   </div>`;
 }
 

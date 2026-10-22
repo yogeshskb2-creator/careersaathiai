@@ -9,6 +9,7 @@ import { CAREERS } from "../data/careers.js";
 import { ALL_SKILLS, SKILL_GROUPS, labelOf } from "../data/options.js";
 import { normalizeProfile } from "./profile-model.js";
 import { esc, formatDate, extLink, hostOf } from "./ui.js";
+import { ageInDays, todayISO, STALE_DAYS } from "./vacancy-match.js";
 
 const root = document.getElementById("courses-app");
 const state = { profile: null, rec: null, skill: "", freeOnly: false };
@@ -25,6 +26,12 @@ function say(m) {
   if (v.skills) vars.skills = v.skills.map(skillName).join(", ");
   if (v.careers) vars.careers = v.careers.slice(0, 3).map(careerName).filter(Boolean).join(", ");
   return tt(m.key, vars);
+}
+
+// Warn when facts are older than STALE_DAYS (worked out from today's date).
+function staleNote(checked) {
+  const age = ageInDays(checked, todayISO());
+  return age > STALE_DAYS ? `<p class="alert alert--warn small">${esc(tt("stale.warn", { n: age }))}</p>` : "";
 }
 
 function fact(labelKey, value) {
@@ -62,6 +69,7 @@ function card(course, result) {
 
     ${course.searchTip ? `<p class="tip"><strong>${esc(tt("courses.howToFind"))}:</strong> ${esc(txt(course.searchTip))}</p>` : ""}
     ${course.note ? `<p class="alert alert--warn small">${esc(txt(course.note))}</p>` : ""}
+    ${staleNote(course.checked)}
 
     <details class="rec-more"${result ? " open" : ""}>
       <summary>${esc(tt("courses.check"))}</summary>

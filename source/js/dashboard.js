@@ -16,6 +16,9 @@ import { COURSES } from "../data/courses.js";
 import { SCHEMES } from "../data/schemes.js";
 import { ALL_SKILLS, EDUCATION_LEVELS, STATES, GOALS, labelOf } from "../data/options.js";
 import { esc, extLink, hostOf } from "./ui.js";
+import { VACANCIES } from "../data/vacancies.js";
+import { openMatches, todayISO } from "./vacancy-match.js";
+import { vacancyCard } from "./vacancy-ui.js";
 
 const root = document.getElementById("dash-app");
 const PLAN_KEY = "plan_done";
@@ -101,6 +104,15 @@ function matchesHtml() {
     linkBtn("recommendations.html", tt("dash.seeAll", { n: state.data.careers.matches.length })));
 }
 
+function openNowHtml() {
+  const matches = openMatches(VACANCIES, state.saved.profile, todayISO()).slice(0, 3);
+  return `
+    <h3 class="dash-sub">${esc(tt("vac.forYouT"))}</h3>
+    ${matches.length ? `<div class="dash-vac">${matches.map((r) => vacancyCard(r, { full: false })).join("")}</div>`
+      : `<p class="muted">${esc(tt("vac.forYouNone"))}</p>`}
+    <p class="dash-more"><a class="btn btn-secondary btn-small" href="jobs.html#open-now">${esc(tt("vac.seeAll"))} →</a></p>`;
+}
+
 function govtHtml() {
   const p = state.saved.profile;
   const govtMatches = state.data.careers.matches.filter((m) => m.career.sector === "government");
@@ -108,7 +120,7 @@ function govtHtml() {
   const stateBodies = RECRUITMENT_SOURCES.filter((s) => s.state && s.state === p.state);
 
   if (!ids.length && !stateBodies.length) {
-    return section("d-govt", 2, "dash.govtT", empty("dash.govtEmpty"), linkBtn("jobs.html", tt("dash.openExplorer")));
+    return section("d-govt", 2, "dash.govtT", openNowHtml() + empty("dash.govtEmpty"), linkBtn("jobs.html", tt("dash.openExplorer")));
   }
   const rows = [
     ...stateBodies.map((s) => `<li class="dash-item"><div>${extLink(s.url, txt(s.name), tt("rec.newTab"))}
@@ -117,6 +129,8 @@ function govtHtml() {
       <span class="source-host">${esc(hostOf(SOURCES[id].url))}</span></li>`)
   ].join("");
   return section("d-govt", 2, "dash.govtT", `
+    ${openNowHtml()}
+    <h3 class="dash-sub">${esc(tt("jobs.sourcesT"))}</h3>
     <p class="muted">${esc(tt("dash.govtD"))}</p>
     <p class="alert alert--info small"><strong>${esc(tt("jobs.verify"))}</strong></p>
     <ul class="dash-list">${rows}</ul>`, linkBtn("jobs.html", tt("dash.openExplorer")));

@@ -8,6 +8,7 @@ import { matchSchemes } from "./scheme-match.js";
 import { SCHEMES, SCHEME_CATEGORIES, MYSCHEME } from "../data/schemes.js";
 import { ALL_SKILLS, GOALS, EDUCATION_LEVELS, labelOf } from "../data/options.js";
 import { esc, formatDate, extLink, hostOf } from "./ui.js";
+import { ageInDays, todayISO, STALE_DAYS } from "./vacancy-match.js";
 
 const root = document.getElementById("schemes-app");
 const state = { profile: null, results: [], category: "all" };
@@ -24,6 +25,12 @@ function say(m) {
   if (v.skills) vars.skills = listOf(ALL_SKILLS, v.skills);
   if (v.level) vars.level = labelOf(EDUCATION_LEVELS, v.level, L());
   return tt(m.key, vars);
+}
+
+// Warn when facts are older than STALE_DAYS (worked out from today's date).
+function staleNote(checked) {
+  const age = ageInDays(checked, todayISO());
+  return age > STALE_DAYS ? `<p class="alert alert--warn small">${esc(tt("stale.warn", { n: age }))}</p>` : "";
 }
 
 function list(items, cls = "compact") {
@@ -52,6 +59,7 @@ function card(r, showFit) {
     <h4>${esc(tt("schemes.check"))}</h4>
     <ul class="list-warn compact">${checks.map((m) => `<li>${esc(say(m))}</li>`).join("")}</ul>
     ${s.note ? `<p class="alert alert--warn small"><strong>${esc(tt("schemes.important"))}</strong> ${esc(txt(s.note))}</p>` : ""}
+    ${staleNote(s.checked)}
 
     <details class="rec-more">
       <summary>${esc(tt("schemes.details"))}</summary>

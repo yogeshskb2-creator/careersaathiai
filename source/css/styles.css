@@ -556,6 +556,22 @@ section + section { margin-top: 8px; }
 .contact-email { font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; overflow-wrap: anywhere; }
 .contact-email a { text-decoration: none; }
 
+/* ---------- 9h. Open recruitments ---------- */
+.vac-section { margin-bottom: 28px; scroll-margin-top: 110px; }
+.vac-section h2 { font-size: 1.45rem; }
+.sources-title { font-size: 1.3rem; margin-top: 8px; }
+.vac-chip { font-size: .82rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; }
+.vac-chip--open { background: var(--c-ok-soft); color: var(--c-ok); }
+.vac-chip--closing-soon { background: var(--c-error-soft); color: var(--c-error); }
+.vac-chip--upcoming { background: var(--c-info-soft); color: var(--c-info); }
+.vac-card h3 { font-size: 1.12rem; margin-top: 10px; }
+.vac-card--closing-soon { border-color: var(--c-error); }
+.vac-dates { margin-bottom: 8px; }
+.dash-sub { font-size: 1rem; margin: 14px 0 8px; }
+.dash-vac { display: grid; gap: 12px; margin-bottom: 4px; }
+.dash-vac .vac-card { box-shadow: none; padding: 16px; background: var(--c-bg); }
+.vac-banner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; color: var(--c-text); }
+
 /* ---------- 10. Footer ---------- */
 .site-footer { margin-top: 64px; background: #10262a; color: #c9d6d8; padding-top: 40px; font-size: .95rem; }
 .site-footer a { color: #fff; }
