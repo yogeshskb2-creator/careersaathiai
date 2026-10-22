@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="privacy.title">Privacy Information — CareerSaathi AI</title>
+  <meta name="description" content="CareerSaathi AI does not collect personal data. Your answers are processed in your own browser.">
+  <meta name="theme-color" content="#0e5560">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="privacy">
+  <div id="site-header"></div>
+
+  <main id="main" tabindex="-1">
+    <div class="container page-head">
+      <h1 data-i18n="privacy.h1">Privacy Information</h1>
+      <p class="lead" data-i18n="privacy.lead">Short version: we do not collect your personal data. Your answers are processed on your own device.</p>
+      <p class="muted" data-i18n="privacy.updated">Last updated: 22 October 2026</p>
+    </div>
+
+    <div class="container prose">
+      <h2 data-i18n="privacy.collectTitle">What we ask for</h2>
+      <ul class="list-check">
+        <li data-i18n="privacy.collect.1">Education, skills, experience and career goals — to suggest careers.</li>
+        <li data-i18n="privacy.collect.2">State and district — to show relevant state resources.</li>
+        <li data-i18n="privacy.collect.3">Your name is optional. You can use the site without it.</li>
+      </ul>
+
+      <h2 data-i18n="privacy.neverTitle">What we never ask for</h2>
+      <ul class="list-cross">
+        <li data-i18n="privacy.never.1">Aadhaar, PAN or any ID number</li>
+        <li data-i18n="privacy.never.2">Bank account or card details</li>
+        <li data-i18n="privacy.never.3">Passwords or OTPs</li>
+        <li data-i18n="privacy.never.4">Phone number, email or photos</li>
+      </ul>
+
+      <h2 data-i18n="privacy.whereTitle">Where your answers are kept</h2>
+      <ul>
+        <li data-i18n="privacy.where.1">Your answers are processed inside your browser. There is no CareerSaathi server or database.</li>
+        <li data-i18n="privacy.where.2">If you choose "Remember on this device", answers are saved only in this browser. You can delete them anytime.</li>
+        <li data-i18n="privacy.where.3">We do not share anything with employers, agencies or advertisers.</li>
+        <li data-i18n="privacy.where.4">This version has no ads, no tracking and no analytics.</li>
+        <li data-i18n="privacy.where.5">If you do not tick "Remember", your answers are kept only until you close the browser tab.</li>
+      </ul>
+
+      <h2 data-i18n="privacy.thirdTitle">Outside services</h2>
+      <ul>
+        <li data-i18n="privacy.third.1">The page font is loaded from Google Fonts, which can see your IP address, like any website you visit.</li>
+        <li data-i18n="privacy.third.2">When you click an official link (for example ssc.gov.in), that website's own privacy policy applies.</li>
+      </ul>
+
+      <section class="card" aria-labelledby="delete-title" style="margin-top:32px">
+        <h2 id="delete-title" style="margin-top:0" data-i18n="privacy.deleteTitle">Delete data saved on this device</h2>
+        <p data-i18n="privacy.deleteText">This removes your saved language choice and any saved profile from this browser.</p>
+        <button type="button" class="btn btn-danger" id="delete-data" data-i18n="privacy.deleteBtn">Delete my saved data</button>
+        <!-- role="status" makes screen readers announce the result -->
+        <div id="delete-result" role="status" aria-live="polite" style="margin-top:16px"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script type="module" src="js/layout.js"></script>
+  <script type="module" src="js/privacy.js"></script>
+</body>
+</html>

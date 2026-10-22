@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="rec.title">Career Recommendations — CareerSaathi AI</title>
+  <meta name="description" content="Explainable career suggestions based on your profile. No percentages, no promises — just clear reasons and official sources.">
+  <meta name="theme-color" content="#0e5560">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="recommendations">
+  <div id="site-header"></div>
+
+  <main id="main" tabindex="-1">
+    <div class="container page-head">
+      <h1 data-i18n="rec.h1">Your career recommendations</h1>
+      <p class="lead" data-i18n="rec.lead">Based only on the answers in your profile. Every card explains why it was suggested and what you should check.</p>
+      <p class="alert alert--warn" data-i18n="rec.notice">These are suggestions, not job offers. We do not show live vacancies — always check the official source before applying.</p>
+    </div>
+
+    <div class="container">
+      <!-- Results are drawn here by js/recommendations.js -->
+      <div id="rec-app" aria-busy="true">
+        <p class="loading"><span class="spinner" aria-hidden="true"></span><span data-i18n="state.loading">Loading…</span></p>
+        <noscript><p class="alert alert--warn">Please turn on JavaScript to see recommendations. / सुझाव देखने के लिए JavaScript चालू करें।</p></noscript>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/bundle-recommendations.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="courses.title">Course & Skill Explorer — CareerSaathi AI</title>
+  <meta name="description" content="Free and official courses in India matched to your skill gaps — SWAYAM, NPTEL, NIELIT CCC, ITI trades, PMKVY and more. No invented prices.">
+  <meta name="theme-color" content="#0e5560">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="courses">
+  <div id="site-header"></div>
+
+  <main id="main" tabindex="-1">
+    <div class="container page-head">
+      <h1 data-i18n="courses.h1">Course &amp; Skill Explorer</h1>
+      <p class="lead" data-i18n="courses.lead">Free and official ways to learn the skills your career matches need. We only state costs, durations and certificates that we read on the provider's own page.</p>
+      <p class="alert alert--warn" data-i18n="courses.noJob">Finishing a course does not guarantee a job. It helps you build skills and show proof of them.</p>
+    </div>
+
+    <div class="container">
+      <div id="courses-app" aria-busy="true">
+        <p class="loading"><span class="spinner" aria-hidden="true"></span><span data-i18n="state.loading">Loading…</span></p>
+        <noscript><p class="alert alert--warn">Please turn on JavaScript. / कृपया JavaScript चालू करें।</p></noscript>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script type="module" src="js/layout.js"></script>
+  <script type="module" src="js/courses.js"></script>
+</body>
+</html>

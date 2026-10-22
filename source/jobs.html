@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="jobs.title">Government Job Explorer — CareerSaathi AI</title>
+  <meta name="description" content="Official government recruitment websites in India, grouped by type: SSC, railways, banking, state commissions, teaching, technical, defence and apprenticeships.">
+  <meta name="theme-color" content="#0e5560">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="jobs">
+  <div id="site-header"></div>
+
+  <main id="main" tabindex="-1">
+    <div class="container page-head">
+      <h1 data-i18n="jobs.h1">Government Job Explorer</h1>
+      <p class="lead" data-i18n="jobs.lead">Official websites where government recruitment is announced, grouped by type. We do not list live vacancies or dates.</p>
+      <p class="alert alert--info"><strong data-i18n="jobs.verify">Explore the official recruitment source to verify current vacancies and eligibility.</strong></p>
+      <div class="alert alert--warn">
+        <strong data-i18n="jobs.scamT">Stay safe from job scams</strong>
+        <p style="margin:4px 0 0" data-i18n="jobs.scam">Government jobs are never sold. Do not pay any agent. Trust only official websites, which usually end in .gov.in or .nic.in.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="jobs-app" aria-busy="true">
+        <p class="loading"><span class="spinner" aria-hidden="true"></span><span data-i18n="state.loading">Loading…</span></p>
+        <noscript><p class="alert alert--warn">Please turn on JavaScript. / कृपया JavaScript चालू करें।</p></noscript>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script type="module" src="js/layout.js"></script>
+  <script type="module" src="js/jobs.js"></script>
+</body>
+</html>

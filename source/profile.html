@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="profile.title">Career Profile — CareerSaathi AI</title>
+  <meta name="description" content="Fill a short, private career profile. No login, no Aadhaar. Your answers stay in your browser.">
+  <meta name="theme-color" content="#0e5560">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="profile">
+  <div id="site-header"></div>
+
+  <main id="main" tabindex="-1">
+    <div class="container container--narrow page-head">
+      <h1 data-i18n="profile.h1">Your career profile</h1>
+      <p class="lead" data-i18n="profile.lead">Answer what you can. Questions marked * are needed. Everything else is optional.</p>
+      <p class="privacy-line">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <span data-i18n="profile.privacyNote">Your answers stay in this browser. We never ask for Aadhaar, phone number or bank details.</span>
+      </p>
+    </div>
+
+    <div class="container container--narrow">
+      <!-- The form is drawn here by js/profile-form.js -->
+      <div id="profile-app" aria-busy="true">
+        <p class="loading"><span class="spinner" aria-hidden="true"></span><span data-i18n="state.loading">Loading…</span></p>
+        <noscript><p class="alert alert--warn">Please turn on JavaScript to fill the profile form. / प्रोफ़ाइल फ़ॉर्म भरने के लिए JavaScript चालू करें।</p></noscript>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script type="module" src="js/layout.js"></script>
+  <script type="module" src="js/profile-form.js"></script>
+</body>
+</html>
