@@ -21,6 +21,8 @@ Everything a visitor types is processed inside their own browser.
 | `courses.html` | Course & Skill Explorer — 14 free/official learning options |
 | `dashboard.html` | Personal dashboard + 30-day action plan (print / save as PDF / add to calendar) |
 | (all recruitment cards) | "Add to calendar" reminders: `.ics` file made on the device + Google Calendar link |
+| `private-jobs.html` | Private Job Finder (footer link): 5-step form + review, role matching (28 roles), salary ranges with source rules, 22-company directory with verification status, skills gap & plan, job-scam safety |
+| `skill-development.html` | Courses & Skill Development: learning options for the target role (free/paid, online/offline, government, certificates, practical) |
 | `about.html` | About, label meanings and disclaimer |
 | `privacy.html` | Privacy information + "delete my saved data" |
 
@@ -136,6 +138,13 @@ so closed recruitments disappear by themselves — but new ones must be added by
 
 Scheme and course facts also carry a `checked` date; after 90 days the site shows
 "may have changed" on those cards — a reminder to re-check them.
+
+## Updating Private Job Finder data
+
+- `data/salary.js` — PayScale India figures (copy avg, 10th–90th percentile, profiles, "last updated"). The site hides a figure automatically when it has fewer than 40 profiles, is more than 2 years old, or the range is too wide.
+- `data/companies.js` — facts from Wikipedia infoboxes; set `careers.checked: true` only after opening the careers page yourself. Never add ratings, logos or "hiring now".
+- `data/private-roles.js` and `data/learning-extra.js` — general role requirements and learning options; `npm test` checks them.
+- Limitation: there is no live vacancy feed (static site, no server). The page links to NCS, Indeed and LinkedIn searches instead.
 
 ## Keeping official information honest
 

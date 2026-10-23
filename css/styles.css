@@ -627,6 +627,56 @@ section + section { margin-top: 8px; }
 .cal-note { flex-basis: 100%; color: var(--c-ok); font-weight: 600; }
 @media print { .cal-row, .quiz-progress { display: none !important; } }
 
+/* ---------- 9c. Private Job Finder & Skill Development ---------- */
+.grid-fields { display: grid; gap: 0 16px; }
+@media (min-width: 640px) { .grid-fields { grid-template-columns: 1fr 1fr; } }
+.field--inline { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.field--inline select { width: auto; min-width: 200px; }
+.pj-how { margin: 12px 0; padding: 14px 18px; }
+.pj-how summary { cursor: pointer; font-weight: 700; min-height: 32px; }
+.pj-privacy ul { margin: 6px 0 0; }
+.pj-summary, .pj-kinds, .pj-legend { margin-bottom: 16px; }
+.pj-kinds ul { list-style: none; padding: 0; display: grid; gap: 10px; margin-top: 10px; }
+.pj-kinds summary, .pj-legend summary { cursor: pointer; min-height: 32px; }
+.pj-kinds li .status { margin-right: 6px; }
+.pj-legend h3, .pj-kinds h3 { font-size: 1.05rem; }
+.pj-tabs { padding-top: 8px; }
+.pj-tabs .filter-btn { font-size: 1rem; }
+.pj-cat--strong { background: var(--c-ok-soft); color: var(--c-ok); }
+.pj-cat--good { background: var(--c-info-soft); color: var(--c-info); }
+.pj-cat--entry { background: var(--c-brand-soft); color: var(--c-brand-ink); }
+.pj-cat--training { background: var(--c-warn-soft); color: var(--c-warn); }
+.pj-cat--growth { background: var(--c-accent-soft); color: var(--c-accent); }
+.pj-card h4, .pj-co h4, .sd-card h4 { margin: 14px 0 6px; font-size: .95rem; }
+.pj-salary { background: var(--c-bg); border-radius: var(--radius-sm); padding: 10px 12px; }
+.pj-salary p { margin: 0 0 4px; }
+.pj-salary-range { font-size: 1.05rem; }
+.pj-salary--none { color: var(--c-muted); }
+.pj-note { color: var(--c-warn); font-weight: 600; }
+.chip-btn { border: 0; cursor: pointer; font: inherit; min-height: 36px; padding: 6px 12px; }
+.chip-btn:hover { background: var(--c-brand); color: #fff; }
+.pj-controls { display: grid; gap: 0 12px; }
+@media (min-width: 640px) { .pj-controls { grid-template-columns: repeat(3, 1fr); } }
+.pj-co-type { font-size: .82rem; font-weight: 700; color: var(--c-muted); }
+.pj-co:focus { outline: none; box-shadow: var(--focus); }
+.pj-co .status { margin: 4px 0 8px; }
+.pj-verify { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.pj-v { display: flex; gap: 8px; align-items: flex-start; font-size: .92rem; }
+.pj-v-icon { flex: none; width: 22px; height: 22px; border-radius: 50%; display: inline-grid; place-items: center; font-weight: 800; font-size: .8rem; }
+.pj-v--ok .pj-v-icon { background: var(--c-ok-soft); color: var(--c-ok); }
+.pj-v--warn .pj-v-icon { background: var(--c-warn-soft); color: var(--c-warn); }
+.pj-local { margin-top: 20px; }
+.pj-gap-grid { margin-bottom: 16px; }
+.pj-gap-rows { display: grid; gap: 4px 20px; }
+@media (min-width: 720px) { .pj-gap-rows { grid-template-columns: 1fr 1fr; } }
+.pj-plan { display: grid; gap: 8px; padding-left: 1.4em; }
+.pj-consent { margin-top: 18px; }
+.pj-consent h3 { color: #fff; }
+.sd-paths .sd-jobs-link { text-decoration: none; display: inline-flex; align-items: center; border-style: dashed; }
+.sd-picks { margin-bottom: 16px; }
+.sd-badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 6px; }
+.sd-why { background: var(--c-brand-soft); border-radius: var(--radius-sm); padding: 8px 10px; }
+
 /* ---------- 10. Footer ---------- */
 .site-footer { margin-top: 64px; background: #10262a; color: #c9d6d8; padding-top: 40px; font-size: .95rem; }
 .site-footer a { color: #fff; }

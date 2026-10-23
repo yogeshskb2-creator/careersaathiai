@@ -11,12 +11,34 @@
 // The site works out "open / closing soon / upcoming / closed" from today's date
 // on the visitor's own device, so nothing else needs changing when days pass.
 
-export const LIST_UPDATED = "2026-10-22";
+export const LIST_UPDATED = "2026-10-23";
 
 const tx = (en, hi) => ({ en, hi });
 const GRAD = ["graduation", "postgraduation", "professional"];
 
 export const VACANCIES = [
+  {
+    id: "ousssc-police-constable-2026",
+    title: tx("Odisha Police: Constable, Firefighter, Driver and other posts (Advt. 01-CRE-2026/OUSSSC)",
+      "ओडिशा पुलिस: कांस्टेबल, फ़ायरफ़ाइटर, ड्राइवर और अन्य पद (विज्ञापन 01-CRE-2026/OUSSSC)"),
+    org: tx("Odisha Uniformed Services Staff Selection Commission (OUSSSC)", "ओडिशा यूनिफ़ॉर्म्ड सर्विसेज़ स्टाफ़ सिलेक्शन कमीशन (OUSSSC)"),
+    posts: tx("7,268 posts as reported: Constable (Civil), Constable (Communication), Constable OISF, Firefighter, Firefighting Driver, Driver PMT, Traffic Constable",
+      "रिपोर्ट के अनुसार 7,268 पद: कांस्टेबल (सिविल), कांस्टेबल (कम्युनिकेशन), कांस्टेबल OISF, फ़ायरफ़ाइटर, फ़ायरफ़ाइटिंग ड्राइवर, ड्राइवर PMT, ट्रैफ़िक कांस्टेबल"),
+    category: "state", state: "OD",
+    opens: "2026-10-23", closes: "2026-11-12", closesTime: "22:00",
+    education: ["class10", "class12", "iti", "diploma", "graduation", "postgraduation", "professional"],
+    educationNote: tx("Most posts: Class 12 (+2). Constable OISF and Driver PMT: Class 10 (Driver also needs a valid licence). Constable (Communication): +2 Science or a 3-year engineering diploma. Reports differ slightly — read the official notice.",
+      "ज़्यादातर पद: 12वीं (+2)। कांस्टेबल OISF और ड्राइवर PMT: 10वीं (ड्राइवर के लिए वैध लाइसेंस भी)। कांस्टेबल (कम्युनिकेशन): +2 साइंस या 3 साल का इंजीनियरिंग डिप्लोमा। रिपोर्टों में थोड़ा फ़र्क़ है — आधिकारिक नोटिस पढ़ें।"),
+    age: { min: 18, maxGeneral: null, asOn: "2026-01-01",
+      note: tx("Differs by post (for example Constable Civil 18–26, Traffic Constable 21–32) as on 01.01.2026, as reported; relaxation as per rules.",
+        "पद के हिसाब से अलग (जैसे कांस्टेबल सिविल 18–26, ट्रैफ़िक कांस्टेबल 21–32), 01.01.2026 को, रिपोर्ट के अनुसार; नियमों के अनुसार छूट।") },
+    experienceYears: 0,
+    applyUrl: "https://ousssc.odisha.gov.in/",
+    careerIds: ["state-police"],
+    verification: "news-reports",
+    checkedOn: "2026-10-23",
+    checkedFrom: tx("Two job news websites reporting the advertisement (Testbook, FreeJobAlert)", "विज्ञापन पर दो नौकरी समाचार वेबसाइटें (Testbook, FreeJobAlert)")
+  },
   {
     id: "rrb-ntpc-graduate-cen-06-2026",
     title: tx("RRB NTPC Graduate Level (CEN 06/2026)", "RRB NTPC ग्रेजुएट स्तर (CEN 06/2026)"),

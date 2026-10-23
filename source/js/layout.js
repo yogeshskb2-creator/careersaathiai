@@ -23,7 +23,8 @@ export const FOOTER_ITEMS = [
   { id: "scholarships",    href: "scholarships.html",    key: "nav.scholarships",    ready: true },
   { id: "roadmap",         href: "roadmap.html",         key: "nav.roadmap",         ready: true },
   { id: "courses",         href: "courses.html",         key: "nav.courses",         ready: true },
-  { id: "guides",          href: "guides.html",          key: "nav.guides",          ready: true }
+  { id: "guides",          href: "guides.html",          key: "nav.guides",          ready: true },
+  { id: "private-jobs",    href: "private-jobs.html",    key: "nav.privateJobs",     ready: true }
 ];
 
 let currentLang = normalizeLang(getItem("lang"));
