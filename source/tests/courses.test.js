@@ -25,7 +25,11 @@ test("course records: valid skills, careers, https links, both languages", () =>
   for (const c of COURSES) {
     assert.ok(!ids.has(c.id), `duplicate ${c.id}`); ids.add(c.id);
     assert.ok(c.title.en && c.title.hi && c.provider.en && c.provider.hi && c.topics.en && c.topics.hi, `${c.id} text`);
-    assert.ok(c.skills.length && c.skills.every((s) => skills.has(s)), `${c.id} skills`);
+    assert.ok(c.skills.every((s) => skills.has(s)), `${c.id} skills`);
+    assert.ok(c.unverifiedSkills.every((s) => skills.has(s) && !c.skills.includes(s)), `${c.id} unverified skills`);
+    // Every verified skill needs evidence; a record with none must say why.
+    if (c.skills.length) assert.ok(c.evidence?.url?.startsWith("https://") && c.evidence.text.en && c.evidence.text.hi, `${c.id} evidence`);
+    else assert.ok(c.note?.en && c.note?.hi, `${c.id}: no verified skill, so it needs a note`);
     assert.ok(c.relatedCareers.every((id) => careers.has(id)), `${c.id} careers`);
     assert.ok(types.has(c.providerType), `${c.id} provider type`);
     assert.ok(c.url.startsWith("https://"), `${c.id} url`);
@@ -73,12 +77,14 @@ test("ITI electrician aiming for apprenticeship gets no electrician course (alre
   assert.ok(out.gaps.every((g) => g.skill !== "electrician"));
 });
 
-test("a data entry seeker without typing gets CCC; typing with no course is listed as uncovered", () => {
+test("a data entry seeker without typing gets CCC and the verified typing tutorial", () => {
   const p = person({ education: { ...emptyProfile().education, level: "class12" }, goals: ["private-job", "govt-job"], skills: [] });
   p.goals.push("skill-development");
   const out = recommendCourses(p, CAREERS, COURSES);
   assert.ok(out.items.some((r) => r.courseId === "nielit-ccc"));
-  assert.ok(out.uncovered.includes("typing"), out.uncovered.join());
+  const typing = out.items.filter((r) => r.covers.includes("typing")).map((r) => r.courseId);
+  assert.deepEqual(typing, ["spoken-tutorial"], "only the provider verified to teach typing");
+  assert.ok(!out.uncovered.includes("typing"));
 });
 
 test("budget never hides a course — it only adds a note and changes order", () => {

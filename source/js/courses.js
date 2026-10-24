@@ -53,7 +53,11 @@ function card(course, result) {
     </div>
     <h3 id="co-${course.id}${result ? "-r" : ""}">${esc(txt(course.title))}</h3>
     <p class="muted">${esc(txt(course.topics))}</p>
-    <ul class="chip-list skill-chips">${course.skills.map((s) => `<li class="chip chip--skill">${esc(skillName(s))}</li>`).join("")}</ul>
+    ${course.skills.length
+      ? `<p class="small teaches-t"><strong>${esc(tt("courses.teachesT"))}</strong></p>
+         <ul class="chip-list skill-chips">${course.skills.map((s) => `<li class="chip chip--skill">${esc(skillName(s))}</li>`).join("")}</ul>`
+      : `<p class="alert alert--info small">${esc(tt("courses.generalOnly"))}</p>`}
+    ${course.unverifiedSkills?.length ? `<p class="small muted">${esc(tt("courses.unverifiedSkills", { skills: course.unverifiedSkills.map(skillName).join(", ") }))}</p>` : ""}
 
     ${result ? `<h4>${esc(tt("courses.why"))}</h4>
       <ul class="list-check compact">${result.reasons.map((m) => `<li>${esc(say(m))}</li>`).join("")}</ul>` : ""}
@@ -78,6 +82,7 @@ function card(course, result) {
 
     <p class="source-host">${esc(hostOf(course.url))}</p>
     <p>${extLink(course.url, tt("courses.open"), tt("rec.newTab"), "btn btn-primary btn-small")}</p>
+    ${course.evidence ? `<p class="muted small">${esc(tt("courses.evidence", { date: formatDate(course.evidence.checked, L()) }))} ${esc(txt(course.evidence.text))} ${extLink(course.evidence.url, hostOf(course.evidence.url), tt("rec.newTab"))}</p>` : ""}
     <p class="muted small">${esc(tt("courses.checkedFrom", { date: formatDate(course.checked, L()), source: txt(course.checkedFrom) }))}</p>
   </article>`;
 }
@@ -134,7 +139,7 @@ function renderBrowse() {
   box.innerHTML = `
     <p class="muted" id="browse-count" aria-live="polite">${esc(tt("courses.count", { n: list.length }))}</p>
     ${list.length ? `<div class="rec-grid">${list.map((c) => card(c, null)).join("")}</div>`
-      : `<p class="alert alert--info">${esc(tt("courses.emptyFilter"))}</p>`}`;
+      : `<div class="alert alert--info" role="status"><p><strong>${esc(tt(state.skill ? "courses.noVerified" : "courses.emptyFilter"))}</strong></p><p class="small">${esc(tt("courses.noVerifiedHint"))}</p></div>`}`;
 }
 
 function sidhCard() {

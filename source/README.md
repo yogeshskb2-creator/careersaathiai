@@ -139,6 +139,18 @@ so closed recruitments disappear by themselves — but new ones must be added by
 Scheme and course facts also carry a `checked` date; after 90 days the site shows
 "may have changed" on those cards — a reminder to re-check them.
 
+## Course and skill providers: the evidence rule
+
+- A provider is linked to a skill ONLY when `skills` in `data/courses.js` lists it, and every
+  record with skills has `evidence` (the page where we saw the course, and the date).
+- Claims we could not confirm go in `unverifiedSkills`: they are shown as "not confirmed" and are
+  never used to match. A record with no verified skills needs a `note` and is shown only as a
+  general place to search.
+- The Private Job Finder maps its skills to course skills only through exact equivalents
+  (`courseSkills` in `data/pj-options.js`). Related skills are never used as stand-ins.
+- When nothing verified exists, the site says "No verified provider is currently available".
+- `tests/provider-accuracy.test.js` enforces all of this — run `npm test` after every data change.
+
 ## Updating Private Job Finder data
 
 - `data/salary.js` — PayScale India figures (copy avg, 10th–90th percentile, profiles, "last updated"). The site hides a figure automatically when it has fewer than 40 profiles, is more than 2 years old, or the range is too wide.

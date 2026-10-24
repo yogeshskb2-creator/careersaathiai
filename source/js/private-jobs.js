@@ -20,7 +20,7 @@ import {
   searchLinks, gapAnalysis, roleById, CATEGORY_ORDER
 } from "./pj-model.js";
 import { loadPJ, savePJ, clearPJ, saveDraftPJ, loadDraftPJ } from "./pj-store.js";
-import { todayISO } from "./vacancy-match.js";
+import { todayISO, ageInDays, STALE_DAYS } from "./vacancy-match.js";
 
 const root = document.getElementById("pj-app");
 const STEP_IDS = ["place", "edu", "skills", "job", "env", "review"];
@@ -373,7 +373,7 @@ function verifyRows(c) {
     : c.parent ? tt("pj.v.identitySub", { parent: c.parent }) : tt("pj.v.identityNone");
   const rows = [
     ["pj.v.identity", identity, c.listing || c.parent ? "ok" : "warn"],
-    ["pj.v.website", tt("pj.v.websiteD"), "ok"],
+    ["pj.v.website", tt("pj.v.websiteD", { source: c.websiteSource }), "ok"],
     ["pj.v.careers", c.careers.checked ? tt("pj.v.careersYes", { date: formatDate(COMPANIES_CHECKED, L()) }) : tt("pj.v.careersNo"), c.careers.checked ? "ok" : "warn"],
     ["pj.v.vacancy", tt("pj.v.vacancyD"), "warn"],
     ["pj.v.contact", tt("pj.v.contactD"), "warn"],
@@ -438,6 +438,7 @@ function companiesTab(p, results) {
   const opt = (arr, v) => arr.map((o) => `<option value="${o.id}"${v === o.id ? " selected" : ""}>${esc(lab(o))}</option>`).join("");
   return `
   <p class="lead">${esc(tt("pj.co.lead"))}</p>
+  ${ageInDays(COMPANIES_CHECKED, todayISO()) > STALE_DAYS ? `<p class="alert alert--warn small">${esc(tt("stale.warn", { n: ageInDays(COMPANIES_CHECKED, todayISO()) }))}</p>` : ""}
   <div class="pj-controls">
     <div class="field"><label for="pj-co-type">${esc(tt("pj.co.type"))}</label>
       <select id="pj-co-type" data-control="coType"><option value="all">${esc(tt("pj.co.all"))}</option>${opt(COMPANY_TYPES, state.coType)}</select></div>

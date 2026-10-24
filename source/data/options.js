@@ -100,7 +100,7 @@ export const SKILL_GROUPS = [
       o("olevel", "O Level", "O लेवल"),
       o("dca", "DCA / ADCA", "DCA / ADCA"),
       o("tally", "Tally", "टैली"),
-      o("excel", "MS Excel", "MS एक्सेल"),
+      o("excel", "Spreadsheets (MS Excel / LibreOffice Calc)", "स्प्रेडशीट (MS एक्सेल / LibreOffice Calc)"),
       o("typing", "Typing (Hindi / English)", "टाइपिंग (हिंदी / अंग्रेज़ी)")
     ]
   },

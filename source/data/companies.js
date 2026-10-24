@@ -38,7 +38,7 @@ export const INDUSTRIES = [
   { id: "staffing", en: "Staffing & HR services", hi: "स्टाफ़िंग और HR सेवाएँ" }
 ];
 
-const co = (o) => ({ fraudNotice: false, parent: null, listing: null, keyPeople: null, employees: null, founders: null, ...o });
+const co = (o) => ({ websiteSource: "Wikipedia", fraudNotice: false, parent: null, listing: null, keyPeople: null, employees: null, founders: null, ...o });
 
 export const COMPANIES = [
   co({
@@ -164,7 +164,7 @@ export const COMPANIES = [
     business: tx("Mobile, broadband, DTH and digital services.", "मोबाइल, ब्रॉडबैंड, DTH और डिजिटल सेवाएँ।"),
     founded: "1995", founders: "Sunil Mittal", hq: "New Delhi", listing: "NSE: BHARTIARTL · BSE: 532454",
     keyPeople: "Sunil Mittal (Chairman), Gopal Vittal (Vice Chairman & MD)", employees: { n: "28,730", asOf: "March 2026" },
-    website: "https://www.airtel.in/", careers: { url: null, checked: false },
+    website: "https://www.airtel.com/", careers: { url: null, checked: false },
     cats: ["sales", "customer-support", "technician", "it"],
     sources: [wiki("Bharti_Airtel")]
   }),
@@ -182,7 +182,7 @@ export const COMPANIES = [
     business: tx("Online shopping, delivery network, cloud (AWS) and customer service. Global company headquartered in Seattle, USA.", "ऑनलाइन ख़रीदारी, डिलीवरी नेटवर्क, क्लाउड (AWS) और ग्राहक सेवा। वैश्विक कंपनी, मुख्यालय सिएटल (अमेरिका)।"),
     founded: "1994", founders: "Jeff Bezos", hq: "Seattle, USA (global)", listing: "NASDAQ: AMZN",
     keyPeople: "Andy Jassy (CEO, global)",
-    website: "https://www.amazon.in/", careers: { url: "https://www.amazon.jobs/", checked: true },
+    website: "https://www.amazon.com/", careers: { url: "https://www.amazon.jobs/", checked: true },
     cats: ["warehouse", "delivery", "customer-support", "it"],
     notes: tx("amazon.jobs is Amazon's global jobs site — choose India as the location there.", "amazon.jobs अमेज़न की वैश्विक नौकरी साइट है — वहाँ स्थान में भारत चुनें।"),
     sources: [wiki("Amazon_(company)"), "https://www.amazon.jobs/"]
@@ -237,10 +237,10 @@ export const COMPANIES = [
     id: "teamlease", name: "TeamLease Services", type: "domestic", industry: "staffing",
     business: tx("Staffing, apprenticeship and skilling company that hires people for client companies.", "स्टाफ़िंग, अप्रेंटिसशिप और स्किलिंग कंपनी, जो दूसरी कंपनियों के लिए लोगों को रखती है।"),
     founded: "2000", founders: "Manish Sabharwal, Ashok Reddy", hq: "Bengaluru, Karnataka", listing: "NSE and BSE",
-    website: "https://www.teamlease.com/", careers: { url: null, checked: false },
+    website: "https://www.teamlease.com/", websiteSource: "Screener.in", careers: { url: null, checked: false },
     cats: ["retail", "sales", "customer-support", "warehouse", "delivery", "manufacturing", "office", "data-entry"],
     notes: tx("A staffing company: your employer on paper may be TeamLease while you work at a client company. Genuine staffing firms should not charge job seekers a placement fee.", "स्टाफ़िंग कंपनी: काग़ज़ पर आपका नियोक्ता TeamLease हो सकता है और काम किसी दूसरी कंपनी में। असली स्टाफ़िंग कंपनियों को नौकरी के लिए उम्मीदवार से फ़ीस नहीं लेनी चाहिए।"),
-    sources: [wiki("TeamLease")]
+    sources: [wiki("TeamLease"), "https://www.screener.in/company/539658"]
   })
 ];
 

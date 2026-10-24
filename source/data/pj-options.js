@@ -59,25 +59,29 @@ export const PJ_CERTS = [
 //   "course"   = a short course can teach the basics
 //   "practice" = mostly learned by doing it on the job
 //   "licence"  = needs a formal licence/certificate
-// courseSkills = matching skills in data/courses.js (for course suggestions).
+// courseSkills = the SAME skill in data/courses.js, used to find courses. Only exact
+//   equivalents are listed. A related skill is never used as a stand-in (for
+//   example "data entry" is not mapped to typing courses, and "mechanical work"
+//   is not mapped to repair courses), so a provider is never shown for a skill it
+//   was not verified to teach. [] = no equivalent → only verified extra options.
 export const PJ_SKILLS = [
-  o("computer-basics", "Basic computer & internet", "बेसिक कंप्यूटर और इंटरनेट", { learn: "course", courseSkills: ["basic-computer", "ccc"] }),
-  o("ms-office", "MS Office (Word, Excel)", "MS ऑफ़िस (वर्ड, एक्सेल)", { learn: "course", courseSkills: ["excel", "basic-computer"] }),
+  o("computer-basics", "Basic computer & internet", "बेसिक कंप्यूटर और इंटरनेट", { learn: "course", courseSkills: ["basic-computer"] }),
+  o("ms-office", "Office software (Word, Excel or similar)", "ऑफ़िस सॉफ़्टवेयर (वर्ड, एक्सेल या ऐसे)", { learn: "course", courseSkills: ["excel"] }),
   o("typing", "Typing (Hindi / English)", "टाइपिंग (हिंदी / अंग्रेज़ी)", { learn: "course", courseSkills: ["typing"] }),
-  o("data-entry", "Data entry", "डेटा एंट्री", { learn: "course", courseSkills: ["typing", "excel", "basic-computer"] }),
-  o("communication", "Talking clearly with people", "लोगों से साफ़ बात करना", { learn: "practice", courseSkills: ["customer-service"] }),
+  o("data-entry", "Data entry", "डेटा एंट्री", { learn: "course", courseSkills: [] }),
+  o("communication", "Talking clearly with people", "लोगों से साफ़ बात करना", { learn: "practice", courseSkills: [] }),
   o("spoken-english", "Spoken English", "अंग्रेज़ी बोलना", { learn: "course", courseSkills: ["spoken-english"] }),
   o("customer-service", "Customer service", "ग्राहक सेवा", { learn: "course", courseSkills: ["customer-service"] }),
   o("sales", "Sales & marketing", "सेल्स और मार्केटिंग", { learn: "practice", courseSkills: ["sales"] }),
-  o("accounting", "Accounting & billing (Tally, GST)", "अकाउंटिंग और बिलिंग (टैली, GST)", { learn: "course", courseSkills: ["tally", "accounting"] }),
-  o("retail-ops", "Shop / showroom work (counter, display, stock)", "दुकान / शोरूम का काम (काउंटर, डिस्प्ले, स्टॉक)", { learn: "practice", courseSkills: ["sales", "customer-service"] }),
+  o("accounting", "Accounting & billing (Tally, GST)", "अकाउंटिंग और बिलिंग (टैली, GST)", { learn: "course", courseSkills: ["accounting", "tally"] }),
+  o("retail-ops", "Shop / showroom work (counter, display, stock)", "दुकान / शोरूम का काम (काउंटर, डिस्प्ले, स्टॉक)", { learn: "practice", courseSkills: [] }),
   o("inventory", "Inventory & warehouse work", "इन्वेंटरी और गोदाम का काम", { learn: "practice", courseSkills: [] }),
   o("manufacturing", "Factory / production / machine work", "फ़ैक्ट्री / प्रोडक्शन / मशीन का काम", { learn: "practice", courseSkills: [] }),
   o("electrical", "Electrical work", "बिजली का काम", { learn: "licence", courseSkills: ["electrician"] }),
-  o("mechanical", "Mechanical / fitter work", "मैकेनिकल / फ़िटर का काम", { learn: "practice", courseSkills: ["repair"] }),
+  o("mechanical", "Mechanical / fitter work", "मैकेनिकल / फ़िटर का काम", { learn: "practice", courseSkills: [] }),
   o("repair", "Repair (mobile, appliance, vehicle)", "मरम्मत (मोबाइल, उपकरण, गाड़ी)", { learn: "course", courseSkills: ["repair"] }),
   o("driving", "Driving (with licence)", "ड्राइविंग (लाइसेंस के साथ)", { learn: "licence", courseSkills: ["driving"] }),
-  o("hospitality", "Hotel, restaurant & food service", "होटल, रेस्टोरेंट और खाना परोसना", { learn: "practice", courseSkills: ["cooking", "customer-service"] }),
+  o("hospitality", "Hotel, restaurant & food service", "होटल, रेस्टोरेंट और खाना परोसना", { learn: "practice", courseSkills: [] }),
   o("healthcare", "Healthcare support (patient care)", "स्वास्थ्य सहायता (मरीज़ की देखभाल)", { learn: "licence", courseSkills: [] }),
   o("teaching", "Teaching & training", "पढ़ाना और ट्रेनिंग देना", { learn: "practice", courseSkills: ["teaching"] }),
   o("digital-marketing", "Digital marketing", "डिजिटल मार्केटिंग", { learn: "course", courseSkills: ["digital-marketing"] }),

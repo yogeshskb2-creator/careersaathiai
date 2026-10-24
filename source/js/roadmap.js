@@ -8,6 +8,7 @@ import { CAREERS } from "../data/careers.js";
 import { STAGES, PATHS, ROADMAP_CHECKED } from "../data/roadmap.js";
 import { loadProfile } from "./profile-store.js";
 import { savedQuizResult, areaName } from "./quiz-summary.js";
+import { todayISO, ageInDays, STALE_DAYS } from "./vacancy-match.js";
 
 const root = document.getElementById("roadmap-app");
 const state = { stage: "after10", top: [] };
@@ -62,7 +63,8 @@ function render(focus) {
     ${quizNote}
     <h2 class="road-count" id="road-list-t" tabindex="-1">${esc(tt("road.count", { n: paths.length, stage: txt(STAGES.find((s) => s.id === state.stage).name) }))}</h2>
     <div class="grid grid-2 road-grid">${paths.map(pathCard).join("")}</div>
-    <p class="muted small">${esc(tt("road.checked", { date: formatDate(ROADMAP_CHECKED, L()) }))}</p>`;
+    <p class="muted small">${esc(tt("road.checked", { date: formatDate(ROADMAP_CHECKED, L()) }))}</p>
+    ${ageInDays(ROADMAP_CHECKED, todayISO()) > STALE_DAYS ? `<p class="alert alert--warn small">${esc(tt("stale.warn", { n: ageInDays(ROADMAP_CHECKED, todayISO()) }))}</p>` : ""}`;
   if (focus) root.querySelector(focus)?.focus();
 }
 

@@ -337,27 +337,39 @@ export function gapAnalysis(rawProfile, roleId, todayISO = "2026-10-23") {
 }
 
 // ---------- Learning options ----------
+// Government/statutory certificates (NIELIT, NCVT/ITI, PMKVY/NSQF, driving licence, NCTE-recognised training).
 const RECOGNISED_COURSES = ["nielit-ccc", "nielit-olevel", "iti-cts", "pmkvy-training", "sarathi-licence", "ncte-teacher"];
 const PRACTICAL_COURSES = ["iti-cts", "pmkvy-training"];
 
-/** Existing course skills (data/courses.js) → Private Job Finder skills. */
+/**
+ * Existing course skills (data/courses.js) → Private Job Finder skills.
+ * Uses only the exact equivalents listed in PJ_SKILLS.courseSkills, and only the
+ * course's VERIFIED skills are passed in — so no provider is linked to a skill
+ * through a similar name, a shared category or an unconfirmed claim.
+ */
 export function courseToPJSkills(courseSkills) {
-  return PJ_SKILLS.filter((s) => s.courseSkills.some((c) => courseSkills.includes(c))).map((s) => s.id);
+  const list = Array.isArray(courseSkills) ? courseSkills : [];
+  return PJ_SKILLS.filter((s) => s.courseSkills.some((c) => list.includes(c))).map((s) => s.id);
 }
 
-/** Both course lists in one shape. */
+/** Both course lists in one shape. Broken records are skipped, not guessed. */
 export function allLearning() {
-  const fromCourses = COURSES.map((c) => ({
-    id: c.id, source: "courses", title: c.title, provider: c.provider, url: c.url,
-    about: c.topics, costNote: c.costNote, duration: c.duration, eligibility: c.prerequisites,
-    searchTip: c.searchTip, checkedFrom: c.checkedFrom, checked: c.checked,
-    mode: c.mode === "in-person" ? "offline" : c.mode,
-    cost: c.cost, govt: c.providerType === "government" || c.providerType === "institute",
-    cert: RECOGNISED_COURSES.includes(c.id) ? "recognised" : (c.certificate ? "provider" : null),
-    practical: PRACTICAL_COURSES.includes(c.id), beginner: !c.minEducation, eduMax: null,
-    skills: courseToPJSkills(c.skills), kind: c.providerType === "government" ? "govt" : "free-online"
-  }));
-  const extra = EXTRA_LEARNING.map((x) => ({ ...x, source: "extra" }));
+  const fromCourses = COURSES.filter((c) => c && c.id && c.title && c.url).map((c) => {
+    const verified = Array.isArray(c.skills) ? c.skills : [];
+    return {
+      id: c.id, source: "courses", title: c.title, provider: c.provider, url: c.url,
+      about: c.topics, costNote: c.costNote, duration: c.duration, eligibility: c.prerequisites,
+      searchTip: c.searchTip, checkedFrom: c.checkedFrom, checked: c.checked, note: c.note || null,
+      evidence: c.evidence || null, courseSkills: verified,
+      unverifiedCourseSkills: Array.isArray(c.unverifiedSkills) ? c.unverifiedSkills : [],
+      mode: c.mode === "in-person" ? "offline" : c.mode,
+      cost: c.cost, govt: c.providerType === "government" || c.providerType === "institute",
+      cert: RECOGNISED_COURSES.includes(c.id) ? "recognised" : (c.certificate ? "provider" : null),
+      practical: PRACTICAL_COURSES.includes(c.id), beginner: !c.minEducation, eduMax: null,
+      skills: courseToPJSkills(verified), kind: c.providerType === "government" ? "govt" : "free-online"
+    };
+  });
+  const extra = EXTRA_LEARNING.filter((x) => x && x.id && x.url).map((x) => ({ ...x, source: "extra", skills: Array.isArray(x.skills) ? x.skills : [] }));
   return [...fromCourses, ...extra];
 }
 
@@ -376,19 +388,31 @@ function inPath(o, path) {
   }
 }
 
+/** What a matched option teaches, in its own words (course skill ids or PJ skill ids). */
+function teachesFor(o, covers) {
+  if (o.source === "courses") {
+    const ids = o.courseSkills.filter((cs) => PJ_SKILLS.some((p) => covers.includes(p.id) && p.courseSkills.includes(cs)));
+    return { vocab: "course", ids };
+  }
+  return { vocab: "pj", ids: covers };
+}
+
 /**
- * Learning options for the skills a person needs, best first, plus "best of" picks.
- * skills: PJ skill ids to learn (from the gap). Options that teach none of them
- * are dropped, except general beginner options for people with Class 12 or less.
+ * Learning options for the skills a person needs.
+ *  items   — options with a VERIFIED offering of at least one needed skill, best first.
+ *  general — portals and programmes with no verified skill (places to search
+ *            yourself); they are never presented as teaching the skill.
+ *  missing — needed skills that no verified option teaches (the page says so).
+ *  picks   — "best of" choices, taken only from verified items.
  */
 export function recommendLearning(skills, rawProfile, path = "all", primary = skills) {
   const p = normalizePJ(rawProfile);
-  const want = new Set(skills);
-  const main = new Set(primary);
+  const want = new Set(Array.isArray(skills) ? skills : []);
+  const main = new Set(Array.isArray(primary) ? primary : []);
   const rank = eduRank(p.edu.level);
   const low = rank !== null && rank <= 3;
-  const scored = allLearning()
-    .filter((o) => o.eduMax === null || (rank !== null && rank <= o.eduMax))
+  const all = allLearning().filter((o) => o.eduMax === null || o.eduMax === undefined || (rank !== null && rank <= o.eduMax));
+  const scored = all
     .map((o) => {
       const covers = o.skills.filter((s) => want.has(s));
       // Skills the job really needs count most; nice-to-have skills count a little.
@@ -400,13 +424,18 @@ export function recommendLearning(skills, rawProfile, path = "all", primary = sk
       if (o.practical) score += 2;
       if (low && o.beginner) score += 2;
       if (p.env.internet === "no" && o.mode === "online") score -= 6;
-      return { ...o, covers, score };
-    })
-    .filter((o) => o.covers.length > 0 || (low && o.beginner && o.govt && o.skills.length === 0))
-    .filter((o) => inPath(o, path))
+      return { ...o, covers, score, teaches: teachesFor(o, covers) };
+    });
+  const items = scored
+    .filter((o) => o.covers.length > 0 && inPath(o, path))
     .sort((a, b) => b.score - a.score || a.id.localeCompare(b.id));
+  const general = scored
+    .filter((o) => o.skills.length === 0 && inPath(o, path))
+    .sort((a, b) => Number(b.govt) - Number(a.govt) || Number(low && b.beginner) - Number(low && a.beginner) || a.id.localeCompare(b.id));
+  const taught = new Set(scored.flatMap((o) => o.covers));
+  const missing = [...want].filter((s) => !taught.has(s));
 
-  const best = (fn) => scored.find(fn)?.id || null;
+  const best = (fn) => items.find(fn)?.id || null;
   const picks = {
     free: best((o) => o.cost === "free" || o.cost === "free-exam-fee"),
     govt: best((o) => o.govt),
@@ -415,7 +444,7 @@ export function recommendLearning(skills, rawProfile, path = "all", primary = sk
     offline: best((o) => o.mode === "offline"),
     beginner: best((o) => o.beginner)
   };
-  return { items: scored, picks };
+  return { items, general, missing, picks };
 }
 
 /** Skills to learn for a target role (required first, then helpful). */

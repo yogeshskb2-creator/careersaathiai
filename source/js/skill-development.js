@@ -6,10 +6,11 @@ import { t } from "./i18n.js";
 import { getLang } from "./layout.js";
 import { esc, extLink, formatDate } from "./ui.js";
 import { PJ_SKILLS, pjLabel } from "../data/pj-options.js";
+import { ALL_SKILLS, labelOf } from "../data/options.js";
 import { ROLES } from "../data/private-roles.js";
 import { loadPJ } from "./pj-store.js";
 import { normalizePJ, gapAnalysis, recommendLearning, skillsToLearn, roleById, LEARNING_PATHS } from "./pj-model.js";
-import { todayISO } from "./vacancy-match.js";
+import { todayISO, ageInDays, STALE_DAYS } from "./vacancy-match.js";
 
 const root = document.getElementById("sd-app");
 const state = { profile: null, hasProfile: false, role: "", path: "all", extraSkills: [] };
@@ -18,6 +19,10 @@ const L = () => getLang();
 const tt = (key, vars) => t(key, L(), vars);
 const txt = (o) => (o ? o[L()] || o.en : "");
 const skillName = (id) => pjLabel(PJ_SKILLS, id, L());
+const courseSkillName = (id) => labelOf(ALL_SKILLS, id, L());
+// Show what the provider teaches in the provider's own terms (e.g. "Spreadsheets"),
+// so a related skill is never presented as the one the person asked for.
+const taughtNames = (t) => (t.vocab === "course" ? t.ids.map(courseSkillName) : t.ids.map(skillName)).join(", ");
 
 const COST_KEY = { free: "sd.cost.free", "free-exam-fee": "sd.cost.freeExam", fee: "sd.cost.fee" };
 const CERT_KEY = { recognised: "sd.cert.recognised", provider: "sd.cert.provider" };
@@ -35,7 +40,9 @@ function optionCard(o, picks) {
     <h3 id="sd-${o.id}">${esc(txt(o.title))}</h3>
     <p class="muted small">${esc(txt(o.provider))}</p>
     <p>${esc(txt(o.about))}</p>
-    ${o.covers.length ? `<p class="sd-why"><strong>${esc(tt("sd.why"))}</strong> ${esc(o.covers.map(skillName).join(", "))}</p>` : `<p class="sd-why small">${esc(tt("sd.whyGeneral"))}</p>`}
+    ${o.covers.length ? `<p class="sd-why"><strong>${esc(tt("sd.why"))}</strong> ${esc(taughtNames(o.teaches))}</p>` : `<p class="sd-why small">${esc(tt("sd.whyGeneral"))}</p>`}
+    ${o.unverifiedCourseSkills?.length ? `<p class="small muted">${esc(tt("courses.unverifiedSkills", { skills: o.unverifiedCourseSkills.map(courseSkillName).join(", ") }))}</p>` : ""}
+    ${o.note ? `<p class="alert alert--warn small">${esc(txt(o.note))}</p>` : ""}
     <dl class="facts">
       ${fact("sd.costT", o.cost ? tt(COST_KEY[o.cost]) + (o.costNote ? ` — ${txt(o.costNote)}` : "") : tt("sd.cost.none"))}
       ${fact("sd.certT", o.cert ? tt(CERT_KEY[o.cert]) : tt("sd.cert.none"))}
@@ -45,7 +52,9 @@ function optionCard(o, picks) {
     </dl>
     ${o.searchTip ? `<p class="small">${esc(txt(o.searchTip))}</p>` : ""}
     <p>${extLink(o.url, tt("sd.open"), tt("rec.newTab"), "btn btn-primary btn-small")}</p>
+    ${o.evidence ? `<p class="muted small">${esc(tt("courses.evidence", { date: formatDate(o.evidence.checked, L()) }))} ${esc(txt(o.evidence.text))}</p>` : ""}
     <p class="muted small">${esc(tt("sd.checked", { date: formatDate(o.checked, L()), source: txt(o.checkedFrom) }))}</p>
+    ${ageInDays(o.checked, todayISO()) > STALE_DAYS ? `<p class="alert alert--warn small">${esc(tt("stale.warn", { n: ageInDays(o.checked, todayISO()) }))}</p>` : ""}
   </article>`;
 }
 
@@ -94,8 +103,15 @@ function render(focus) {
     <p class="small muted">${esc(tt("sd.picksNote"))}</p>
   </section>` : ""}
   <p class="muted" aria-live="polite">${esc(tt("sd.count", { n: rec.items.length }))}</p>
+  ${rec.missing.length && rec.items.length ? `<p class="alert alert--info" role="status">${esc(tt("sd.missing", { skills: rec.missing.map(skillName).join(", ") }))}</p>` : ""}
   ${rec.items.length ? `<div class="rec-grid">${rec.items.map((o) => optionCard(o, rec.picks)).join("")}</div>`
-    : `<p class="alert alert--info">${esc(tt("sd.none"))}</p>`}
+    : `<div class="alert alert--info" role="status"><p><strong>${esc(tt("sd.noVerified"))}</strong></p>${skills.length ? `<p class="small">${esc(tt("sd.noVerifiedFor", { skills: (rec.missing.length ? rec.missing : skills).map(skillName).join(", ") }))}</p>` : ""}${state.path !== "all" ? `<p class="small">${esc(tt("sd.none"))}</p>` : ""}</div>`}
+  ${rec.general.length ? `
+  <section aria-labelledby="sd-gen-t" class="sd-general">
+    <h2 id="sd-gen-t">${esc(tt("sd.generalT"))}</h2>
+    <p class="muted">${esc(tt("sd.generalD"))}</p>
+    <div class="rec-grid">${rec.general.map((o) => optionCard(o, {})).join("")}</div>
+  </section>` : ""}
   <p class="alert alert--warn small">${esc(tt("sd.honest"))}</p>
   <p class="btn-row">
     <a class="btn btn-secondary" href="private-jobs.html?role=${encodeURIComponent(state.role)}">← ${esc(tt("sd.back"))}</a>

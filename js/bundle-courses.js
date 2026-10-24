@@ -363,7 +363,7 @@ const translations = {
     "courses.cost.all": "All",
     "courses.cost.free": "Free to learn",
     "courses.count": "{n} learning options",
-    "courses.emptyFilter": "No course in our list teaches this skill yet. Try Skill India Digital Hub.",
+    "courses.emptyFilter": "No course matches these filters.",
     "courses.provider": "Provider",
     "courses.topics": "What you learn",
     "courses.prereq": "Before you start",
@@ -894,7 +894,7 @@ const translations = {
     "pj.v.identitySub": "Part of {parent}, as per Wikipedia",
     "pj.v.identityNone": "Not publicly verified",
     "pj.v.website": "Official website",
-    "pj.v.websiteD": "Address as listed on Wikipedia",
+    "pj.v.websiteD": "Address as listed on {source}",
     "pj.v.careers": "Careers page",
     "pj.v.careersYes": "Opened and checked by us on {date}",
     "pj.v.careersNo": "Not checked by us",
@@ -935,7 +935,7 @@ const translations = {
     "pj.gap.noneLeft": "Nothing here.",
     "pj.gap.planT": "Your step-by-step plan",
     "pj.gap.planNote": "This plan is guidance, not a promise. Completing a course does not guarantee a job or promotion.",
-    "pj.step.course": "Learn {skills} through a short course — free government options exist.",
+    "pj.step.course": "Learn {skills} through a short course — see the Courses & Skill Development page for verified options.",
     "pj.step.formal": "Get the required qualification or licence: {note}",
     "pj.step.formalSkills": "Get the required licence or certificate for: {skills}.",
     "pj.step.practice": "Practise {skills} — through an apprenticeship, internship, part-time work or helping in a family business.",
@@ -1001,7 +1001,7 @@ const translations = {
     "sd.mode.offline": "Offline / in person",
     "sd.mode.both": "Online and offline",
     "sd.why": "Relevant because it teaches:",
-    "sd.whyGeneral": "A general option for building job skills close to home.",
+    "sd.whyGeneral": "Not verified for a specific skill — search this site for what you need.",
     "sd.costT": "Cost",
     "sd.cost.free": "Free (as stated by the provider)",
     "sd.cost.freeExam": "Free to learn; the certificate exam has a fee",
@@ -1019,6 +1019,17 @@ const translations = {
     "sd.honest": "We do not show fees, student ratings or placement numbers because we could not verify them. Read the provider's page before you pay or share any details.",
     "sd.back": "Back to my job results",
     "sd.allCourses": "See all free courses",
+    "courses.teachesT": "Verified to teach:",
+    "courses.generalOnly": "General place to look: we have not verified that it currently teaches a specific skill, so it is not shown as a match for any skill.",
+    "courses.unverifiedSkills": "Not confirmed (not used for matching): {skills}.",
+    "courses.evidence": "How we checked ({date}):",
+    "courses.noVerified": "No verified provider is currently available for this course or skill.",
+    "courses.noVerifiedHint": "We only list a provider when we have seen evidence that it teaches this exact skill. You can search the Skill India Digital Hub below — results there are not checked by us.",
+    "sd.missing": "No verified provider is currently available for: {skills}.",
+    "sd.noVerified": "No verified provider is currently available for this course or skill.",
+    "sd.noVerifiedFor": "Skills without a verified provider: {skills}. We do not show unrelated providers to fill the gap.",
+    "sd.generalT": "Places to search yourself",
+    "sd.generalD": "These are real portals and programmes, but we have not verified that they currently teach your exact skills. Search on their sites before you decide.",
     // ---- About & Disclaimer ----
     "about.title": "About & Disclaimer — CareerSaathi AI",
     "about.h1": "About CareerSaathi AI",
@@ -1433,7 +1444,7 @@ const translations = {
     "courses.cost.all": "सभी",
     "courses.cost.free": "मुफ़्त पढ़ाई",
     "courses.count": "सीखने के {n} विकल्प",
-    "courses.emptyFilter": "हमारी सूची में अभी इस हुनर का कोई कोर्स नहीं है। स्किल इंडिया डिजिटल हब देखें।",
+    "courses.emptyFilter": "इन फ़िल्टर से कोई कोर्स मेल नहीं खाता।",
     "courses.provider": "संस्था",
     "courses.topics": "आप क्या सीखेंगे",
     "courses.prereq": "शुरू करने से पहले",
@@ -1964,7 +1975,7 @@ const translations = {
     "pj.v.identitySub": "{parent} का हिस्सा, विकिपीडिया के अनुसार",
     "pj.v.identityNone": "सार्वजनिक रूप से सत्यापित नहीं",
     "pj.v.website": "आधिकारिक वेबसाइट",
-    "pj.v.websiteD": "विकिपीडिया में दिया गया पता",
+    "pj.v.websiteD": "{source} में दिया गया पता",
     "pj.v.careers": "करियर पेज",
     "pj.v.careersYes": "हमने {date} को खोलकर जाँचा",
     "pj.v.careersNo": "हमने नहीं जाँचा",
@@ -2005,7 +2016,7 @@ const translations = {
     "pj.gap.noneLeft": "यहाँ कुछ नहीं।",
     "pj.gap.planT": "आपका क़दम-दर-क़दम प्लान",
     "pj.gap.planNote": "यह प्लान मार्गदर्शन है, वादा नहीं। कोर्स पूरा करने से नौकरी या प्रमोशन की गारंटी नहीं मिलती।",
-    "pj.step.course": "{skills} छोटे कोर्स से सीखें — मुफ़्त सरकारी विकल्प भी हैं।",
+    "pj.step.course": "{skills} छोटे कोर्स से सीखें — जाँचे गए विकल्पों के लिए कोर्स और हुनर विकास पेज देखें।",
     "pj.step.formal": "ज़रूरी योग्यता या लाइसेंस लें: {note}",
     "pj.step.formalSkills": "इनके लिए ज़रूरी लाइसेंस या प्रमाणपत्र लें: {skills}।",
     "pj.step.practice": "{skills} का अभ्यास करें — अप्रेंटिसशिप, इंटर्नशिप, पार्ट-टाइम काम या परिवार के व्यवसाय में मदद से।",
@@ -2071,7 +2082,7 @@ const translations = {
     "sd.mode.offline": "ऑफ़लाइन / आमने-सामने",
     "sd.mode.both": "ऑनलाइन और ऑफ़लाइन",
     "sd.why": "क्यों काम का है — यह सिखाता है:",
-    "sd.whyGeneral": "घर के पास नौकरी वाले हुनर सीखने का एक सामान्य विकल्प।",
+    "sd.whyGeneral": "किसी ख़ास हुनर के लिए जाँचा नहीं गया — अपनी ज़रूरत की चीज़ इस साइट पर खोजें।",
     "sd.costT": "ख़र्च",
     "sd.cost.free": "मुफ़्त (प्रदाता के अनुसार)",
     "sd.cost.freeExam": "पढ़ाई मुफ़्त; प्रमाणपत्र परीक्षा की फ़ीस लगती है",
@@ -2089,6 +2100,17 @@ const translations = {
     "sd.honest": "हम फ़ीस, छात्रों की रेटिंग या प्लेसमेंट के आँकड़े नहीं दिखाते क्योंकि हम उन्हें सत्यापित नहीं कर पाए। पैसे देने या कोई जानकारी देने से पहले प्रदाता का पेज पढ़ें।",
     "sd.back": "मेरे नौकरी के नतीजों पर वापस",
     "sd.allCourses": "सभी मुफ़्त कोर्स देखें",
+    "courses.teachesT": "जाँचा गया — यह सिखाता है:",
+    "courses.generalOnly": "खोजने की सामान्य जगह: हमने पक्का नहीं किया कि यह अभी कोई ख़ास हुनर सिखाता है, इसलिए इसे किसी हुनर के मेल के रूप में नहीं दिखाते।",
+    "courses.unverifiedSkills": "पक्का नहीं (मेल के लिए इस्तेमाल नहीं): {skills}।",
+    "courses.evidence": "हमने कैसे जाँचा ({date}):",
+    "courses.noVerified": "इस कोर्स या हुनर के लिए अभी कोई सत्यापित प्रदाता उपलब्ध नहीं है।",
+    "courses.noVerifiedHint": "हम किसी प्रदाता को तभी दिखाते हैं जब हमें सबूत मिले कि वह ठीक यही हुनर सिखाता है। आप नीचे स्किल इंडिया डिजिटल हब पर खोज सकते हैं — वहाँ के नतीजे हमने नहीं जाँचे।",
+    "sd.missing": "इनके लिए अभी कोई सत्यापित प्रदाता उपलब्ध नहीं है: {skills}।",
+    "sd.noVerified": "इस कोर्स या हुनर के लिए अभी कोई सत्यापित प्रदाता उपलब्ध नहीं है।",
+    "sd.noVerifiedFor": "बिना सत्यापित प्रदाता वाले हुनर: {skills}। कमी भरने के लिए हम असंबंधित प्रदाता नहीं दिखाते।",
+    "sd.generalT": "ख़ुद खोजने की जगहें",
+    "sd.generalD": "ये असली पोर्टल और कार्यक्रम हैं, लेकिन हमने पक्का नहीं किया कि ये अभी आपके हुनर सिखाते हैं। फ़ैसले से पहले इनकी साइट पर खोजें।",
     // ---- About ----
     "about.title": "हमारे बारे में और अस्वीकरण — करियरसाथी AI",
     "about.h1": "करियरसाथी AI के बारे में",
@@ -2546,7 +2568,7 @@ const SKILL_GROUPS = [
       o("olevel", "O Level", "O लेवल"),
       o("dca", "DCA / ADCA", "DCA / ADCA"),
       o("tally", "Tally", "टैली"),
-      o("excel", "MS Excel", "MS एक्सेल"),
+      o("excel", "Spreadsheets (MS Excel / LibreOffice Calc)", "स्प्रेडशीट (MS एक्सेल / LibreOffice Calc)"),
       o("typing", "Typing (Hindi / English)", "टाइपिंग (हिंदी / अंग्रेज़ी)")
     ]
   },
@@ -3217,9 +3239,15 @@ function costFits(cost, budget) {
   return true;
 }
 
+/** Only skills with evidence count (see data/courses.js). Broken records count as none. */
+function verifiedSkills(course) {
+  return course && Array.isArray(course.skills) ? course.skills : [];
+}
+
 function evaluateCourse(course, profile, gapSkills) {
-  const covers = course.skills.filter((s) => gapSkills.includes(s));
-  const already = course.skills.filter((s) => profile.skills.includes(s));
+  const skills = verifiedSkills(course);
+  const covers = skills.filter((s) => gapSkills.includes(s));
+  const already = skills.filter((s) => profile.skills.includes(s));
   const reasons = [];
   const checks = [];
 
@@ -3271,16 +3299,21 @@ function recommendCourses(rawProfile, careers, courses) {
   return { ready: true, gaps, items, uncovered };
 }
 
-/** Courses that teach one skill (for the "browse by skill" view). */
+/**
+ * Courses for the "browse by skill" view. With a skill, only providers with a
+ * VERIFIED offering of exactly that skill are returned — never a provider whose
+ * claim is unconfirmed, or one that only teaches a similar or related skill.
+ * An empty list means "no verified provider", and the page says so.
+ */
 function coursesForSkill(skill, courses) {
   if (!Array.isArray(courses)) return [];
   return courses
-    .filter((c) => !skill || c.skills.includes(skill))
+    .filter((c) => c && c.id && c.title && (!skill || verifiedSkills(c).includes(skill)))
     .sort((a, b) => ((COST_RANK[a.cost] ?? 3) - (COST_RANK[b.cost] ?? 3)) ||
       ((PROVIDER_RANK[a.providerType] ?? 3) - (PROVIDER_RANK[b.providerType] ?? 3)));
 }
 
-return { skillGaps, evaluateCourse, recommendCourses, coursesForSkill };
+return { skillGaps, verifiedSkills, evaluateCourse, recommendCourses, coursesForSkill };
 })();
 
 // ===== data/courses.js =====
@@ -3295,6 +3328,11 @@ __mods["data/courses.js"] = (function () {
 // - Course pages change every term, so most records point to the provider and
 //   give a `searchTip` (what to search for there) instead of a fragile deep link.
 // - Completing a course never guarantees a job. The page says so.
+// - `skills` lists ONLY skills with evidence that this provider offers them now
+//   (`evidence` says where we saw it). Claims we could not confirm go in
+//   `unverifiedSkills`: they are shown as "not confirmed" and are NEVER used to
+//   match a course to a skill. A record may have no verified skills at all — then
+//   it is a general place to look, not a match for any skill.
 
 const COST = {
   FREE: "free",                 // learning and certificate free (as stated by provider)
@@ -3305,7 +3343,9 @@ const COST = {
 
 const CHECKED = "2026-10-22";
 const tx = (en, hi) => ({ en, hi });
-const c = (o) => ({ duration: null, certificate: null, minEducation: null, searchTip: null, note: null, checked: CHECKED, ...o });
+const V2 = "2026-10-24";
+const ev = (url, en, hi, checked = V2) => ({ url, text: tx(en, hi), checked });
+const c = (o) => ({ duration: null, certificate: null, minEducation: null, searchTip: null, note: null, checked: CHECKED, unverifiedSkills: [], evidence: null, ...o });
 
 const PROVIDER_TYPES = [
   { id: "government", en: "Government", hi: "सरकारी" },
@@ -3327,60 +3367,67 @@ const COURSES = [
     duration: tx("80 hours", "80 घंटे"),
     certificate: tx("Digitally signed NIELIT certificate after passing the exam.", "परीक्षा पास करने पर NIELIT का डिजिटल हस्ताक्षर वाला प्रमाणपत्र।"),
     relatedCareers: ["data-entry", "ssc-chsl", "india-post-gds", "office-assistant", "computer-centre"],
+    evidence: ev("https://www.nielit.gov.in/node/2480", "NIELIT's CCC syllabus lists: introduction to computer, word processing, spreadsheets, internet and presentations.", "NIELIT के CCC सिलेबस में: कंप्यूटर परिचय, वर्ड प्रोसेसिंग, स्प्रेडशीट, इंटरनेट और प्रेज़ेंटेशन।"),
     checkedFrom: tx("NIELIT CCC page", "NIELIT CCC पेज")
   }),
   c({
     id: "nielit-olevel", providerType: "government", mode: "both",
     title: tx("O Level (IT)", "O लेवल (IT)"),
     provider: tx("NIELIT (Government of India)", "NIELIT (भारत सरकार)"),
-    url: "https://www.nielit.gov.in/",
+    url: "https://www.nielit.gov.in/node/15962",
     searchTip: tx("On the NIELIT site, open the O Level section for the current syllabus and rules.", "NIELIT की वेबसाइट पर O लेवल सेक्शन में मौजूदा सिलेबस और नियम देखें।"),
     skills: ["olevel", "basic-computer", "programming", "webdev"],
-    topics: tx("A longer IT course after CCC. Check the current syllabus on NIELIT.", "CCC के बाद का लंबा IT कोर्स। मौजूदा सिलेबस NIELIT पर देखें।"),
+    topics: tx("IT tools and networking basics, web design, Python programming and Internet of Things (as listed by NIELIT).", "IT टूल्स और नेटवर्क की बुनियाद, वेब डिज़ाइन, पाइथन प्रोग्रामिंग और इंटरनेट ऑफ़ थिंग्स (NIELIT के अनुसार)।"),
     prerequisites: null, cost: null, costNote: null,
     relatedCareers: ["data-entry", "computer-centre", "web-developer"],
-    checkedFrom: tx("NIELIT official website (address only)", "NIELIT आधिकारिक वेबसाइट (सिर्फ़ पता)")
+    evidence: ev("https://www.nielit.gov.in/node/15962", "NIELIT's O Level (IT) page lists the papers: IT Tools & Network Basics, Web Design & Publishing, Programming through Python, and Internet of Things.", "NIELIT के O लेवल (IT) पेज पर पेपर: IT टूल्स और नेटवर्क बेसिक्स, वेब डिज़ाइन और पब्लिशिंग, पाइथन से प्रोग्रामिंग, और इंटरनेट ऑफ़ थिंग्स।"),
+    checkedFrom: tx("NIELIT O Level (IT) page", "NIELIT O लेवल (IT) पेज")
   }),
   c({
     id: "swayam-computer", providerType: "government", mode: "online",
-    title: tx("Computer & office skills courses", "कंप्यूटर और ऑफ़िस कौशल के कोर्स"),
+    title: tx("Search SWAYAM for computer and office courses (not confirmed)", "स्वयम पर कंप्यूटर और ऑफ़िस कोर्स खोजें (पक्का नहीं)"),
     provider: tx("SWAYAM (Ministry of Education)", "स्वयम (शिक्षा मंत्रालय)"),
     url: "https://swayam.gov.in/",
     searchTip: tx("Search SWAYAM for \"computer fundamentals\", \"office automation\" or \"spreadsheet\". Available courses change each semester.", "स्वयम पर \"computer fundamentals\", \"office automation\" या \"spreadsheet\" खोजें। कोर्स हर सेमेस्टर बदलते हैं।"),
-    skills: ["basic-computer", "excel"],
+    skills: [],
     topics: tx("University-level online courses on computer and office basics.", "कंप्यूटर और ऑफ़िस की बुनियाद पर विश्वविद्यालय स्तर के ऑनलाइन कोर्स।"),
     prerequisites: null,
     cost: "free-exam-fee", costNote: tx("Learning is free. A certificate needs a paid, in-person proctored exam.", "पढ़ाई मुफ़्त है। प्रमाणपत्र के लिए फ़ीस वाली परीक्षा केंद्र पर देनी होती है।"),
     certificate: tx("Only after passing the paid proctored exam.", "सिर्फ़ फ़ीस वाली निगरानी परीक्षा पास करने पर।"),
-    relatedCareers: ["office-assistant", "data-entry", "accounts-assistant"],
+    relatedCareers: [],
+    note: tx("We could not find a computer-basics or spreadsheet course in the current SWAYAM semester lists we checked. Search SWAYAM yourself; this is not a confirmed offering.", "हमने जो मौजूदा स्वयम सेमेस्टर सूचियाँ देखीं, उनमें कंप्यूटर बेसिक्स या स्प्रेडशीट का कोर्स नहीं मिला। स्वयम पर ख़ुद खोजें; यह पक्का किया हुआ कोर्स नहीं है।"),
+    unverifiedSkills: ["basic-computer", "excel"],
     checkedFrom: tx("SWAYAM 'About' page", "स्वयम का 'About' पेज")
   }),
   c({
     id: "swayam-accounting", providerType: "government", mode: "online",
-    title: tx("Accounting and commerce courses", "अकाउंटिंग और कॉमर्स के कोर्स"),
+    title: tx("Search SWAYAM for accounting courses (not confirmed)", "स्वयम पर अकाउंटिंग कोर्स खोजें (पक्का नहीं)"),
     provider: tx("SWAYAM (Ministry of Education)", "स्वयम (शिक्षा मंत्रालय)"),
     url: "https://swayam.gov.in/",
     searchTip: tx("Search SWAYAM for \"accounting\", \"financial accounting\" or \"GST\".", "स्वयम पर \"accounting\", \"financial accounting\" या \"GST\" खोजें।"),
-    skills: ["accounting"],
+    skills: [],
     topics: tx("Basics of bookkeeping, financial accounting and taxation from universities.", "विश्वविद्यालयों से बही-खाता, वित्तीय लेखा और टैक्स की बुनियाद।"),
     prerequisites: null,
     cost: "free-exam-fee", costNote: tx("Learning is free. A certificate needs a paid, in-person proctored exam.", "पढ़ाई मुफ़्त है। प्रमाणपत्र के लिए फ़ीस वाली परीक्षा केंद्र पर देनी होती है।"),
     certificate: tx("Only after passing the paid proctored exam.", "सिर्फ़ फ़ीस वाली निगरानी परीक्षा पास करने पर।"),
-    relatedCareers: ["accounts-assistant", "bank-clerk", "ssc-cgl"],
+    relatedCareers: [],
+    note: tx("We could not find an accounting course in the current SWAYAM semester lists we checked. Search SWAYAM yourself; this is not a confirmed offering.", "हमने जो मौजूदा स्वयम सेमेस्टर सूचियाँ देखीं, उनमें अकाउंटिंग का कोर्स नहीं मिला। स्वयम पर ख़ुद खोजें; यह पक्का किया हुआ कोर्स नहीं है।"),
+    unverifiedSkills: ["accounting"],
     checkedFrom: tx("SWAYAM 'About' page", "स्वयम का 'About' पेज")
   }),
   c({
     id: "swayam-digital-marketing", providerType: "government", mode: "online",
-    title: tx("Digital marketing and e-commerce courses", "डिजिटल मार्केटिंग और ई-कॉमर्स के कोर्स"),
+    title: tx("Basics of Digital Marketing (CEC, on SWAYAM)", "डिजिटल मार्केटिंग की बुनियाद (CEC, स्वयम पर)"),
     provider: tx("SWAYAM (Ministry of Education)", "स्वयम (शिक्षा मंत्रालय)"),
     url: "https://swayam.gov.in/",
-    searchTip: tx("Search SWAYAM for \"digital marketing\" or \"e-commerce\". If none is open now, check again next semester.", "स्वयम पर \"digital marketing\" या \"e-commerce\" खोजें। अभी कोई न हो तो अगले सेमेस्टर देखें।"),
+    searchTip: tx("Search SWAYAM for \"Basics of Digital Marketing\". Courses run by semester — if it is not open now, check the next semester.", "स्वयम पर \"Basics of Digital Marketing\" खोजें। कोर्स सेमेस्टर के हिसाब से चलते हैं — अभी न खुला हो तो अगला सेमेस्टर देखें।"),
     skills: ["digital-marketing"],
-    topics: tx("Online promotion, social media and selling online.", "ऑनलाइन प्रचार, सोशल मीडिया और ऑनलाइन बिक्री।"),
+    topics: tx("A SWAYAM course on the basics of digital marketing, offered by CEC (Consortium for Educational Communication).", "डिजिटल मार्केटिंग की बुनियाद पर स्वयम का कोर्स, CEC (कंसोर्टियम फ़ॉर एजुकेशनल कम्युनिकेशन) द्वारा।"),
     prerequisites: null,
     cost: "free-exam-fee", costNote: tx("Learning is free. A certificate needs a paid, in-person proctored exam.", "पढ़ाई मुफ़्त है। प्रमाणपत्र के लिए फ़ीस वाली परीक्षा केंद्र पर देनी होती है।"),
     certificate: tx("Only after passing the paid proctored exam.", "सिर्फ़ फ़ीस वाली निगरानी परीक्षा पास करने पर।"),
-    relatedCareers: ["digital-marketer", "tailoring-business", "food-business"],
+    relatedCareers: ["digital-marketer"],
+    evidence: ev("https://manuu.edu.in/sites/default/files/SWAYAM/SWAYAM-Courses-approved-ODD-2026-for-2872027.pdf", "'Basics of Digital Marketing' (CEC) appears in a university's list of SWAYAM courses for the July 2026 semester.", "'Basics of Digital Marketing' (CEC) एक विश्वविद्यालय की जुलाई 2026 सेमेस्टर की स्वयम कोर्स सूची में है।"),
     checkedFrom: tx("SWAYAM 'About' page", "स्वयम का 'About' पेज")
   }),
   c({
@@ -3395,6 +3442,7 @@ const COURSES = [
     cost: "free-exam-fee", costNote: tx("Course materials are free. The in-person certification exam has a fee.", "कोर्स सामग्री मुफ़्त है। प्रमाणपत्र परीक्षा की फ़ीस लगती है।"),
     certificate: tx("After passing the proctored exam.", "निगरानी परीक्षा पास करने पर।"),
     relatedCareers: ["software-developer", "data-analyst", "web-developer"],
+    evidence: ev("https://nptel.ac.in/courses/106106182", "NPTEL course pages: 'The Joy of Computing using Python' (106106182) and 'Python for Data Science' (106106212).", "NPTEL कोर्स पेज: 'The Joy of Computing using Python' (106106182) और 'Python for Data Science' (106106212)।"),
     checkedFrom: tx("NPTEL FAQ page", "NPTEL FAQ पेज")
   }),
   c({
@@ -3403,12 +3451,14 @@ const COURSES = [
     provider: tx("NPTEL / SWAYAM", "NPTEL / स्वयम"),
     url: "https://nptel.ac.in/",
     searchTip: tx("Search NPTEL or SWAYAM for \"spoken English\", \"speaking effectively\" or \"communication skills\".", "NPTEL या स्वयम पर \"spoken English\", \"speaking effectively\" या \"communication skills\" खोजें।"),
-    skills: ["spoken-english", "customer-service"],
+    skills: ["spoken-english"],
     topics: tx("Speaking, listening and workplace communication.", "बोलना, सुनना और काम की जगह पर बातचीत।"),
     prerequisites: null,
     cost: "free-exam-fee", costNote: tx("Course materials are free. The certification exam has a fee.", "कोर्स सामग्री मुफ़्त है। प्रमाणपत्र परीक्षा की फ़ीस लगती है।"),
     certificate: tx("After passing the proctored exam.", "निगरानी परीक्षा पास करने पर।"),
     relatedCareers: ["customer-support", "bank-po", "sales-executive", "tutor"],
+    unverifiedSkills: ["customer-service"],
+    evidence: ev("https://archive.nptel.ac.in/content/syllabus_pdf/109105117.pdf", "NPTEL 'Speaking Effectively' (IIT Kharagpur) syllabus covers English pronunciation, interviews, presentations and meetings.", "NPTEL 'Speaking Effectively' (IIT खड़गपुर) के सिलेबस में अंग्रेज़ी उच्चारण, इंटरव्यू, प्रेज़ेंटेशन और मीटिंग शामिल हैं।"),
     checkedFrom: tx("NPTEL FAQ and SWAYAM 'About' pages", "NPTEL FAQ और स्वयम 'About' पेज")
   }),
   c({
@@ -3417,24 +3467,26 @@ const COURSES = [
     provider: tx("freeCodeCamp", "freeCodeCamp"),
     url: "https://www.freecodecamp.org/",
     searchTip: tx("Start with the Responsive Web Design curriculum. Lessons are in English.", "Responsive Web Design पाठ्यक्रम से शुरू करें। पाठ अंग्रेज़ी में हैं।"),
-    skills: ["webdev", "programming"],
+    skills: ["webdev", "programming", "data-analytics"],
     topics: tx("Build real web pages step by step and practise with projects.", "क़दम-दर-क़दम असली वेब पेज बनाएँ और प्रोजेक्ट से अभ्यास करें।"),
     prerequisites: tx("Basic computer use and some English reading.", "बेसिक कंप्यूटर और थोड़ी अंग्रेज़ी पढ़ना।"),
     cost: "free", costNote: tx("The site states that you can learn to code for free.", "वेबसाइट के अनुसार कोडिंग मुफ़्त सीख सकते हैं।"),
-    relatedCareers: ["web-developer", "software-developer"],
+    relatedCareers: ["web-developer", "software-developer", "data-analyst"],
+    evidence: ev("https://www.freecodecamp.org/news/freecodecamp-certifications/", "freeCodeCamp's own article lists certifications including Responsive Web Design, JavaScript Algorithms and Data Structures, and Data Analysis with Python (article dated March 2022).", "freeCodeCamp के अपने लेख में Responsive Web Design, JavaScript Algorithms and Data Structures और Data Analysis with Python जैसे प्रमाणपत्र (लेख मार्च 2022 का)।"),
     checkedFrom: tx("freeCodeCamp home page", "freeCodeCamp होम पेज")
   }),
   c({
     id: "spoken-tutorial", providerType: "institute", mode: "online",
-    title: tx("Software tutorials in Hindi and English (Calc, Python, HTML, GIMP, Inkscape)", "हिंदी और अंग्रेज़ी में सॉफ़्टवेयर ट्यूटोरियल (Calc, Python, HTML, GIMP, Inkscape)"),
+    title: tx("Software tutorials in Hindi and English (computer basics, typing, Calc, Python, HTML, GIMP, Inkscape)", "हिंदी और अंग्रेज़ी में सॉफ़्टवेयर ट्यूटोरियल (कंप्यूटर बेसिक्स, टाइपिंग, Calc, Python, HTML, GIMP, Inkscape)"),
     provider: tx("Spoken Tutorial (developed at IIT Bombay)", "स्पोकन ट्यूटोरियल (IIT बॉम्बे में विकसित)"),
     url: "https://spoken-tutorial.org/",
     searchTip: tx("Choose a topic such as \"LibreOffice Calc\", \"Python\", \"HTML\", \"GIMP\" or \"Inkscape\", then pick Hindi or English.", "\"LibreOffice Calc\", \"Python\", \"HTML\", \"GIMP\" या \"Inkscape\" जैसा विषय चुनें, फिर हिंदी या अंग्रेज़ी चुनें।"),
-    skills: ["excel", "programming", "webdev", "graphic-design"],
+    skills: ["basic-computer", "typing", "excel", "programming", "webdev", "graphic-design"],
     topics: tx("Short video tutorials for learning software on your own; many are in Hindi.", "ख़ुद सॉफ़्टवेयर सीखने के छोटे वीडियो; कई हिंदी में।"),
     prerequisites: null, cost: null, costNote: null,
     note: tx("The site now lists subscription and payment pages, so we could not confirm what is free.", "वेबसाइट पर अब सब्सक्रिप्शन और भुगतान पेज भी हैं, इसलिए हम पक्का नहीं कर सके कि क्या मुफ़्त है।"),
     relatedCareers: ["graphic-designer", "office-assistant", "web-developer", "data-analyst"],
+    evidence: ev("https://spoken-tutorial.org/", "The site's course list includes Introduction to Computers, Tux Typing, LibreOffice Calc (spreadsheets), Python, Java, HTML/CSS/JavaScript, GIMP and Inkscape; 658 tutorials are listed in Hindi.", "वेबसाइट की सूची में Introduction to Computers, Tux Typing, LibreOffice Calc (स्प्रेडशीट), Python, Java, HTML/CSS/JavaScript, GIMP और Inkscape हैं; हिंदी में 658 ट्यूटोरियल दिखते हैं।"),
     checkedFrom: tx("Spoken Tutorial home page", "स्पोकन ट्यूटोरियल होम पेज")
   }),
   c({
@@ -3443,12 +3495,13 @@ const COURSES = [
     provider: tx("Government and private ITIs, under DGT (Ministry of Skill Development)", "सरकारी और प्राइवेट ITI, DGT (कौशल विकास मंत्रालय) के तहत"),
     url: "https://dgt.gov.in/en/about-us",
     searchTip: tx("Ask your nearest government ITI or your State's technical education / ITI admission portal about trades and admission dates.", "ट्रेड और दाख़िले की तारीख़ों के लिए नज़दीकी सरकारी ITI या अपने राज्य के ITI दाख़िला पोर्टल से पूछें।"),
-    skills: ["electrician", "plumbing", "welding", "repair"],
+    skills: ["electrician", "plumbing", "welding", "repair", "tailoring"],
     topics: tx("Hands-on training in engineering and non-engineering trades at ITIs.", "ITI में इंजीनियरिंग और ग़ैर-इंजीनियरिंग ट्रेड की व्यावहारिक ट्रेनिंग।"),
     prerequisites: tx("Each trade sets its own entry qualification.", "हर ट्रेड की अपनी प्रवेश योग्यता है।"),
     cost: null, costNote: null,
     duration: tx("About 6 months to 2 years, depending on the trade.", "ट्रेड के हिसाब से लगभग 6 महीने से 2 साल।"),
-    relatedCareers: ["electrician", "plumber", "welder", "repair-technician", "trade-apprentice", "rrb-level1"],
+    relatedCareers: ["electrician", "plumber", "welder", "repair-technician", "tailoring-business", "trade-apprentice", "rrb-level1"],
+    evidence: ev("https://dgt.gov.in/sites/default/files/2024-02/list_of_cts_trades.pdf", "DGT's list of CTS trades includes Electrician, Wireman, Plumber, Welder, Electronic Mechanic, Refrigeration & AC Mechanic, Sewing Technology and Dress Making. Not every ITI runs every trade.", "DGT की CTS ट्रेड सूची में इलेक्ट्रीशियन, वायरमैन, प्लंबर, वेल्डर, इलेक्ट्रॉनिक मैकेनिक, रेफ़्रिजरेशन और AC मैकेनिक, सिलाई तकनीक और ड्रेस मेकिंग हैं। हर ITI में हर ट्रेड नहीं होता।"),
     checkedFrom: tx("DGT 'About us' page", "DGT का 'About us' पेज")
   }),
   c({
@@ -3457,13 +3510,15 @@ const COURSES = [
     provider: tx("PMKVY training centres, through NSDC", "PMKVY ट्रेनिंग सेंटर, NSDC के ज़रिए"),
     url: "https://nsdcindia.org/products/pradhan-mantri-kaushal-vikas-yojana",
     searchTip: tx("Ask a PMKVY centre near you which job roles they train for (for example retail, tailoring, electrician, customer service).", "पास के PMKVY सेंटर से पूछें कि वे किन कामों की ट्रेनिंग देते हैं (जैसे रिटेल, सिलाई, इलेक्ट्रीशियन, ग्राहक सेवा)।"),
-    skills: ["customer-service", "sales", "tailoring", "electrician", "plumbing", "welding", "repair", "cooking", "digital-marketing"],
+    skills: [],
     topics: tx("Industry-linked job-role courses with on-the-job training. Available roles differ by centre.", "उद्योग से जुड़े जॉब-रोल कोर्स, काम पर ट्रेनिंग के साथ। हर सेंटर पर अलग कोर्स।"),
     prerequisites: tx("Each job role has its own entry requirements.", "हर जॉब रोल की अपनी शर्तें हैं।"),
     cost: "free", costNote: tx("Training cost is paid by the scheme.", "ट्रेनिंग का ख़र्च योजना उठाती है।"),
     duration: tx("Courses typically run 300–600 hours.", "कोर्स आमतौर पर 300–600 घंटे के होते हैं।"),
     certificate: tx("Nationally recognised certificate after the assessment.", "परीक्षा के बाद राष्ट्रीय स्तर पर मान्य प्रमाणपत्र।"),
-    relatedCareers: ["retail-associate", "customer-support", "sales-executive", "tailoring-business", "electrician", "plumber", "welder", "repair-technician"],
+    relatedCareers: [],
+    note: tx("Job roles differ from centre to centre. We could not confirm which roles a centre near you offers, so this is not shown as a match for any skill — ask the centre.", "हर सेंटर पर जॉब रोल अलग होते हैं। हम पक्का नहीं कर सके कि आपके पास का सेंटर कौन-से रोल सिखाता है, इसलिए इसे किसी हुनर के मेल के रूप में नहीं दिखाते — सेंटर से पूछें।"),
+    unverifiedSkills: ["customer-service", "sales", "tailoring", "electrician", "plumbing", "welding", "repair", "cooking", "digital-marketing"],
     checkedFrom: tx("NSDC PMKVY page", "NSDC PMKVY पेज")
   }),
   c({
@@ -3477,6 +3532,7 @@ const COURSES = [
     prerequisites: null,
     cost: "fee", costNote: tx("Government fees apply.", "सरकारी फ़ीस लगती है।"),
     relatedCareers: ["driver", "sales-executive"],
+    evidence: ev("https://sarathi.parivahan.gov.in/sarathiservice/", "Sarathi is the government's official driving-licence service. It issues licences; it does not teach driving.", "सारथी सरकार की आधिकारिक ड्राइविंग लाइसेंस सेवा है। यह लाइसेंस देती है; ड्राइविंग नहीं सिखाती।", "2026-10-22"),
     checkedFrom: tx("Saharanpur district (UP) official page on driving licences", "सहारनपुर ज़िला (UP) का ड्राइविंग लाइसेंस पेज")
   }),
   c({
@@ -3489,6 +3545,7 @@ const COURSES = [
     topics: tx("Short and long vocational training for farmers and rural youth in agriculture and allied work.", "किसानों और ग्रामीण युवाओं के लिए खेती और सहायक कामों की छोटी और लंबी ट्रेनिंग।"),
     prerequisites: null, cost: null, costNote: null,
     relatedCareers: ["agri-entrepreneur"],
+    evidence: ev("https://kvk.icar.gov.in/", "ICAR describes Krishi Vigyan Kendras as district centres that train farmers and rural youth in agriculture and allied work.", "ICAR के अनुसार कृषि विज्ञान केंद्र ज़िला स्तर पर किसानों और ग्रामीण युवाओं को खेती और सहायक कामों की ट्रेनिंग देते हैं।", "2026-10-22"),
     checkedFrom: tx("ICAR institute page on KVKs", "KVK पर ICAR संस्थान का पेज")
   }),
   c({
@@ -3502,7 +3559,67 @@ const COURSES = [
     prerequisites: tx("Depends on the programme (usually Class 12 for D.El.Ed and graduation for B.Ed) — confirm with NCTE rules.", "कार्यक्रम पर निर्भर (आमतौर पर D.El.Ed के लिए 12वीं, B.Ed के लिए ग्रेजुएशन) — NCTE नियमों से पक्का करें।"),
     cost: null, costNote: null,
     relatedCareers: ["govt-teacher", "tutor"],
+    evidence: ev("https://ncte.gov.in/", "NCTE is the statutory body that recognises teacher-training institutes (D.El.Ed, B.Ed).", "NCTE शिक्षक-प्रशिक्षण संस्थानों (D.El.Ed, B.Ed) को मान्यता देने वाली वैधानिक संस्था है।", "2026-10-22"),
     checkedFrom: tx("NCTE official website (institution lists)", "NCTE आधिकारिक वेबसाइट (संस्थान सूची)")
+  }),
+  c({
+    id: "tally-education", providerType: "other", mode: "both",
+    title: tx("TallyPrime and GST courses (Tally Education)", "टैलीप्राइम और GST कोर्स (टैली एजुकेशन)"),
+    provider: tx("Tally Education — learning arm of the makers of Tally", "टैली एजुकेशन — टैली बनाने वालों की लर्निंग शाखा"),
+    url: "https://tallyeducation.com/",
+    skills: ["tally", "accounting"],
+    topics: tx("Courses such as TallyEssential, TallyProfessional and GST using TallyPrime.", "टैलीएसेंशियल, टैलीप्रोफ़ेशनल और टैलीप्राइम से GST जैसे कोर्स।"),
+    prerequisites: null, cost: null, costNote: null,
+    certificate: tx("Certificate from Tally Education (not a government qualification).", "टैली एजुकेशन का प्रमाणपत्र (सरकारी योग्यता नहीं)।"),
+    relatedCareers: ["accounts-assistant"],
+    evidence: ev("https://tallyeducation.com/", "Tally Education's home page lists TallyEssential, TallyProfessional, GST using TallyPrime and other TallyPrime courses. Fees are not stated there.", "टैली एजुकेशन के होम पेज पर टैलीएसेंशियल, टैलीप्रोफ़ेशनल, टैलीप्राइम से GST और दूसरे कोर्स दिखते हैं। वहाँ फ़ीस नहीं लिखी।", "2026-10-23"),
+    checked: "2026-10-23",
+    checkedFrom: tx("Tally Education home page", "टैली एजुकेशन होम पेज")
+  }),
+  c({
+    id: "rseti", providerType: "institute", mode: "in-person",
+    title: tx("RSETI — free self-employment training (mobile/AC repair, CCTV, computerised accounting and more)", "RSETI — मुफ़्त स्वरोज़गार ट्रेनिंग (मोबाइल/AC रिपेयर, CCTV, कंप्यूटराइज़्ड अकाउंटिंग आदि)"),
+    provider: tx("Rural Self Employment Training Institutes, run by banks under Ministry of Rural Development guidelines", "ग्रामीण स्वरोज़गार प्रशिक्षण संस्थान — ग्रामीण विकास मंत्रालय के दिशानिर्देशों के तहत बैंकों द्वारा"),
+    url: "https://bankofbaroda.bank.in/hi-in/baroda-swarojgar-vikas-sansthan",
+    searchTip: tx("Ask the lead bank in your district for the nearest RSETI and its next batch.", "अपने ज़िले के लीड बैंक से पास के RSETI और अगले बैच के बारे में पूछें।"),
+    skills: ["repair", "accounting"],
+    topics: tx("Short residential-style trainings for unemployed people who want self-employment or a job.", "स्वरोज़गार या नौकरी चाहने वाले बेरोज़गार लोगों के लिए छोटी ट्रेनिंग।"),
+    prerequisites: tx("Age 18–45, unemployed, with basic knowledge of the chosen field (as stated by Bank of Baroda's RSETI page).", "उम्र 18–45, बेरोज़गार, चुने गए क्षेत्र की बुनियादी जानकारी (बैंक ऑफ़ बड़ौदा RSETI पेज के अनुसार)।"),
+    cost: "free", costNote: tx("Bank of Baroda's RSETI page calls the training completely free.", "बैंक ऑफ़ बड़ौदा के RSETI पेज के अनुसार ट्रेनिंग पूरी तरह मुफ़्त है।"),
+    relatedCareers: ["repair-technician", "accounts-assistant"],
+    evidence: ev("https://bankofbaroda.bank.in/hi-in/baroda-swarojgar-vikas-sansthan", "Bank of Baroda's RSETI page lists courses including mobile phone repair, refrigerator & AC repair, CCTV installation and computerised accounting.", "बैंक ऑफ़ बड़ौदा के RSETI पेज पर मोबाइल फ़ोन रिपेयर, फ़्रिज और AC रिपेयर, CCTV लगाना और कंप्यूटराइज़्ड अकाउंटिंग जैसे कोर्स दिखते हैं।", "2026-10-23"),
+    checked: "2026-10-23",
+    checkedFrom: tx("Bank of Baroda — Baroda Swarojgar Vikas Sansthan page", "बैंक ऑफ़ बड़ौदा — बड़ौदा स्वरोज़गार विकास संस्थान पेज")
+  }),
+  c({
+    id: "hubspot-academy", providerType: "other", mode: "online",
+    title: tx("HubSpot Academy — digital and social media marketing", "हबस्पॉट अकादमी — डिजिटल और सोशल मीडिया मार्केटिंग"),
+    provider: tx("HubSpot (private company)", "हबस्पॉट (निजी कंपनी)"),
+    url: "https://academy.hubspot.com/",
+    skills: ["digital-marketing"],
+    topics: tx("Short online courses and certifications such as Digital Marketing and Social Media Marketing. In English.", "डिजिटल मार्केटिंग और सोशल मीडिया मार्केटिंग जैसे छोटे ऑनलाइन कोर्स और प्रमाणपत्र। अंग्रेज़ी में।"),
+    prerequisites: null,
+    cost: "free", costNote: tx("HubSpot says a HubSpot Academy account is 100% free and gives unlimited access to its library.", "हबस्पॉट के अनुसार हबस्पॉट अकादमी का अकाउंट 100% मुफ़्त है और पूरी लाइब्रेरी मिलती है।"),
+    certificate: tx("HubSpot certification (from HubSpot, not a government qualification).", "हबस्पॉट का प्रमाणपत्र (हबस्पॉट से, सरकारी योग्यता नहीं)।"),
+    relatedCareers: ["digital-marketer"],
+    evidence: ev("https://academy.hubspot.com/courses", "HubSpot Academy's course list shows a Social Media Marketing certification and a Digital Marketing certification.", "हबस्पॉट अकादमी की कोर्स सूची में सोशल मीडिया मार्केटिंग और डिजिटल मार्केटिंग प्रमाणपत्र दिखते हैं।"),
+    checked: "2026-10-24",
+    checkedFrom: tx("HubSpot Academy home and course pages", "हबस्पॉट अकादमी होम और कोर्स पेज")
+  }),
+  c({
+    id: "google-skillshop", providerType: "other", mode: "online",
+    title: tx("Google Skillshop — Google Ads and Analytics training", "गूगल स्किलशॉप — गूगल ऐड्स और एनालिटिक्स ट्रेनिंग"),
+    provider: tx("Google (private company)", "गूगल (निजी कंपनी)"),
+    url: "https://skillshop.withgoogle.com/",
+    skills: ["digital-marketing"],
+    topics: tx("Self-paced training on Google Ads, Google Analytics and other Google marketing tools.", "गूगल ऐड्स, गूगल एनालिटिक्स और दूसरे गूगल मार्केटिंग टूल्स पर अपनी गति से ट्रेनिंग।"),
+    prerequisites: null,
+    cost: "free", costNote: tx("Skillshop describes its training as free. Whether each certification is free was not checked.", "स्किलशॉप अपनी ट्रेनिंग को मुफ़्त बताता है। हर प्रमाणपत्र मुफ़्त है या नहीं, यह जाँचा नहीं गया।"),
+    certificate: tx("Google product certifications (from Google, not a government qualification).", "गूगल के प्रोडक्ट प्रमाणपत्र (गूगल से, सरकारी योग्यता नहीं)।"),
+    relatedCareers: ["digital-marketer"],
+    evidence: ev("https://skillshop.withgoogle.com/", "Skillshop's home page offers training on Google Ads, Google Analytics and Google Marketing Platform leading to Google product certifications.", "स्किलशॉप होम पेज पर गूगल ऐड्स, गूगल एनालिटिक्स और गूगल मार्केटिंग प्लेटफ़ॉर्म की ट्रेनिंग, जिससे गूगल के प्रमाणपत्र मिलते हैं।", "2026-10-23"),
+    checked: "2026-10-23",
+    checkedFrom: tx("Skillshop home page", "स्किलशॉप होम पेज")
   })
 ];
 
@@ -4093,7 +4210,11 @@ function card(course, result) {
     </div>
     <h3 id="co-${course.id}${result ? "-r" : ""}">${esc(txt(course.title))}</h3>
     <p class="muted">${esc(txt(course.topics))}</p>
-    <ul class="chip-list skill-chips">${course.skills.map((s) => `<li class="chip chip--skill">${esc(skillName(s))}</li>`).join("")}</ul>
+    ${course.skills.length
+      ? `<p class="small teaches-t"><strong>${esc(tt("courses.teachesT"))}</strong></p>
+         <ul class="chip-list skill-chips">${course.skills.map((s) => `<li class="chip chip--skill">${esc(skillName(s))}</li>`).join("")}</ul>`
+      : `<p class="alert alert--info small">${esc(tt("courses.generalOnly"))}</p>`}
+    ${course.unverifiedSkills?.length ? `<p class="small muted">${esc(tt("courses.unverifiedSkills", { skills: course.unverifiedSkills.map(skillName).join(", ") }))}</p>` : ""}
 
     ${result ? `<h4>${esc(tt("courses.why"))}</h4>
       <ul class="list-check compact">${result.reasons.map((m) => `<li>${esc(say(m))}</li>`).join("")}</ul>` : ""}
@@ -4118,6 +4239,7 @@ function card(course, result) {
 
     <p class="source-host">${esc(hostOf(course.url))}</p>
     <p>${extLink(course.url, tt("courses.open"), tt("rec.newTab"), "btn btn-primary btn-small")}</p>
+    ${course.evidence ? `<p class="muted small">${esc(tt("courses.evidence", { date: formatDate(course.evidence.checked, L()) }))} ${esc(txt(course.evidence.text))} ${extLink(course.evidence.url, hostOf(course.evidence.url), tt("rec.newTab"))}</p>` : ""}
     <p class="muted small">${esc(tt("courses.checkedFrom", { date: formatDate(course.checked, L()), source: txt(course.checkedFrom) }))}</p>
   </article>`;
 }
@@ -4174,7 +4296,7 @@ function renderBrowse() {
   box.innerHTML = `
     <p class="muted" id="browse-count" aria-live="polite">${esc(tt("courses.count", { n: list.length }))}</p>
     ${list.length ? `<div class="rec-grid">${list.map((c) => card(c, null)).join("")}</div>`
-      : `<p class="alert alert--info">${esc(tt("courses.emptyFilter"))}</p>`}`;
+      : `<div class="alert alert--info" role="status"><p><strong>${esc(tt(state.skill ? "courses.noVerified" : "courses.emptyFilter"))}</strong></p><p class="small">${esc(tt("courses.noVerifiedHint"))}</p></div>`}`;
 }
 
 function sidhCard() {

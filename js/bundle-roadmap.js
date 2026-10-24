@@ -363,7 +363,7 @@ const translations = {
     "courses.cost.all": "All",
     "courses.cost.free": "Free to learn",
     "courses.count": "{n} learning options",
-    "courses.emptyFilter": "No course in our list teaches this skill yet. Try Skill India Digital Hub.",
+    "courses.emptyFilter": "No course matches these filters.",
     "courses.provider": "Provider",
     "courses.topics": "What you learn",
     "courses.prereq": "Before you start",
@@ -894,7 +894,7 @@ const translations = {
     "pj.v.identitySub": "Part of {parent}, as per Wikipedia",
     "pj.v.identityNone": "Not publicly verified",
     "pj.v.website": "Official website",
-    "pj.v.websiteD": "Address as listed on Wikipedia",
+    "pj.v.websiteD": "Address as listed on {source}",
     "pj.v.careers": "Careers page",
     "pj.v.careersYes": "Opened and checked by us on {date}",
     "pj.v.careersNo": "Not checked by us",
@@ -935,7 +935,7 @@ const translations = {
     "pj.gap.noneLeft": "Nothing here.",
     "pj.gap.planT": "Your step-by-step plan",
     "pj.gap.planNote": "This plan is guidance, not a promise. Completing a course does not guarantee a job or promotion.",
-    "pj.step.course": "Learn {skills} through a short course — free government options exist.",
+    "pj.step.course": "Learn {skills} through a short course — see the Courses & Skill Development page for verified options.",
     "pj.step.formal": "Get the required qualification or licence: {note}",
     "pj.step.formalSkills": "Get the required licence or certificate for: {skills}.",
     "pj.step.practice": "Practise {skills} — through an apprenticeship, internship, part-time work or helping in a family business.",
@@ -1001,7 +1001,7 @@ const translations = {
     "sd.mode.offline": "Offline / in person",
     "sd.mode.both": "Online and offline",
     "sd.why": "Relevant because it teaches:",
-    "sd.whyGeneral": "A general option for building job skills close to home.",
+    "sd.whyGeneral": "Not verified for a specific skill — search this site for what you need.",
     "sd.costT": "Cost",
     "sd.cost.free": "Free (as stated by the provider)",
     "sd.cost.freeExam": "Free to learn; the certificate exam has a fee",
@@ -1019,6 +1019,17 @@ const translations = {
     "sd.honest": "We do not show fees, student ratings or placement numbers because we could not verify them. Read the provider's page before you pay or share any details.",
     "sd.back": "Back to my job results",
     "sd.allCourses": "See all free courses",
+    "courses.teachesT": "Verified to teach:",
+    "courses.generalOnly": "General place to look: we have not verified that it currently teaches a specific skill, so it is not shown as a match for any skill.",
+    "courses.unverifiedSkills": "Not confirmed (not used for matching): {skills}.",
+    "courses.evidence": "How we checked ({date}):",
+    "courses.noVerified": "No verified provider is currently available for this course or skill.",
+    "courses.noVerifiedHint": "We only list a provider when we have seen evidence that it teaches this exact skill. You can search the Skill India Digital Hub below — results there are not checked by us.",
+    "sd.missing": "No verified provider is currently available for: {skills}.",
+    "sd.noVerified": "No verified provider is currently available for this course or skill.",
+    "sd.noVerifiedFor": "Skills without a verified provider: {skills}. We do not show unrelated providers to fill the gap.",
+    "sd.generalT": "Places to search yourself",
+    "sd.generalD": "These are real portals and programmes, but we have not verified that they currently teach your exact skills. Search on their sites before you decide.",
     // ---- About & Disclaimer ----
     "about.title": "About & Disclaimer — CareerSaathi AI",
     "about.h1": "About CareerSaathi AI",
@@ -1433,7 +1444,7 @@ const translations = {
     "courses.cost.all": "सभी",
     "courses.cost.free": "मुफ़्त पढ़ाई",
     "courses.count": "सीखने के {n} विकल्प",
-    "courses.emptyFilter": "हमारी सूची में अभी इस हुनर का कोई कोर्स नहीं है। स्किल इंडिया डिजिटल हब देखें।",
+    "courses.emptyFilter": "इन फ़िल्टर से कोई कोर्स मेल नहीं खाता।",
     "courses.provider": "संस्था",
     "courses.topics": "आप क्या सीखेंगे",
     "courses.prereq": "शुरू करने से पहले",
@@ -1964,7 +1975,7 @@ const translations = {
     "pj.v.identitySub": "{parent} का हिस्सा, विकिपीडिया के अनुसार",
     "pj.v.identityNone": "सार्वजनिक रूप से सत्यापित नहीं",
     "pj.v.website": "आधिकारिक वेबसाइट",
-    "pj.v.websiteD": "विकिपीडिया में दिया गया पता",
+    "pj.v.websiteD": "{source} में दिया गया पता",
     "pj.v.careers": "करियर पेज",
     "pj.v.careersYes": "हमने {date} को खोलकर जाँचा",
     "pj.v.careersNo": "हमने नहीं जाँचा",
@@ -2005,7 +2016,7 @@ const translations = {
     "pj.gap.noneLeft": "यहाँ कुछ नहीं।",
     "pj.gap.planT": "आपका क़दम-दर-क़दम प्लान",
     "pj.gap.planNote": "यह प्लान मार्गदर्शन है, वादा नहीं। कोर्स पूरा करने से नौकरी या प्रमोशन की गारंटी नहीं मिलती।",
-    "pj.step.course": "{skills} छोटे कोर्स से सीखें — मुफ़्त सरकारी विकल्प भी हैं।",
+    "pj.step.course": "{skills} छोटे कोर्स से सीखें — जाँचे गए विकल्पों के लिए कोर्स और हुनर विकास पेज देखें।",
     "pj.step.formal": "ज़रूरी योग्यता या लाइसेंस लें: {note}",
     "pj.step.formalSkills": "इनके लिए ज़रूरी लाइसेंस या प्रमाणपत्र लें: {skills}।",
     "pj.step.practice": "{skills} का अभ्यास करें — अप्रेंटिसशिप, इंटर्नशिप, पार्ट-टाइम काम या परिवार के व्यवसाय में मदद से।",
@@ -2071,7 +2082,7 @@ const translations = {
     "sd.mode.offline": "ऑफ़लाइन / आमने-सामने",
     "sd.mode.both": "ऑनलाइन और ऑफ़लाइन",
     "sd.why": "क्यों काम का है — यह सिखाता है:",
-    "sd.whyGeneral": "घर के पास नौकरी वाले हुनर सीखने का एक सामान्य विकल्प।",
+    "sd.whyGeneral": "किसी ख़ास हुनर के लिए जाँचा नहीं गया — अपनी ज़रूरत की चीज़ इस साइट पर खोजें।",
     "sd.costT": "ख़र्च",
     "sd.cost.free": "मुफ़्त (प्रदाता के अनुसार)",
     "sd.cost.freeExam": "पढ़ाई मुफ़्त; प्रमाणपत्र परीक्षा की फ़ीस लगती है",
@@ -2089,6 +2100,17 @@ const translations = {
     "sd.honest": "हम फ़ीस, छात्रों की रेटिंग या प्लेसमेंट के आँकड़े नहीं दिखाते क्योंकि हम उन्हें सत्यापित नहीं कर पाए। पैसे देने या कोई जानकारी देने से पहले प्रदाता का पेज पढ़ें।",
     "sd.back": "मेरे नौकरी के नतीजों पर वापस",
     "sd.allCourses": "सभी मुफ़्त कोर्स देखें",
+    "courses.teachesT": "जाँचा गया — यह सिखाता है:",
+    "courses.generalOnly": "खोजने की सामान्य जगह: हमने पक्का नहीं किया कि यह अभी कोई ख़ास हुनर सिखाता है, इसलिए इसे किसी हुनर के मेल के रूप में नहीं दिखाते।",
+    "courses.unverifiedSkills": "पक्का नहीं (मेल के लिए इस्तेमाल नहीं): {skills}।",
+    "courses.evidence": "हमने कैसे जाँचा ({date}):",
+    "courses.noVerified": "इस कोर्स या हुनर के लिए अभी कोई सत्यापित प्रदाता उपलब्ध नहीं है।",
+    "courses.noVerifiedHint": "हम किसी प्रदाता को तभी दिखाते हैं जब हमें सबूत मिले कि वह ठीक यही हुनर सिखाता है। आप नीचे स्किल इंडिया डिजिटल हब पर खोज सकते हैं — वहाँ के नतीजे हमने नहीं जाँचे।",
+    "sd.missing": "इनके लिए अभी कोई सत्यापित प्रदाता उपलब्ध नहीं है: {skills}।",
+    "sd.noVerified": "इस कोर्स या हुनर के लिए अभी कोई सत्यापित प्रदाता उपलब्ध नहीं है।",
+    "sd.noVerifiedFor": "बिना सत्यापित प्रदाता वाले हुनर: {skills}। कमी भरने के लिए हम असंबंधित प्रदाता नहीं दिखाते।",
+    "sd.generalT": "ख़ुद खोजने की जगहें",
+    "sd.generalD": "ये असली पोर्टल और कार्यक्रम हैं, लेकिन हमने पक्का नहीं किया कि ये अभी आपके हुनर सिखाते हैं। फ़ैसले से पहले इनकी साइट पर खोजें।",
     // ---- About ----
     "about.title": "हमारे बारे में और अस्वीकरण — करियरसाथी AI",
     "about.h1": "करियरसाथी AI के बारे में",
@@ -3098,7 +3120,7 @@ const SKILL_GROUPS = [
       o("olevel", "O Level", "O लेवल"),
       o("dca", "DCA / ADCA", "DCA / ADCA"),
       o("tally", "Tally", "टैली"),
-      o("excel", "MS Excel", "MS एक्सेल"),
+      o("excel", "Spreadsheets (MS Excel / LibreOffice Calc)", "स्प्रेडशीट (MS एक्सेल / LibreOffice Calc)"),
       o("typing", "Typing (Hindi / English)", "टाइपिंग (हिंदी / अंग्रेज़ी)")
     ]
   },
@@ -3727,6 +3749,356 @@ function quizSummaryHtml() {
 return { loadQuizAnswers, saveQuizAnswers, clearQuizAnswers, savedQuizResult, interestCareerIds, areaName, quizSummaryHtml, QUIZ_KEY };
 })();
 
+// ===== js/engine.js =====
+__mods["js/engine.js"] = (function () {
+// CareerSaathi matching engine — simple, open rules. No AI API, no percentages.
+//
+// matchCareers(profile, careers) returns:
+//   { ready, matches: [...], futurePaths: [...], missingInfo: [...] }
+//
+// Every explanation is a message { key, vars } so the page can show it in
+// English or Hindi. vars may hold skill ids, goal ids or an education level id.
+// This file has no browser code, so it can be tested with Node.
+
+const { normalizeProfile } = __mods["js/profile-model.js"];
+const FIT = { STRONG: "strong", POSSIBLE: "possible", UPSKILL: "upskill" };
+
+const STATUS = {
+  POTENTIAL: "potential",     // general career match
+  UNVERIFIED: "unverified",   // govt path, or rules not fully recorded
+  ELIGIBLE: "eligible",       // all RECORDED criteria pass on a source-checked record
+  VACANCY: "vacancy"          // verified active vacancy — never produced in v1 (no live data)
+};
+
+const FIT_ORDER = { strong: 0, possible: 1, upskill: 2 };
+const msg = (key, vars = {}) => ({ key, vars });
+
+/** All qualification levels the person has (highest + extra ones). */
+function userLevels(profile) {
+  const levels = [profile.education.level, ...profile.additionalQualifications.map((q) => q.level)];
+  return [...new Set(levels.filter(Boolean))];
+}
+
+/** Step 1: qualification check → "meets" | "any" | "not-met" | "unknown" */
+function checkQualification(career, profile) {
+  if (career.education === "any") return { result: "any", level: "" };
+  if (career.education === null || career.education === undefined) return { result: "unknown", level: "" };
+  const levels = userLevels(profile);
+  if (!levels.length) return { result: "unknown", level: "" };
+  const hit = levels.find((l) => career.education.includes(l));
+  if (hit) return { result: "meets", level: hit };
+  // "other" is too vague to say no — treat as unknown.
+  if (levels.every((l) => l === "other")) return { result: "unknown", level: "" };
+  return { result: "not-met", level: "" };
+}
+
+/** Step 2: skills check → what they have, what is missing. */
+function checkSkills(career, profile) {
+  const mine = new Set(profile.skills);
+  const have = career.requiredSkills.filter((s) => mine.has(s));
+  const missing = career.requiredSkills.filter((s) => !mine.has(s));
+  const optionalHave = career.optionalSkills.filter((s) => mine.has(s));
+  const ratio = career.requiredSkills.length ? have.length / career.requiredSkills.length : 1;
+  return { have, missing, optionalHave, ratio };
+}
+
+/** Step 3: experience → "not-needed" | "meets" | "short" | "unknown" */
+function checkExperience(career, profile) {
+  const need = career.minYearsExperience || 0;
+  if (need === 0) return "not-needed";
+  const ex = profile.experience;
+  if (ex.skipped || !ex.type) return "unknown";
+  const years = ex.type === "experienced" && Number.isInteger(ex.years) ? ex.years : 0;
+  return years >= need ? "meets" : "short";
+}
+
+/** Step 4: preferences → which goals match, and any location conflict. */
+function checkPreferences(career, profile) {
+  const goals = career.goals.filter((g) => profile.goals.includes(g));
+  const remoteOnly = profile.preferredLocation === "remote";
+  return {
+    goals,
+    noGoalsGiven: profile.goals.length === 0,
+    locationConflict: remoteOnly && !career.remoteFriendly
+  };
+}
+
+/** Evaluates one career. Returns null if it is not relevant at all. */
+function evaluateCareer(career, rawProfile) {
+  const profile = normalizeProfile(rawProfile);
+  const qual = checkQualification(career, profile);
+  const skills = checkSkills(career, profile);
+  const exp = checkExperience(career, profile);
+  const pref = checkPreferences(career, profile);
+  const isGovt = career.sector === "government";
+
+  // Relevant only if it fits a goal, or the person already has related skills.
+  const goalMatch = pref.goals.length > 0;
+  const skillOverlap = skills.have.length + skills.optionalHave.length > 0;
+  if (!goalMatch && !skillOverlap) return null;
+
+  // A path needing skills the person has none of is only shown if they
+  // said they want to learn new skills or change career.
+  const wantsToLearn = profile.goals.includes("skill-development") || profile.goals.includes("career-change");
+  if (career.requiredSkills.length > 0 && !skillOverlap && !wantsToLearn) return null;
+
+  // Fit level (words, not percentages)
+  const noSkillRule = career.requiredSkills.length === 0;
+  const blocked = exp === "short" || pref.locationConflict;
+  let fit;
+  if (noSkillRule) {
+    // Exam/merit-based paths: a goal match alone is only "partial";
+    // related extra skills make it "good".
+    fit = goalMatch && skills.optionalHave.length > 0 && !blocked ? FIT.STRONG : FIT.POSSIBLE;
+  } else if ((goalMatch || pref.noGoalsGiven) && skills.ratio >= 2 / 3 && !blocked) {
+    fit = FIT.STRONG;
+  } else if (skills.ratio >= 1 / 3 && (goalMatch || skills.ratio >= 2 / 3)) {
+    fit = FIT.POSSIBLE;
+  } else {
+    fit = FIT.UPSKILL;
+  }
+  // For sorting: paths where the person already has the required skills come first.
+  const sortScore = noSkillRule ? (skills.optionalHave.length ? 0.6 : 0.5) : skills.ratio;
+
+  // Status label
+  const allRecordedPass =
+    (qual.result === "meets" || qual.result === "any") && skills.missing.length === 0 && exp !== "short";
+  let status;
+  if (career.verification?.status === "source-checked" && allRecordedPass) status = STATUS.ELIGIBLE;
+  else if (isGovt || qual.result === "unknown") status = STATUS.UNVERIFIED;
+  else status = STATUS.POTENTIAL;
+
+  // ---- "Why we suggested this" ----
+  const reasons = [];
+  if (goalMatch) reasons.push(msg("why.goal", { goals: pref.goals }));
+  if (qual.result === "meets") reasons.push(msg("why.qualMeets", { level: qual.level }));
+  if (qual.result === "any") reasons.push(msg("why.qualAny"));
+  if (skills.have.length) reasons.push(msg("why.skillsHave", { skills: skills.have }));
+  if (skills.optionalHave.length) reasons.push(msg("why.optionalHave", { skills: skills.optionalHave }));
+  if (career.requiredSkills.length === 0) reasons.push(msg("why.noSkillNeeded"));
+  if (exp === "meets") reasons.push(msg("why.expMeets"));
+  if (career.remoteFriendly && profile.preferredLocation === "remote") reasons.push(msg("why.remote"));
+
+  // ---- "Things to check" ----
+  const checks = [];
+  if (qual.result === "unknown") {
+    checks.push(msg(userLevels(profile).length ? "check.qualVaries" : "check.qualMissing"));
+  }
+  if (exp === "short") checks.push(msg("check.expShort", { n: career.minYearsExperience }));
+  if (exp === "unknown") checks.push(msg("check.expUnknown", { n: career.minYearsExperience }));
+  if (pref.locationConflict) checks.push(msg("check.location"));
+  if (isGovt) {
+    checks.push(msg("check.govtAge"));
+    const cat = profile.eligibility.category;
+    if (["obc", "sc", "st", "ews"].includes(cat) || profile.eligibility.pwd === "yes" || profile.eligibility.exServiceman === "yes") {
+      checks.push(msg("check.relaxation"));
+    }
+  }
+  if (career.verification?.status !== "source-checked") checks.push(msg("check.demo"));
+
+  // ---- "What to do next" ----
+  const next = [];
+  if (skills.missing.length) next.push(msg("next.learn", { skills: skills.missing }));
+  if (isGovt) next.push(msg("next.govt"));
+  else if (career.sector === "apprenticeship") next.push(msg("next.apprentice"));
+  else if (career.sector === "self") next.push(msg("next.self"));
+  else next.push(msg("next.private"));
+  if (career.preferred) next.push(msg("next.preferred"));
+
+  return {
+    careerId: career.id,
+    career,
+    fit,
+    status,
+    qualification: qual.result,
+    skillsHave: skills.have,
+    missingSkills: skills.missing,
+    matchedGoals: pref.goals,
+    reasons,
+    checks,
+    next,
+    _sort: [FIT_ORDER[fit], -sortScore, -pref.goals.length, -skills.optionalHave.length]
+  };
+}
+
+/** Main entry point. Never throws, even for an empty or broken profile. */
+function matchCareers(rawProfile, careers, { futureLimit = 5 } = {}) {
+  const profile = normalizeProfile(rawProfile);
+
+  const missingInfo = [];
+  if (!profile.education.level) missingInfo.push("education");
+  if (!profile.goals.length) missingInfo.push("goals");
+  if (!profile.skills.length) missingInfo.push("skills");
+  const ready = Boolean(profile.education.level || profile.goals.length || profile.skills.length);
+
+  if (!ready || !Array.isArray(careers)) return { ready: false, matches: [], futurePaths: [], missingInfo };
+
+  const matches = [];
+  const futurePaths = [];
+  for (const career of careers) {
+    let result;
+    try {
+      result = evaluateCareer(career, profile);
+    } catch {
+      continue; // one bad record must not break the whole page
+    }
+    if (!result) continue;
+    if (result.qualification === "not-met") {
+      if (result.matchedGoals.length) futurePaths.push(result);
+    } else {
+      matches.push(result);
+    }
+  }
+
+  const bySort = (a, b) => {
+    for (let i = 0; i < a._sort.length; i++) if (a._sort[i] !== b._sort[i]) return a._sort[i] - b._sort[i];
+    return a.careerId.localeCompare(b.careerId);
+  };
+  matches.sort(bySort);
+  futurePaths.sort(bySort);
+
+  return { ready: true, matches, futurePaths: futurePaths.slice(0, futureLimit), missingInfo };
+}
+
+return { userLevels, checkQualification, checkSkills, checkExperience, checkPreferences, evaluateCareer, matchCareers, FIT, STATUS };
+})();
+
+// ===== js/vacancy-match.js =====
+__mods["js/vacancy-match.js"] = (function () {
+// Open-recruitment logic. Pure functions — tested in Node.
+//
+// Everything is worked out from TODAY'S date on the visitor's device:
+//   upcoming (not open yet) · open · closing soon (≤ 7 days) · closed
+// "Verified active vacancy" is used ONLY for records checked against the
+// official notice AND open today. Everything else says "confirm officially".
+
+const { normalizeProfile } = __mods["js/profile-model.js"];
+const { userLevels } = __mods["js/engine.js"];
+const CLOSING_SOON_DAYS = 7;
+const STALE_DAYS = 90;          // scheme/course facts older than this get a warning
+const STALE_LIST_DAYS = 14;     // the vacancy list itself should be refreshed weekly
+
+const msg = (key, vars = {}) => ({ key, vars });
+
+/** Today's date as "YYYY-MM-DD" in the visitor's own time zone. */
+function todayISO(now = new Date()) {
+  const y = now.getFullYear();
+  const m = String(now.getMonth() + 1).padStart(2, "0");
+  const d = String(now.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+/** Whole days from date a to date b ("YYYY-MM-DD"), ignoring time zones. */
+function daysBetween(a, b) {
+  const [ay, am, ad] = a.split("-").map(Number);
+  const [by, bm, bd] = b.split("-").map(Number);
+  return Math.round((Date.UTC(by, bm - 1, bd) - Date.UTC(ay, am - 1, ad)) / 86400000);
+}
+
+/** "upcoming" | "open" | "closing-soon" | "closed", plus day counts. */
+function vacancyStatus(v, today) {
+  if (today < v.opens) return { status: "upcoming", daysToOpen: daysBetween(today, v.opens), daysLeft: daysBetween(today, v.closes) };
+  if (today > v.closes) return { status: "closed", daysLeft: -1 };
+  const daysLeft = daysBetween(today, v.closes); // 0 = last day today
+  return { status: daysLeft <= CLOSING_SOON_DAYS ? "closing-soon" : "open", daysLeft };
+}
+
+const isActive = (s) => s === "open" || s === "closing-soon";
+
+/** How old a "checked" date is, in days (never negative). */
+function ageInDays(checkedISO, today) {
+  return Math.max(0, daysBetween(checkedISO, today));
+}
+
+/** Compares one vacancy with a profile. Never says "eligible" — only what fits and what to check. */
+function matchVacancy(v, rawProfile, today) {
+  const p = normalizeProfile(rawProfile);
+  const st = vacancyStatus(v, today);
+  const reasons = [];
+  const checks = [];
+  let fit = "check"; // "fits-recorded" | "check" | "not-met"
+
+  // Qualification
+  const levels = userLevels(p);
+  let eduOk = null;
+  if (Array.isArray(v.education)) {
+    if (!levels.length) eduOk = null;
+    else if (levels.some((l) => v.education.includes(l))) eduOk = true;
+    else if (levels.every((l) => l === "other")) eduOk = null;
+    else eduOk = false;
+  }
+  if (eduOk === true) reasons.push(msg("vac.why.edu", { level: levels.find((l) => v.education.includes(l)) }));
+  if (eduOk === false) checks.push(msg("vac.check.eduNo"));
+  if (eduOk === null) checks.push(msg("vac.check.edu"));
+
+  // Goal
+  if (p.goals.includes("govt-job")) reasons.push(msg("vac.why.goal"));
+
+  // Age — we only know an exact age if the person chose to give it.
+  const age = p.eligibility.exactAge;
+  if (v.age && Number.isInteger(age)) {
+    if (v.age.min && age < v.age.min) checks.push(msg("vac.check.ageYoung", { min: v.age.min }));
+    else if (v.age.maxGeneral && age > v.age.maxGeneral) {
+      const reserved = ["obc", "sc", "st", "ews"].includes(p.eligibility.category) ||
+        p.eligibility.pwd === "yes" || p.eligibility.exServiceman === "yes";
+      checks.push(msg(reserved ? "vac.check.ageRelax" : "vac.check.ageOld", { max: v.age.maxGeneral }));
+    }
+  }
+  if (v.age) checks.push(msg("vac.check.ageDate", { date: v.age.asOn }));
+
+  // Experience
+  if (v.experienceYears > 0) checks.push(msg("vac.check.exp", { n: v.experienceYears }));
+
+  // State-level recruitment
+  if (v.state) {
+    if (p.state === v.state) reasons.push(msg("vac.why.state"));
+    else checks.push(msg("vac.check.state"));
+  }
+
+  // Source quality
+  if (v.verification !== "official-notice") checks.push(msg("vac.check.reported"));
+  checks.push(msg("vac.check.notice"));
+
+  if (eduOk === false) fit = "not-met";
+  else if (eduOk === true && !(v.state && p.state !== v.state)) fit = "fits-recorded";
+
+  const verifiedActive = v.verification === "official-notice" && isActive(st.status);
+  const relevant = fit !== "not-met" && (p.goals.includes("govt-job") || eduOk === true);
+
+  return { vacancy: v, ...st, fit, relevant, verifiedActive, reasons, checks };
+}
+
+/**
+ * All vacancies that are not closed, with match info.
+ * Order: relevant for this person first, then clear matches before "check" ones,
+ * then open/closing-soon before upcoming, then the soonest closing date.
+ */
+function listVacancies(vacancies, rawProfile, today) {
+  if (!Array.isArray(vacancies)) return [];
+  const out = [];
+  for (const v of vacancies) {
+    try {
+      const r = matchVacancy(v, rawProfile, today);
+      if (r.status !== "closed") out.push(r);
+    } catch { /* skip a broken record */ }
+  }
+  const rank = { "closing-soon": 0, open: 1, upcoming: 2 };
+  const fitRank = { "fits-recorded": 0, check: 1, "not-met": 2 };
+  return out.sort((a, b) =>
+    (Number(b.relevant) - Number(a.relevant)) ||
+    (fitRank[a.fit] - fitRank[b.fit]) ||
+    (rank[a.status] - rank[b.status]) ||
+    (a.vacancy.closes < b.vacancy.closes ? -1 : a.vacancy.closes > b.vacancy.closes ? 1 : 0));
+}
+
+/** Open (not upcoming) vacancies that match the profile — for dashboard & recommendations. */
+function openMatches(vacancies, rawProfile, today) {
+  return listVacancies(vacancies, rawProfile, today).filter((r) => r.relevant && isActive(r.status));
+}
+
+return { todayISO, daysBetween, vacancyStatus, ageInDays, matchVacancy, listVacancies, openMatches, CLOSING_SOON_DAYS, STALE_DAYS, STALE_LIST_DAYS, isActive };
+})();
+
 // ===== js/roadmap.js =====
 __mods["js/roadmap.js"] = (function () {
 // "What after 10th / 12th?" roadmap page.
@@ -3739,6 +4111,7 @@ const { CAREERS } = __mods["data/careers.js"];
 const { STAGES, PATHS, ROADMAP_CHECKED } = __mods["data/roadmap.js"];
 const { loadProfile } = __mods["js/profile-store.js"];
 const { savedQuizResult, areaName } = __mods["js/quiz-summary.js"];
+const { todayISO, ageInDays, STALE_DAYS } = __mods["js/vacancy-match.js"];
 const root = document.getElementById("roadmap-app");
 const state = { stage: "after10", top: [] };
 
@@ -3792,7 +4165,8 @@ function render(focus) {
     ${quizNote}
     <h2 class="road-count" id="road-list-t" tabindex="-1">${esc(tt("road.count", { n: paths.length, stage: txt(STAGES.find((s) => s.id === state.stage).name) }))}</h2>
     <div class="grid grid-2 road-grid">${paths.map(pathCard).join("")}</div>
-    <p class="muted small">${esc(tt("road.checked", { date: formatDate(ROADMAP_CHECKED, L()) }))}</p>`;
+    <p class="muted small">${esc(tt("road.checked", { date: formatDate(ROADMAP_CHECKED, L()) }))}</p>
+    ${ageInDays(ROADMAP_CHECKED, todayISO()) > STALE_DAYS ? `<p class="alert alert--warn small">${esc(tt("stale.warn", { n: ageInDays(ROADMAP_CHECKED, todayISO()) }))}</p>` : ""}`;
   if (focus) root.querySelector(focus)?.focus();
 }
 

@@ -36,9 +36,15 @@ function costFits(cost, budget) {
   return true;
 }
 
+/** Only skills with evidence count (see data/courses.js). Broken records count as none. */
+export function verifiedSkills(course) {
+  return course && Array.isArray(course.skills) ? course.skills : [];
+}
+
 export function evaluateCourse(course, profile, gapSkills) {
-  const covers = course.skills.filter((s) => gapSkills.includes(s));
-  const already = course.skills.filter((s) => profile.skills.includes(s));
+  const skills = verifiedSkills(course);
+  const covers = skills.filter((s) => gapSkills.includes(s));
+  const already = skills.filter((s) => profile.skills.includes(s));
   const reasons = [];
   const checks = [];
 
@@ -90,11 +96,16 @@ export function recommendCourses(rawProfile, careers, courses) {
   return { ready: true, gaps, items, uncovered };
 }
 
-/** Courses that teach one skill (for the "browse by skill" view). */
+/**
+ * Courses for the "browse by skill" view. With a skill, only providers with a
+ * VERIFIED offering of exactly that skill are returned — never a provider whose
+ * claim is unconfirmed, or one that only teaches a similar or related skill.
+ * An empty list means "no verified provider", and the page says so.
+ */
 export function coursesForSkill(skill, courses) {
   if (!Array.isArray(courses)) return [];
   return courses
-    .filter((c) => !skill || c.skills.includes(skill))
+    .filter((c) => c && c.id && c.title && (!skill || verifiedSkills(c).includes(skill)))
     .sort((a, b) => ((COST_RANK[a.cost] ?? 3) - (COST_RANK[b.cost] ?? 3)) ||
       ((PROVIDER_RANK[a.providerType] ?? 3) - (PROVIDER_RANK[b.providerType] ?? 3)));
 }
