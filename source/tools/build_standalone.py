@@ -34,7 +34,7 @@ OUT = os.path.join(ROOT, "standalone")
 NOT_IN_SITEMAP = {"dashboard"}
 
 IMPORT_RE = re.compile(r'^import\s*\{([^}]*)\}\s*from\s*"([^"]+)";\s*$', re.M | re.S)
-EXPORT_FN_RE = re.compile(r'^export\s+function\s+(\w+)', re.M)
+EXPORT_FN_RE = re.compile(r'^export\s+((?:async\s+)?function)\s+(\w+)', re.M)
 EXPORT_CONST_RE = re.compile(r'^export\s+const\s+(\w+)', re.M)
 
 
@@ -65,8 +65,8 @@ def load_module(path, modules, order):
         bad = re.search(r'^\s*(import|export)\s.*$', body, re.M).group(0)
         if not (EXPORT_FN_RE.search(bad) or EXPORT_CONST_RE.search(bad)):
             sys.exit(f"{key}: unsupported line: {bad}")
-    exported = EXPORT_FN_RE.findall(body) + EXPORT_CONST_RE.findall(body)
-    body = EXPORT_FN_RE.sub(r'function \1', body)
+    exported = [m[1] for m in EXPORT_FN_RE.findall(body)] + EXPORT_CONST_RE.findall(body)
+    body = EXPORT_FN_RE.sub(r'\1 \2', body)
     body = EXPORT_CONST_RE.sub(r'const \1', body)
     if re.search(r'^\s*(import|export)\s', body, re.M):
         sys.exit(f"{key}: an import/export was not converted")
@@ -122,6 +122,14 @@ def main():
     def ver(rel):
         return hashlib.sha1(open(os.path.join(OUT, rel), "rb").read()).hexdigest()[:8]
 
+    # The chat assistant is a separate bundle, loaded only when a visitor opens it,
+    # so normal pages stay small. layout.js refers to "js/chat-entry.js"; in the
+    # built site that name is swapped for the versioned bundle.
+    chat_js = bundle(["js/chat-entry.js"])
+    open(os.path.join(OUT, "js/bundle-chat.js"), "w", encoding="utf8").write(chat_js)
+    chat_ref = f'"js/bundle-chat.js?v={ver("js/bundle-chat.js")}"'
+    print(f"bundle js/bundle-chat.js  ({len(chat_js)//1024} KB, loaded on demand)")
+
     pages = sorted(f[:-5] for f in os.listdir(ROOT) if f.endswith(".html"))
     script_re = re.compile(r'\s*<script type="module" src="([^"]+)"></script>')
     built = {}  # same set of scripts → one shared bundle file
@@ -134,7 +142,7 @@ def main():
         if key not in built:
             last = os.path.splitext(os.path.basename(entries[-1]))[0]
             bundle_name = f"js/bundle-{last}.js"
-            js = bundle(entries)
+            js = bundle(entries).replace('"js/chat-entry.js"', chat_ref)
             open(os.path.join(OUT, bundle_name), "w", encoding="utf8").write(js)
             built[key] = bundle_name
             print(f"bundle {bundle_name}  ({len(js)//1024} KB)")

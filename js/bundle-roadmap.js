@@ -1030,6 +1030,40 @@ const translations = {
     "sd.noVerifiedFor": "Skills without a verified provider: {skills}. We do not show unrelated providers to fill the gap.",
     "sd.generalT": "Places to search yourself",
     "sd.generalD": "These are real portals and programmes, but we have not verified that they currently teach your exact skills. Search on their sites before you decide.",
+    // ---- Chat assistant ----
+    "chat.launch": "Ask CareerSaathi",
+    "chat.loadFail": "The chat could not load. Please check your internet connection and try again.",
+    "chat.title": "CareerSaathi Assistant",
+    "chat.subGuide": "Automated guide · not a human · runs in your browser",
+    "chat.subAI": "AI assistant ({provider}) · not a human",
+    "chat.new": "New chat (clears this conversation)",
+    "chat.close": "Close chat",
+    "chat.privacyT": "Privacy — please read",
+    "chat.privacyGuide": "No login or personal details needed. This guide runs only in your browser: your messages are not sent to us or to anyone else. Answers about courses, providers, salaries and jobs come only from this website's checked data.",
+    "chat.privacyAI": "AI answers are switched on: your messages are sent to our chat server and to {provider} to write a reply. Our server does not store chats, but {provider} and network providers may process technical data such as your IP address, so this is not fully anonymous. Do not type your name, phone number or other personal details.",
+    "chat.privacyAll": "The conversation is kept only in this browser tab. \"New chat\", closing the tab, or \"Delete my saved data\" removes it.",
+    "chat.privacyMore": "Privacy page",
+    "chat.aiToggle": "Use AI answers ({provider}) — sends my messages outside this browser",
+    "chat.inputLabel": "Your message",
+    "chat.placeholder": "Ask in English, हिंदी or Hinglish…",
+    "chat.send": "Send",
+    "chat.foot": "General guidance only — not a guarantee of any job or salary. Check official websites before deciding.",
+    "chat.thinking": "Thinking…",
+    "chat.retry": "Try again",
+    "chat.useGuide": "Answer with the website guide instead",
+    "chat.err.off": "AI answers are not set up on this website. You can use the website guide.",
+    "chat.err.timeout": "The AI service took too long to answer.",
+    "chat.err.network": "Could not reach the AI service. Check your internet connection.",
+    "chat.err.rate": "Too many messages in a short time. Please wait a minute and try again.",
+    "chat.err.server": "The AI service is not available right now.",
+    "chat.err.bad": "The AI service sent an answer we could not read.",
+    "chat.verifiedFor": "Verified for: {skill}",
+    "chat.checkedOn": "Checked {date}",
+    "chat.aiSaid": "AI assistant said:",
+    "chat.botSaid": "Guide said:",
+    "chat.youSaid": "You said:",
+    "chat.aiTag": "AI answer · {provider}",
+    "privacy.where.9": "CareerSaathi Assistant (chat): no login or personal details are needed. In guide mode it runs only in your browser and sends nothing. If AI answers are offered and you switch them on, your messages are sent to our chat server and to Google Gemini to write replies; our server does not store them. The chat is kept only in your browser tab until you start a new chat or close the tab.",
     // ---- About & Disclaimer ----
     "about.title": "About & Disclaimer — CareerSaathi AI",
     "about.h1": "About CareerSaathi AI",
@@ -2111,6 +2145,40 @@ const translations = {
     "sd.noVerifiedFor": "बिना सत्यापित प्रदाता वाले हुनर: {skills}। कमी भरने के लिए हम असंबंधित प्रदाता नहीं दिखाते।",
     "sd.generalT": "ख़ुद खोजने की जगहें",
     "sd.generalD": "ये असली पोर्टल और कार्यक्रम हैं, लेकिन हमने पक्का नहीं किया कि ये अभी आपके हुनर सिखाते हैं। फ़ैसले से पहले इनकी साइट पर खोजें।",
+    // ---- Chat assistant ----
+    "chat.launch": "CareerSaathi से पूछें",
+    "chat.loadFail": "चैट लोड नहीं हो पाई। अपना इंटरनेट कनेक्शन देखकर फिर कोशिश करें।",
+    "chat.title": "CareerSaathi असिस्टेंट",
+    "chat.subGuide": "ऑटोमेटेड गाइड · इंसान नहीं · आपके ब्राउज़र में चलता है",
+    "chat.subAI": "AI असिस्टेंट ({provider}) · इंसान नहीं",
+    "chat.new": "नई चैट (यह बातचीत मिट जाएगी)",
+    "chat.close": "चैट बंद करें",
+    "chat.privacyT": "गोपनीयता — ज़रूर पढ़ें",
+    "chat.privacyGuide": "लॉगिन या निजी जानकारी की ज़रूरत नहीं। यह गाइड सिर्फ़ आपके ब्राउज़र में चलता है: आपके संदेश हमें या किसी और को नहीं भेजे जाते। कोर्स, प्रदाता, सैलरी और नौकरी के जवाब सिर्फ़ इस वेबसाइट के जाँचे गए डेटा से आते हैं।",
+    "chat.privacyAI": "AI जवाब चालू हैं: जवाब लिखने के लिए आपके संदेश हमारे चैट सर्वर और {provider} को भेजे जाते हैं। हमारा सर्वर चैट सेव नहीं करता, लेकिन {provider} और नेटवर्क कंपनियाँ आपका IP पता जैसी तकनीकी जानकारी देख सकती हैं, इसलिए यह पूरी तरह गुमनाम नहीं है। अपना नाम, फ़ोन नंबर या दूसरी निजी जानकारी न लिखें।",
+    "chat.privacyAll": "बातचीत सिर्फ़ इसी ब्राउज़र टैब में रहती है। \"नई चैट\", टैब बंद करने या \"मेरा सेव डेटा मिटाएँ\" से यह मिट जाती है।",
+    "chat.privacyMore": "गोपनीयता पेज",
+    "chat.aiToggle": "AI जवाब इस्तेमाल करें ({provider}) — मेरे संदेश ब्राउज़र से बाहर भेजे जाएँगे",
+    "chat.inputLabel": "आपका संदेश",
+    "chat.placeholder": "English, हिंदी या Hinglish में पूछें…",
+    "chat.send": "भेजें",
+    "chat.foot": "सिर्फ़ सामान्य मार्गदर्शन — किसी नौकरी या सैलरी की गारंटी नहीं। फ़ैसले से पहले आधिकारिक वेबसाइट देखें।",
+    "chat.thinking": "सोच रहा है…",
+    "chat.retry": "फिर से कोशिश करें",
+    "chat.useGuide": "इसकी जगह वेबसाइट गाइड से जवाब लें",
+    "chat.err.off": "इस वेबसाइट पर AI जवाब चालू नहीं हैं। आप वेबसाइट गाइड इस्तेमाल कर सकते हैं।",
+    "chat.err.timeout": "AI सेवा ने जवाब देने में बहुत समय लगाया।",
+    "chat.err.network": "AI सेवा से संपर्क नहीं हो पाया। अपना इंटरनेट कनेक्शन देखें।",
+    "chat.err.rate": "कम समय में बहुत ज़्यादा संदेश। एक मिनट रुककर फिर कोशिश करें।",
+    "chat.err.server": "AI सेवा अभी उपलब्ध नहीं है।",
+    "chat.err.bad": "AI सेवा का जवाब पढ़ा नहीं जा सका।",
+    "chat.verifiedFor": "इसके लिए जाँचा गया: {skill}",
+    "chat.checkedOn": "{date} को जाँचा",
+    "chat.aiSaid": "AI असिस्टेंट ने कहा:",
+    "chat.botSaid": "गाइड ने कहा:",
+    "chat.youSaid": "आपने कहा:",
+    "chat.aiTag": "AI जवाब · {provider}",
+    "privacy.where.9": "CareerSaathi असिस्टेंट (चैट): लॉगिन या निजी जानकारी की ज़रूरत नहीं। गाइड मोड में यह सिर्फ़ आपके ब्राउज़र में चलता है और कुछ नहीं भेजता। अगर AI जवाब उपलब्ध हों और आप उन्हें चालू करें, तो जवाब लिखने के लिए आपके संदेश हमारे चैट सर्वर और Google Gemini को भेजे जाते हैं; हमारा सर्वर उन्हें सेव नहीं करता। चैट सिर्फ़ आपके ब्राउज़र टैब में रहती है, जब तक आप नई चैट शुरू न करें या टैब बंद न करें।",
     // ---- About ----
     "about.title": "हमारे बारे में और अस्वीकरण — करियरसाथी AI",
     "about.h1": "करियरसाथी AI के बारे में",
@@ -2443,6 +2511,51 @@ function setupMenu() {
   });
 }
 
+// ---------- Chat assistant launcher ----------
+// Only a small button is part of every page. The assistant itself is loaded the
+// first time someone opens it, so pages stay fast for everyone else.
+const CHAT_SCRIPT = "js/bundle-chat.js?v=b067ddf8";
+let chatLoading = false;
+
+function setupChatLauncher() {
+  if (document.getElementById("cs-launch")) return;
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.id = "cs-launch";
+  btn.className = "cs-launch no-print";
+  btn.setAttribute("aria-expanded", "false");
+  btn.setAttribute("aria-controls", "cs-panel");
+  btn.innerHTML = '<span class="cs-launch-icon" aria-hidden="true">💬</span><span class="cs-launch-text" data-i18n="chat.launch"></span>';
+  btn.querySelector(".cs-launch-text").textContent = t("chat.launch", currentLang);
+  btn.addEventListener("click", openChatFromLauncher);
+  document.body.appendChild(btn);
+}
+
+function openChatFromLauncher() {
+  if (window.CareerSaathiChat) { window.CareerSaathiChat.toggle(); return; }
+  if (chatLoading) return;
+  chatLoading = true;
+  const btn = document.getElementById("cs-launch");
+  btn?.setAttribute("aria-busy", "true");
+  const bundled = Boolean(document.querySelector('script[src*="js/bundle-"]'));
+  const s = document.createElement("script");
+  if (!bundled) s.type = "module";
+  s.src = CHAT_SCRIPT;
+  s.onload = () => {
+    chatLoading = false;
+    btn?.removeAttribute("aria-busy");
+    if (window.CareerSaathiChat) { window.CareerSaathiChat.init(getLang); window.CareerSaathiChat.open(); }
+  };
+  s.onerror = () => {
+    chatLoading = false;
+    btn?.removeAttribute("aria-busy");
+    s.remove();
+    if (btn) btn.title = t("chat.loadFail", currentLang);
+    window.alert(t("chat.loadFail", currentLang));
+  };
+  document.body.appendChild(s);
+}
+
 function init() {
   const pageId = document.body.dataset.page || "";
   const headerSlot = document.getElementById("site-header");
@@ -2456,6 +2569,7 @@ function init() {
 
   setupMenu();
   setLang(currentLang);
+  setupChatLauncher();
   document.body.classList.add("is-ready");
 }
 

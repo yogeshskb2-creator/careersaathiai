@@ -1,0 +1,26 @@
+# Cloudflare Worker settings for the CareerSaathi AI chat server.
+# Deploy: see server/README.md. The API key is NOT stored here — use
+#   npx wrangler secret put GEMINI_API_KEY
+name = "careersaathi-chat"
+main = "chat-worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://yogeshskb2-creator.github.io"
+GEMINI_MODEL = "gemini-3.6-flash"
+
+# Per-visitor limit: 10 messages per minute.
+[[ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "1001"
+  [ratelimits.simple]
+  limit = 10
+  period = 60
+
+# Whole-site cap to control cost: 60 messages per minute.
+[[ratelimits]]
+name = "GLOBAL_LIMITER"
+namespace_id = "1002"
+  [ratelimits.simple]
+  limit = 60
+  period = 60

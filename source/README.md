@@ -139,6 +139,17 @@ so closed recruitments disappear by themselves — but new ones must be added by
 Scheme and course facts also carry a `checked` date; after 90 days the site shows
 "may have changed" on those cards — a reminder to re-check them.
 
+## CareerSaathi Assistant (chat)
+
+- A "Ask CareerSaathi" button on every page opens the assistant. Its code (`js/chat-*.js`) is
+  loaded only when someone opens it (`js/bundle-chat.js` in the built site).
+- **Guide mode (default, free):** runs in the browser, sends nothing, understands English,
+  Hindi and Hinglish, keeps context for the current chat (this tab only), and answers about
+  courses, providers, salaries and vacancies only from the website's verified data.
+- **AI mode (optional):** set `aiEndpoint` in `js/chat-config.js` after deploying the server in
+  `server/` (see `server/README.md`). Visitors must switch it on; the API key stays on the server.
+- Tests: `tests/chat-engine.test.js`, `tests/chat-server.test.js`.
+
 ## Course and skill providers: the evidence rule
 
 - A provider is linked to a skill ONLY when `skills` in `data/courses.js` lists it, and every

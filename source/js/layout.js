@@ -159,6 +159,51 @@ function setupMenu() {
   });
 }
 
+// ---------- Chat assistant launcher ----------
+// Only a small button is part of every page. The assistant itself is loaded the
+// first time someone opens it, so pages stay fast for everyone else.
+const CHAT_SCRIPT = "js/chat-entry.js";
+let chatLoading = false;
+
+function setupChatLauncher() {
+  if (document.getElementById("cs-launch")) return;
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.id = "cs-launch";
+  btn.className = "cs-launch no-print";
+  btn.setAttribute("aria-expanded", "false");
+  btn.setAttribute("aria-controls", "cs-panel");
+  btn.innerHTML = '<span class="cs-launch-icon" aria-hidden="true">💬</span><span class="cs-launch-text" data-i18n="chat.launch"></span>';
+  btn.querySelector(".cs-launch-text").textContent = t("chat.launch", currentLang);
+  btn.addEventListener("click", openChatFromLauncher);
+  document.body.appendChild(btn);
+}
+
+function openChatFromLauncher() {
+  if (window.CareerSaathiChat) { window.CareerSaathiChat.toggle(); return; }
+  if (chatLoading) return;
+  chatLoading = true;
+  const btn = document.getElementById("cs-launch");
+  btn?.setAttribute("aria-busy", "true");
+  const bundled = Boolean(document.querySelector('script[src*="js/bundle-"]'));
+  const s = document.createElement("script");
+  if (!bundled) s.type = "module";
+  s.src = CHAT_SCRIPT;
+  s.onload = () => {
+    chatLoading = false;
+    btn?.removeAttribute("aria-busy");
+    if (window.CareerSaathiChat) { window.CareerSaathiChat.init(getLang); window.CareerSaathiChat.open(); }
+  };
+  s.onerror = () => {
+    chatLoading = false;
+    btn?.removeAttribute("aria-busy");
+    s.remove();
+    if (btn) btn.title = t("chat.loadFail", currentLang);
+    window.alert(t("chat.loadFail", currentLang));
+  };
+  document.body.appendChild(s);
+}
+
 function init() {
   const pageId = document.body.dataset.page || "";
   const headerSlot = document.getElementById("site-header");
@@ -172,6 +217,7 @@ function init() {
 
   setupMenu();
   setLang(currentLang);
+  setupChatLauncher();
   document.body.classList.add("is-ready");
 }
 
